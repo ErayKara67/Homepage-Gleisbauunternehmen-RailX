@@ -135,7 +135,7 @@ p{margin:0}
 }
 .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
 .hero-stats{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.12);
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.12);
   margin-top:66px;border-top:2px solid var(--railx-orange);
 }
 .stat{background:var(--railx-dark);padding:26px 22px}
@@ -310,7 +310,9 @@ form .btn{width:100%}
   .logo-img{height:48px}
   .footer .logo-img{height:60px}
   .hero{min-height:auto;padding:132px 0 66px}
-  .hero-stats{grid-template-columns:repeat(2,1fr);margin-top:50px}
+  .hero-stats{margin-top:50px}
+  .stat{padding:20px 14px}
+  .stat-num{font-size:2rem}
   .section{padding:74px 0}
   .contact>*{padding:26px}
 }
@@ -328,6 +330,7 @@ form .btn{width:100%}
   .benefits,.steps{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr;gap:0}
+  .hero-stats{grid-template-columns:1fr}
   .hero-actions .btn{width:100%}
   .step{padding-right:0}
 }
@@ -416,9 +419,8 @@ form .btn{width:100%}
 
       <div class="hero-stats">
         <div class="stat"><div class="stat-num">10<span>+</span></div><div class="stat-label">Jahre Erfahrung</div></div>
-        <div class="stat"><div class="stat-num">20<span>+</span></div><div class="stat-label">Projekte realisiert</div></div>
+        <div class="stat"><div class="stat-num">10<span>+</span></div><div class="stat-label">Projekte realisiert</div></div>
         <div class="stat"><div class="stat-num">24<span>/7</span></div><div class="stat-label">Einsatzbereit</div></div>
-        <div class="stat"><div class="stat-num">100<span>%</span></div><div class="stat-label">Bahnzertifiziert</div></div>
       </div>
     </div>
   </div>
