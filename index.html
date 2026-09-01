@@ -190,17 +190,22 @@ p{margin:0}
 /* ---------- Referenzen ---------- */
 .refs{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-bottom:52px}
 .ref{
-  background:#fff;border:1px solid var(--border);padding:30px 26px;position:relative;
+  background:#fff;border:1px solid var(--border);margin:0;overflow:hidden;position:relative;
+  display:flex;flex-direction:column;
   transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
 }
-.ref::before{content:"";position:absolute;top:0;left:0;width:0;height:3px;background:var(--railx-orange);transition:width .3s ease}
+.ref::before{content:"";position:absolute;top:0;left:0;width:0;height:3px;background:var(--railx-orange);transition:width .3s ease;z-index:2}
 .ref:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(26,31,46,.1);border-color:transparent}
 .ref:hover::before{width:100%}
+.ref img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .4s ease}
+.ref:hover img{transform:scale(1.04)}
+.ref figcaption{padding:22px 22px 26px;flex:1}
 .ref-no{
   font-family:var(--font-display);font-size:.85rem;font-weight:700;color:var(--railx-orange);
-  letter-spacing:.12em;display:block;margin-bottom:12px;
+  letter-spacing:.12em;display:block;margin-bottom:9px;
 }
-.ref h3{font-size:1.05rem;line-height:1.25}
+.ref h3{font-size:1.05rem;line-height:1.25;margin-bottom:9px}
+.ref figcaption p{font-size:.88rem;color:var(--railx-gray);line-height:1.55}
 .ref-works{border-left:3px solid var(--railx-orange);padding:4px 0 4px 28px}
 .ref-works h4{
   font-family:var(--font-display);font-size:1.15rem;text-transform:uppercase;letter-spacing:.03em;
@@ -514,10 +519,41 @@ form .btn{width:100%}
     </div>
 
     <div class="refs">
-      <div class="ref reveal"><span class="ref-no">01</span><h3>Bahnhof Remscheid</h3></div>
-      <div class="ref reveal"><span class="ref-no">02</span><h3>FZI Werk Paderborn</h3></div>
-      <div class="ref reveal"><span class="ref-no">03</span><h3>Bahnhof Gremberg</h3></div>
-      <div class="ref reveal"><span class="ref-no">04</span><h3>Bahnhof Mönchengladbach</h3></div>
+      <figure class="ref reveal">
+        <img src="bilder/ref-remscheid.jpg" alt="Hergestelltes Planum am Bahnhof Remscheid" width="1000" height="750" loading="lazy" />
+        <figcaption>
+          <span class="ref-no">01</span>
+          <h3>Bahnhof Remscheid</h3>
+          <p>Herstellung des Planums für den anschließenden Oberbau.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="ref reveal">
+        <img src="bilder/ref-paderborn.jpg" alt="Fertiggestellte Gleisanlage im FZI Werk Paderborn" width="1000" height="750" loading="lazy" />
+        <figcaption>
+          <span class="ref-no">02</span>
+          <h3>FZI Werk Paderborn</h3>
+          <p>Erneuerung von Gleisanlagen und Weichenverbindungen im Werksbereich.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="ref reveal">
+        <img src="bilder/ref-gremberg.jpg" alt="Weichenumbau am Bahnhof Gremberg" width="1000" height="750" loading="lazy" />
+        <figcaption>
+          <span class="ref-no">03</span>
+          <h3>Bahnhof Gremberg</h3>
+          <p>Weichenumbau mit Maschineneinsatz und anschließender Schotterarbeit.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="ref reveal">
+        <img src="bilder/ref-moenchengladbach.jpg" alt="Trennarbeiten an der doppelten Kreuzweiche am Bahnhof Mönchengladbach" width="1000" height="750" loading="lazy" />
+        <figcaption>
+          <span class="ref-no">04</span>
+          <h3>Bahnhof Mönchengladbach</h3>
+          <p>Doppelte Kreuzweiche — Trenn- und Schienenarbeiten in der Sperrpause.</p>
+        </figcaption>
+      </figure>
     </div>
 
     <div class="ref-works reveal">
