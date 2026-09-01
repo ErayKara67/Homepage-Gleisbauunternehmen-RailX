@@ -197,22 +197,37 @@ p{margin:0}
 .ref::before{content:"";position:absolute;top:0;left:0;width:0;height:3px;background:var(--railx-orange);transition:width .3s ease;z-index:2}
 .ref:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(26,31,46,.1);border-color:transparent}
 .ref:hover::before{width:100%}
-.ref-bild{position:relative;aspect-ratio:4/3;background:var(--railx-dark);overflow:hidden}
-.ref img{
-  width:100%;height:100%;object-fit:cover;display:block;
-  transition:padding .3s ease;
-}
-/* Beim Überfahren wird das vollständige Bild gezeigt statt des Ausschnitts */
-.ref:hover img,
-.ref.offen img{object-fit:contain;padding:8px}
+.ref-bild{position:relative;aspect-ratio:4/3;background:var(--railx-dark);overflow:hidden;cursor:zoom-in}
+.ref img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.ref:hover img{transform:scale(1.04)}
 .ref-lupe{
   position:absolute;right:10px;bottom:10px;z-index:2;
   background:rgba(26,31,46,.72);color:#fff;font-size:.68rem;font-weight:600;
   letter-spacing:.08em;text-transform:uppercase;padding:5px 9px;
   opacity:1;transition:opacity .25s ease;pointer-events:none;
 }
-.ref:hover .ref-lupe,
-.ref.offen .ref-lupe{opacity:0}
+.ref:hover .ref-lupe{opacity:0}
+
+/* Großansicht: legt sich beim Überfahren über die Seite */
+.bild-gross{
+  position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;
+  background:rgba(26,31,46,.92);padding:40px;
+  opacity:0;visibility:hidden;transition:opacity .28s ease,visibility .28s ease;
+  pointer-events:none;
+}
+.bild-gross.sichtbar{opacity:1;visibility:visible}
+.bild-gross img{
+  max-width:100%;max-height:100%;object-fit:contain;display:block;
+  border:3px solid var(--railx-orange);
+  transform:scale(.96);transition:transform .28s ease;
+}
+.bild-gross.sichtbar img{transform:scale(1)}
+.bild-gross figcaption{
+  position:absolute;left:0;right:0;bottom:22px;text-align:center;
+  font-family:var(--font-display);font-size:1.25rem;text-transform:uppercase;
+  letter-spacing:.04em;color:#fff;
+}
+@media (prefers-reduced-motion:reduce){.bild-gross,.bild-gross img{transition:none}}
 .ref figcaption{padding:22px 22px 26px;flex:1}
 .ref-no{
   font-family:var(--font-display);font-size:.85rem;font-weight:700;color:var(--railx-orange);
@@ -756,6 +771,11 @@ form .btn{width:100%}
   </div>
 </section>
 
+<div class="bild-gross" id="bildGross" aria-hidden="true">
+  <img src="" alt="" />
+  <figcaption></figcaption>
+</div>
+
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
   <div class="wrap">
@@ -843,12 +863,40 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
   document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
 }
 
-// Referenzbilder auf Touchgeräten per Antippen vollständig anzeigen
-if (matchMedia('(hover: none)').matches) {
-  document.querySelectorAll('.ref-bild').forEach(box => {
-    box.addEventListener('click', () => box.closest('.ref').classList.toggle('offen'));
-  });
+// Referenzbilder: Großansicht beim Überfahren, auf Touchgeräten beim Antippen
+const bildGross = document.getElementById('bildGross');
+const grossImg = bildGross.querySelector('img');
+const grossText = bildGross.querySelector('figcaption');
+const nurTouch = matchMedia('(hover: none)').matches;
+
+function grossZeigen(box) {
+  const q = box.querySelector('img');
+  const titel = box.closest('.ref').querySelector('h3').textContent;
+  grossImg.src = q.currentSrc || q.src;
+  grossImg.alt = q.alt;
+  grossText.textContent = titel;
+  bildGross.classList.add('sichtbar');
+  bildGross.setAttribute('aria-hidden', 'false');
 }
+
+function grossSchliessen() {
+  bildGross.classList.remove('sichtbar');
+  bildGross.setAttribute('aria-hidden', 'true');
+}
+
+document.querySelectorAll('.ref-bild').forEach(box => {
+  if (nurTouch) {
+    box.addEventListener('click', () => grossZeigen(box));
+  } else {
+    box.addEventListener('mouseenter', () => grossZeigen(box));
+    box.addEventListener('mouseleave', grossSchliessen);
+  }
+});
+
+// Auf Touchgeräten schließt ein Tippen auf die Großansicht diese wieder
+bildGross.addEventListener('click', grossSchliessen);
+bildGross.style.pointerEvents = nurTouch ? 'auto' : 'none';
+addEventListener('keydown', e => { if (e.key === 'Escape') grossSchliessen(); });
 
 // Karte — Zwei-Klick-Lösung: Google wird erst nach aktivem Klick kontaktiert
 const mapLoad = document.getElementById('mapLoad');
