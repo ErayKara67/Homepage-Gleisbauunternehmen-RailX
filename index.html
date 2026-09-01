@@ -211,22 +211,29 @@ p{margin:0}
 /* Großansicht: legt sich beim Überfahren über die Seite */
 .bild-gross{
   position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;
-  background:rgba(26,31,46,.92);padding:40px;
-  opacity:0;visibility:hidden;transition:opacity .28s ease,visibility .28s ease;
-  pointer-events:none;
+  background:rgba(15,18,28,.97);
+  opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease;
+  cursor:zoom-out;
 }
 .bild-gross.sichtbar{opacity:1;visibility:visible}
 .bild-gross img{
-  max-width:100%;max-height:100%;object-fit:contain;display:block;
-  border:3px solid var(--railx-orange);
-  transform:scale(.96);transition:transform .28s ease;
+  width:100%;height:100%;object-fit:contain;display:block;
+  transform:scale(.97);transition:transform .3s ease;
 }
 .bild-gross.sichtbar img{transform:scale(1)}
 .bild-gross figcaption{
-  position:absolute;left:0;right:0;bottom:22px;text-align:center;
-  font-family:var(--font-display);font-size:1.25rem;text-transform:uppercase;
+  position:absolute;left:0;right:0;bottom:0;padding:20px 26px;text-align:center;
+  font-family:var(--font-display);font-size:1.3rem;text-transform:uppercase;
   letter-spacing:.04em;color:#fff;
+  background:linear-gradient(to top,rgba(15,18,28,.85),transparent);
 }
+.bild-zu{
+  position:absolute;top:20px;right:24px;z-index:2;
+  background:none;border:0;color:#fff;cursor:pointer;line-height:0;padding:10px;
+  opacity:.75;transition:opacity .2s ease;
+}
+.bild-zu:hover{opacity:1}
+.bild-zu svg{width:26px;height:26px;stroke:currentColor;stroke-width:2}
 @media (prefers-reduced-motion:reduce){.bild-gross,.bild-gross img{transition:none}}
 .ref figcaption{padding:22px 22px 26px;flex:1}
 .ref-no{
@@ -551,7 +558,7 @@ form .btn{width:100%}
       <figure class="ref reveal">
         <div class="ref-bild">
           <img src="bilder/ref-remscheid.jpg?v=2" alt="Hergestelltes Planum am Bahnhof Remscheid" width="1100" height="619" loading="lazy" />
-          <span class="ref-lupe">Ganzes Bild</span>
+          <span class="ref-lupe">Vergrößern</span>
         </div>
         <figcaption>
           <span class="ref-no">01</span>
@@ -563,7 +570,7 @@ form .btn{width:100%}
       <figure class="ref reveal">
         <div class="ref-bild">
           <img src="bilder/ref-paderborn.jpg?v=2" alt="Fertiggestellte Gleisanlage im FZI Werk Paderborn" width="825" height="1100" loading="lazy" />
-          <span class="ref-lupe">Ganzes Bild</span>
+          <span class="ref-lupe">Vergrößern</span>
         </div>
         <figcaption>
           <span class="ref-no">02</span>
@@ -575,7 +582,7 @@ form .btn{width:100%}
       <figure class="ref reveal">
         <div class="ref-bild">
           <img src="bilder/ref-gremberg.jpg?v=2" alt="Weichenumbau am Bahnhof Gremberg" width="619" height="1100" loading="lazy" />
-          <span class="ref-lupe">Ganzes Bild</span>
+          <span class="ref-lupe">Vergrößern</span>
         </div>
         <figcaption>
           <span class="ref-no">03</span>
@@ -587,7 +594,7 @@ form .btn{width:100%}
       <figure class="ref reveal">
         <div class="ref-bild">
           <img src="bilder/ref-moenchengladbach.jpg?v=2" alt="Trennarbeiten an der doppelten Kreuzweiche am Bahnhof Mönchengladbach" width="1100" height="619" loading="lazy" />
-          <span class="ref-lupe">Ganzes Bild</span>
+          <span class="ref-lupe">Vergrößern</span>
         </div>
         <figcaption>
           <span class="ref-no">04</span>
@@ -772,6 +779,9 @@ form .btn{width:100%}
 </section>
 
 <div class="bild-gross" id="bildGross" aria-hidden="true">
+  <button type="button" class="bild-zu" id="bildZu" aria-label="Ansicht schließen">
+    <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
   <img src="" alt="" />
   <figcaption></figcaption>
 </div>
@@ -863,39 +873,37 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
   document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
 }
 
-// Referenzbilder: Großansicht beim Überfahren, auf Touchgeräten beim Antippen
+// Referenzbilder: Klick öffnet die bildschirmfüllende Ansicht
 const bildGross = document.getElementById('bildGross');
 const grossImg = bildGross.querySelector('img');
 const grossText = bildGross.querySelector('figcaption');
-const nurTouch = matchMedia('(hover: none)').matches;
 
 function grossZeigen(box) {
   const q = box.querySelector('img');
-  const titel = box.closest('.ref').querySelector('h3').textContent;
   grossImg.src = q.currentSrc || q.src;
   grossImg.alt = q.alt;
-  grossText.textContent = titel;
+  grossText.textContent = box.closest('.ref').querySelector('h3').textContent;
   bildGross.classList.add('sichtbar');
   bildGross.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';   // Seite dahinter nicht mitscrollen
 }
 
 function grossSchliessen() {
   bildGross.classList.remove('sichtbar');
   bildGross.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
 }
 
 document.querySelectorAll('.ref-bild').forEach(box => {
-  if (nurTouch) {
-    box.addEventListener('click', () => grossZeigen(box));
-  } else {
-    box.addEventListener('mouseenter', () => grossZeigen(box));
-    box.addEventListener('mouseleave', grossSchliessen);
-  }
+  box.addEventListener('click', () => grossZeigen(box));
 });
 
-// Auf Touchgeräten schließt ein Tippen auf die Großansicht diese wieder
+// Schließen: Klick irgendwo, Schaltfläche oder Escape
 bildGross.addEventListener('click', grossSchliessen);
-bildGross.style.pointerEvents = nurTouch ? 'auto' : 'none';
+document.getElementById('bildZu').addEventListener('click', e => {
+  e.stopPropagation();
+  grossSchliessen();
+});
 addEventListener('keydown', e => { if (e.key === 'Escape') grossSchliessen(); });
 
 // Karte — Zwei-Klick-Lösung: Google wird erst nach aktivem Klick kontaktiert
