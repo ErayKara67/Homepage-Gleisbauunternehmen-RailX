@@ -207,6 +207,11 @@ p{margin:0}
   opacity:1;transition:opacity .25s ease;pointer-events:none;
 }
 .ref:hover .ref-lupe{opacity:0}
+.ref-zahl{
+  position:absolute;left:10px;bottom:10px;z-index:2;
+  background:var(--railx-orange);color:#fff;font-size:.68rem;font-weight:700;
+  letter-spacing:.06em;padding:5px 9px;pointer-events:none;
+}
 
 /* Großansicht: legt sich beim Überfahren über die Seite */
 .bild-gross{
@@ -233,6 +238,25 @@ p{margin:0}
   opacity:.75;transition:opacity .2s ease;
 }
 .bild-zu:hover{opacity:1}
+.bild-nav{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:2;
+  background:rgba(255,255,255,.1);border:0;color:#fff;cursor:pointer;
+  padding:16px 12px;line-height:0;transition:background .2s ease;
+}
+.bild-nav:hover{background:var(--railx-orange)}
+.bild-nav svg{width:24px;height:24px;stroke:currentColor;stroke-width:2;fill:none}
+.bild-nav.zurueck{left:16px}
+.bild-nav.weiter{right:16px}
+.bild-gross.einzeln .bild-nav{display:none}
+.bild-zaehler{
+  position:absolute;top:24px;left:26px;z-index:2;
+  color:rgba(255,255,255,.8);font-size:.82rem;font-weight:600;letter-spacing:.1em;
+}
+@media (max-width:560px){
+  .bild-nav{padding:12px 8px}
+  .bild-nav.zurueck{left:6px}
+  .bild-nav.weiter{right:6px}
+}
 .bild-zu svg{width:26px;height:26px;stroke:currentColor;stroke-width:2}
 @media (prefers-reduced-motion:reduce){.bild-gross,.bild-gross img{transition:none}}
 .ref figcaption{padding:22px 22px 26px;flex:1}
@@ -556,8 +580,8 @@ form .btn{width:100%}
 
     <div class="refs">
       <figure class="ref reveal">
-        <div class="ref-bild">
-          <img src="bilder/ref-remscheid.jpg?v=2" alt="Hergestelltes Planum am Bahnhof Remscheid" width="1100" height="619" loading="lazy" />
+        <div class="ref-bild" data-bilder='[{"src": "bilder/ref-remscheid-1.jpg", "bu": "Hergestelltes Planum vor dem Oberbau"}]'>
+          <img src="bilder/ref-remscheid-1.jpg" alt="Hergestelltes Planum vor dem Oberbau" loading="lazy" />
           <span class="ref-lupe">Vergrößern</span>
         </div>
         <figcaption>
@@ -568,9 +592,10 @@ form .btn{width:100%}
       </figure>
 
       <figure class="ref reveal">
-        <div class="ref-bild">
-          <img src="bilder/ref-paderborn.jpg?v=2" alt="Fertiggestellte Gleisanlage im FZI Werk Paderborn" width="825" height="1100" loading="lazy" />
+        <div class="ref-bild" data-bilder='[{"src": "bilder/ref-paderborn-1.jpg", "bu": "Vermessungs- und Begehungsarbeiten im Werksbereich"}, {"src": "bilder/ref-paderborn-2.jpg", "bu": "Fertiggestellte Kreuzweiche"}, {"src": "bilder/ref-paderborn-3.jpg", "bu": "Neu eingeschotterte Gleisanlage"}]'>
+          <img src="bilder/ref-paderborn-1.jpg" alt="Vermessungs- und Begehungsarbeiten im Werksbereich" loading="lazy" />
           <span class="ref-lupe">Vergrößern</span>
+          <span class="ref-zahl">1&thinsp;/&thinsp;3</span>
         </div>
         <figcaption>
           <span class="ref-no">02</span>
@@ -580,9 +605,10 @@ form .btn{width:100%}
       </figure>
 
       <figure class="ref reveal">
-        <div class="ref-bild">
-          <img src="bilder/ref-gremberg.jpg?v=2" alt="Weichenumbau am Bahnhof Gremberg" width="619" height="1100" loading="lazy" />
+        <div class="ref-bild" data-bilder='[{"src": "bilder/ref-gremberg-1.jpg", "bu": "Weichenumbau mit Maschineneinsatz"}, {"src": "bilder/ref-gremberg-2.jpg", "bu": "Eingebaute Weichenverbindung"}, {"src": "bilder/ref-gremberg-3.jpg", "bu": "Montage der Zungenvorrichtung"}]'>
+          <img src="bilder/ref-gremberg-1.jpg" alt="Weichenumbau mit Maschineneinsatz" loading="lazy" />
           <span class="ref-lupe">Vergrößern</span>
+          <span class="ref-zahl">1&thinsp;/&thinsp;3</span>
         </div>
         <figcaption>
           <span class="ref-no">03</span>
@@ -592,9 +618,10 @@ form .btn{width:100%}
       </figure>
 
       <figure class="ref reveal">
-        <div class="ref-bild">
-          <img src="bilder/ref-moenchengladbach.jpg?v=2" alt="Trennarbeiten an der doppelten Kreuzweiche am Bahnhof Mönchengladbach" width="1100" height="619" loading="lazy" />
+        <div class="ref-bild" data-bilder='[{"src": "bilder/ref-moenchengladbach-1.jpg", "bu": "Trennarbeiten in der Sperrpause"}, {"src": "bilder/ref-moenchengladbach-2.jpg", "bu": "Hergestelltes Schotterplanum"}]'>
+          <img src="bilder/ref-moenchengladbach-1.jpg" alt="Trennarbeiten in der Sperrpause" loading="lazy" />
           <span class="ref-lupe">Vergrößern</span>
+          <span class="ref-zahl">1&thinsp;/&thinsp;2</span>
         </div>
         <figcaption>
           <span class="ref-no">04</span>
@@ -782,6 +809,13 @@ form .btn{width:100%}
   <button type="button" class="bild-zu" id="bildZu" aria-label="Ansicht schließen">
     <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
   </button>
+  <span class="bild-zaehler" id="bildZaehler"></span>
+  <button type="button" class="bild-nav zurueck" id="bildZurueck" aria-label="Vorheriges Bild">
+    <svg viewBox="0 0 24 24" stroke-linecap="square"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <button type="button" class="bild-nav weiter" id="bildWeiter" aria-label="Nächstes Bild">
+    <svg viewBox="0 0 24 24" stroke-linecap="square"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
   <img src="" alt="" />
   <figcaption></figcaption>
 </div>
@@ -873,16 +907,31 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
   document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
 }
 
-// Referenzbilder: Klick öffnet die bildschirmfüllende Ansicht
-const bildGross = document.getElementById('bildGross');
-const grossImg = bildGross.querySelector('img');
-const grossText = bildGross.querySelector('figcaption');
+// Referenzbilder: Klick öffnet die bildschirmfüllende Ansicht mit Blätterfunktion
+const bildGross    = document.getElementById('bildGross');
+const grossImg     = bildGross.querySelector('img');
+const grossText    = bildGross.querySelector('figcaption');
+const grossZaehler = document.getElementById('bildZaehler');
+
+let galerie = [];      // Bilder des aktuell geöffneten Projekts
+let position = 0;      // Index des angezeigten Bildes
+let projektTitel = '';
+
+function bildSetzen(i) {
+  position = (i + galerie.length) % galerie.length;   // umlaufend blättern
+  const b = galerie[position];
+  grossImg.src = b.src;
+  grossImg.alt = b.bu;
+  grossText.textContent = projektTitel + ' — ' + b.bu;
+  grossZaehler.textContent = galerie.length > 1
+    ? (position + 1) + ' / ' + galerie.length : '';
+}
 
 function grossZeigen(box) {
-  const q = box.querySelector('img');
-  grossImg.src = q.currentSrc || q.src;
-  grossImg.alt = q.alt;
-  grossText.textContent = box.closest('.ref').querySelector('h3').textContent;
+  galerie = JSON.parse(box.dataset.bilder);
+  projektTitel = box.closest('.ref').querySelector('h3').textContent;
+  bildGross.classList.toggle('einzeln', galerie.length < 2);
+  bildSetzen(0);
   bildGross.classList.add('sichtbar');
   bildGross.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';   // Seite dahinter nicht mitscrollen
@@ -898,13 +947,27 @@ document.querySelectorAll('.ref-bild').forEach(box => {
   box.addEventListener('click', () => grossZeigen(box));
 });
 
-// Schließen: Klick irgendwo, Schaltfläche oder Escape
+// Schließen: Klick auf den Hintergrund, Schaltfläche oder Escape
 bildGross.addEventListener('click', grossSchliessen);
 document.getElementById('bildZu').addEventListener('click', e => {
-  e.stopPropagation();
-  grossSchliessen();
+  e.stopPropagation(); grossSchliessen();
 });
-addEventListener('keydown', e => { if (e.key === 'Escape') grossSchliessen(); });
+
+// Blättern — stopPropagation, damit der Klick die Ansicht nicht schließt
+document.getElementById('bildZurueck').addEventListener('click', e => {
+  e.stopPropagation(); bildSetzen(position - 1);
+});
+document.getElementById('bildWeiter').addEventListener('click', e => {
+  e.stopPropagation(); bildSetzen(position + 1);
+});
+grossImg.addEventListener('click', e => e.stopPropagation());
+
+addEventListener('keydown', e => {
+  if (!bildGross.classList.contains('sichtbar')) return;
+  if (e.key === 'Escape')     grossSchliessen();
+  if (e.key === 'ArrowLeft')  bildSetzen(position - 1);
+  if (e.key === 'ArrowRight') bildSetzen(position + 1);
+});
 
 // Karte — Zwei-Klick-Lösung: Google wird erst nach aktivem Klick kontaktiert
 const mapLoad = document.getElementById('mapLoad');
