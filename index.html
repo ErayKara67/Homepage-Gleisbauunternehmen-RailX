@@ -255,9 +255,16 @@ p{margin:0}
   color:rgba(255,255,255,.8);font-size:.82rem;font-weight:600;letter-spacing:.1em;
 }
 @media (max-width:560px){
-  .bild-nav{padding:12px 8px}
-  .bild-nav.zurueck{left:6px}
-  .bild-nav.weiter{right:6px}
+  .bild-nav{padding:14px 9px}
+  .bild-nav.zurueck{left:4px}
+  .bild-nav.weiter{right:4px}
+  .bild-nav svg{width:20px;height:20px}
+  /* Bild nicht hinter Beschriftung und Schaltflaechen laufen lassen */
+  .bild-gross img{padding:52px 0 76px}
+  .bild-gross figcaption{font-size:1rem;padding:14px 18px;line-height:1.35}
+  .bild-zaehler{top:16px;left:18px;font-size:.75rem}
+  .bild-zu{top:10px;right:12px;padding:8px}
+  .bild-zu svg{width:22px;height:22px}
 }
 .bild-zu svg{width:26px;height:26px;stroke:currentColor;stroke-width:2}
 @media (prefers-reduced-motion:reduce){.bild-gross,.bild-gross img{transition:none}}
@@ -377,7 +384,8 @@ form .btn{width:100%}
   .services{grid-template-columns:repeat(2,1fr)}
   .services>.card,
   .services>.card:last-child{grid-column:auto}
-  .refs{grid-template-columns:repeat(2,1fr)}
+  .refs,
+  .refs.praxis{grid-template-columns:repeat(2,1fr)}
   .benefits{grid-template-columns:repeat(2,1fr);gap:36px}
   .steps{grid-template-columns:repeat(2,1fr);row-gap:44px}
   .contact{grid-template-columns:1fr;gap:26px}
@@ -406,7 +414,10 @@ form .btn{width:100%}
   .services{grid-template-columns:1fr}
   .services>.card,
   .services>.card:last-child{grid-column:auto}
-  .refs{grid-template-columns:1fr}
+  .refs,
+  .refs.praxis{grid-template-columns:1fr;gap:18px}
+  .ref figcaption{padding:18px 18px 22px}
+  .ref-lupe,.ref-zahl{font-size:.62rem;padding:4px 7px}
   .ref-works ul{columns:1}
   .ref-works{padding-left:20px}
   .benefits,.steps{grid-template-columns:1fr}
