@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://railx-gleisbau.de/sitemap.xml
