@@ -330,7 +330,7 @@ form{margin:0}
 label{display:block;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--railx-dark);margin-bottom:8px}
 input,select,textarea{
   width:100%;padding:14px 16px;border:1px solid var(--border);background:var(--railx-light);
-  font-family:var(--font-body);font-size:.95rem;color:var(--railx-dark);transition:border-color .18s ease,background .18s ease;
+  font-family:var(--font-body);font-size:16px;color:var(--railx-dark);transition:border-color .18s ease,background .18s ease;
 }
 input:focus,select:focus,textarea:focus{outline:none;border-color:var(--railx-orange);background:#fff}
 textarea{resize:vertical;min-height:200px}
@@ -366,6 +366,7 @@ form .btn{width:100%}
 .footer h4{font-family:var(--font-display);font-size:1rem;text-transform:uppercase;letter-spacing:.06em;margin:0 0 20px;color:#fff}
 .footer ul{list-style:none;margin:0;padding:0}
 .footer li{margin-bottom:12px}
+.footer li a{display:inline-block;padding:3px 0}
 .footer li a{color:rgba(255,255,255,.62);font-size:.9rem;transition:color .18s ease}
 .footer li a:hover{color:var(--railx-orange)}
 .footer-bottom{
@@ -375,6 +376,7 @@ form .btn{width:100%}
 .footer-bottom p,.footer-bottom a{color:rgba(255,255,255,.45);font-size:.83rem}
 .footer-bottom a:hover{color:#fff}
 .footer-legal{display:flex;gap:26px}
+.footer-legal a{padding:6px 0}
 
 /* ---------- Reveal ---------- */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
@@ -398,9 +400,10 @@ form .btn{width:100%}
 @media (max-width:820px){
   .nav,.header-phone{display:none}
   .burger{display:block}
+  .header-inner{height:76px}
   .logo-img{height:48px}
   .footer .logo-img{height:60px}
-  .hero{min-height:auto;padding:132px 0 66px}
+  .hero{min-height:auto;padding:112px 0 60px}
   .hero-stats{margin-top:50px}
   .stat{padding:20px 14px}
   .stat-num{font-size:2rem}
@@ -410,6 +413,7 @@ form .btn{width:100%}
 @media (max-width:560px){
   /* Platz fuer das groessere Logo: CTA steckt im Klappmenue */
   .header-cta .btn-primary{display:none}
+  .header-inner{height:68px}
   .logo-img{height:44px}
 
   .services{grid-template-columns:1fr}
@@ -912,6 +916,7 @@ form .btn{width:100%}
         <ul>
           <li><a href="#ueber-uns">Über uns</a></li>
           <li><a href="#referenzen">Referenzen</a></li>
+          <li><a href="#praxis">Aus der Praxis</a></li>
           <li><a href="#ablauf">Ablauf</a></li>
           <li><a href="impressum.html">Impressum</a></li>
           <li><a href="datenschutz.html">Datenschutz</a></li>
