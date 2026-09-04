@@ -225,8 +225,9 @@ p{margin:0}
 .bild-gross.sichtbar{opacity:1;visibility:visible}
 .bild-gross img{
   width:100%;height:100%;object-fit:contain;display:block;
-  transform:scale(.97);transition:transform .3s ease;
+  transform:scale(.97);transition:transform .3s ease,opacity .18s ease;
 }
+.bild-gross img.wechsel{opacity:0}
 .bild-gross.sichtbar img{transform:scale(1)}
 .bild-gross figcaption{
   position:absolute;left:0;right:0;bottom:0;padding:20px 26px;text-align:center;
@@ -980,9 +981,13 @@ let galerie = [];      // Bilder des aktuell geöffneten Projekts
 let position = 0;      // Index des angezeigten Bildes
 let projektTitel = '';
 
-function bildSetzen(i) {
+function bildSetzen(i, weich) {
   position = (i + galerie.length) % galerie.length;   // umlaufend blättern
   const b = galerie[position];
+  if (weich) {
+    grossImg.classList.add('wechsel');
+    grossImg.addEventListener('load', () => grossImg.classList.remove('wechsel'), { once: true });
+  }
   grossImg.src = b.src;
   grossImg.alt = b.bu;
   grossText.textContent = projektTitel + ' — ' + b.bu;
@@ -1011,25 +1016,51 @@ document.querySelectorAll('.ref-bild').forEach(box => {
 });
 
 // Schließen: Klick auf den Hintergrund, Schaltfläche oder Escape
-bildGross.addEventListener('click', grossSchliessen);
+// Wischen auf Touchgeräten: seitlich blättern
+let tippX = 0, tippY = 0, gewischt = false;
+
+bildGross.addEventListener('touchstart', e => {
+  if (e.touches.length !== 1) return;
+  tippX = e.touches[0].clientX;
+  tippY = e.touches[0].clientY;
+  gewischt = false;
+}, { passive: true });
+
+bildGross.addEventListener('touchend', e => {
+  if (galerie.length < 2) return;
+  const t = e.changedTouches[0];
+  const dx = t.clientX - tippX;
+  const dy = t.clientY - tippY;
+  // Nur waagerechte Bewegungen auswerten, damit vertikales Wischen frei bleibt
+  if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+    bildSetzen(position + (dx < 0 ? 1 : -1), true);
+    gewischt = true;
+  }
+}, { passive: true });
+
+// Schließen: Klick auf den Hintergrund — aber nicht nach einem Wisch
+bildGross.addEventListener('click', () => {
+  if (gewischt) { gewischt = false; return; }
+  grossSchliessen();
+});
 document.getElementById('bildZu').addEventListener('click', e => {
   e.stopPropagation(); grossSchliessen();
 });
 
 // Blättern — stopPropagation, damit der Klick die Ansicht nicht schließt
 document.getElementById('bildZurueck').addEventListener('click', e => {
-  e.stopPropagation(); bildSetzen(position - 1);
+  e.stopPropagation(); bildSetzen(position - 1, true);
 });
 document.getElementById('bildWeiter').addEventListener('click', e => {
-  e.stopPropagation(); bildSetzen(position + 1);
+  e.stopPropagation(); bildSetzen(position + 1, true);
 });
 grossImg.addEventListener('click', e => e.stopPropagation());
 
 addEventListener('keydown', e => {
   if (!bildGross.classList.contains('sichtbar')) return;
   if (e.key === 'Escape')     grossSchliessen();
-  if (e.key === 'ArrowLeft')  bildSetzen(position - 1);
-  if (e.key === 'ArrowRight') bildSetzen(position + 1);
+  if (e.key === 'ArrowLeft')  bildSetzen(position - 1, true);
+  if (e.key === 'ArrowRight') bildSetzen(position + 1, true);
 });
 
 // Karte — Zwei-Klick-Lösung: Google wird erst nach aktivem Klick kontaktiert
