@@ -189,6 +189,8 @@ p{margin:0}
 
 /* ---------- Referenzen ---------- */
 .refs{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-bottom:52px}
+.refs.praxis{grid-template-columns:repeat(3,1fr);margin-bottom:0}
+.refs.praxis .ref h3{margin-bottom:9px}
 .ref{
   background:#fff;border:1px solid var(--border);margin:0;overflow:hidden;position:relative;
   display:flex;flex-direction:column;
@@ -433,6 +435,7 @@ form .btn{width:100%}
     <nav class="nav" aria-label="Hauptnavigation">
       <a href="#leistungen">Leistungen</a>
       <a href="#referenzen">Referenzen</a>
+      <a href="#praxis">Praxis</a>
       <a href="#ablauf">Ablauf</a>
       <a href="#ueber-uns">Über uns</a>
       <a href="#kontakt">Kontakt</a>
@@ -453,6 +456,7 @@ form .btn{width:100%}
   <div class="mobile-nav" id="mobileNav">
     <a href="#leistungen">Leistungen</a>
     <a href="#referenzen">Referenzen</a>
+    <a href="#praxis">Praxis</a>
     <a href="#ablauf">Ablauf</a>
     <a href="#ueber-uns">Über uns</a>
     <a href="#kontakt">Kontakt</a>
@@ -592,10 +596,10 @@ form .btn{width:100%}
       </figure>
 
       <figure class="ref reveal">
-        <div class="ref-bild" data-bilder='[{"src": "bilder/ref-paderborn-1.jpg", "bu": "Vermessungs- und Begehungsarbeiten im Werksbereich"}, {"src": "bilder/ref-paderborn-2.jpg", "bu": "Fertiggestellte Kreuzweiche"}, {"src": "bilder/ref-paderborn-3.jpg", "bu": "Neu eingeschotterte Gleisanlage"}]'>
+        <div class="ref-bild" data-bilder='[{"src": "bilder/ref-paderborn-1.jpg", "bu": "Vermessungs- und Begehungsarbeiten im Werksbereich"}, {"src": "bilder/ref-paderborn-2.jpg", "bu": "Fertiggestellte Kreuzweiche"}, {"src": "bilder/ref-paderborn-3.jpg", "bu": "Neu eingeschotterte Gleisanlage"}, {"src": "bilder/ref-paderborn-4.jpg", "bu": "Stopfarbeiten am neu verlegten Gleis"}, {"src": "bilder/ref-paderborn-5.jpg", "bu": "Verdichtung des Planums mit der Rüttelplatte"}, {"src": "bilder/ref-paderborn-6.jpg", "bu": "Kontrollmessung der Gleislage"}]'>
           <img src="bilder/ref-paderborn-1.jpg" alt="Vermessungs- und Begehungsarbeiten im Werksbereich" loading="lazy" />
           <span class="ref-lupe">Vergrößern</span>
-          <span class="ref-zahl">1&thinsp;/&thinsp;3</span>
+          <span class="ref-zahl">1&thinsp;/&thinsp;6</span>
         </div>
         <figcaption>
           <span class="ref-no">02</span>
@@ -605,10 +609,10 @@ form .btn{width:100%}
       </figure>
 
       <figure class="ref reveal">
-        <div class="ref-bild" data-bilder='[{"src": "bilder/ref-gremberg-1.jpg", "bu": "Weichenumbau mit Maschineneinsatz"}, {"src": "bilder/ref-gremberg-2.jpg", "bu": "Eingebaute Weichenverbindung"}, {"src": "bilder/ref-gremberg-3.jpg", "bu": "Montage der Zungenvorrichtung"}]'>
+        <div class="ref-bild" data-bilder='[{"src": "bilder/ref-gremberg-1.jpg", "bu": "Weichenumbau mit Maschineneinsatz"}, {"src": "bilder/ref-gremberg-2.jpg", "bu": "Eingebaute Weichenverbindung"}, {"src": "bilder/ref-gremberg-3.jpg", "bu": "Montage der Zungenvorrichtung"}, {"src": "bilder/ref-gremberg-4.jpg", "bu": "Weichenschwellen mit Rollvorrichtung"}, {"src": "bilder/ref-gremberg-5.jpg", "bu": "Weiche im Einbau"}]'>
           <img src="bilder/ref-gremberg-1.jpg" alt="Weichenumbau mit Maschineneinsatz" loading="lazy" />
           <span class="ref-lupe">Vergrößern</span>
-          <span class="ref-zahl">1&thinsp;/&thinsp;3</span>
+          <span class="ref-zahl">1&thinsp;/&thinsp;5</span>
         </div>
         <figcaption>
           <span class="ref-no">03</span>
@@ -618,10 +622,10 @@ form .btn{width:100%}
       </figure>
 
       <figure class="ref reveal">
-        <div class="ref-bild" data-bilder='[{"src": "bilder/ref-moenchengladbach-1.jpg", "bu": "Trennarbeiten in der Sperrpause"}, {"src": "bilder/ref-moenchengladbach-2.jpg", "bu": "Hergestelltes Schotterplanum"}]'>
+        <div class="ref-bild" data-bilder='[{"src": "bilder/ref-moenchengladbach-1.jpg", "bu": "Trennarbeiten in der Sperrpause"}, {"src": "bilder/ref-moenchengladbach-2.jpg", "bu": "Hergestelltes Schotterplanum"}, {"src": "bilder/ref-moenchengladbach-3.jpg", "bu": "Weiche W33 im Einbau"}, {"src": "bilder/ref-moenchengladbach-4.jpg", "bu": "Weiche W33 nach dem Einbau"}, {"src": "bilder/ref-moenchengladbach-5.jpg", "bu": "Fertige Weichenverbindung bei Tagesanbruch"}, {"src": "bilder/ref-moenchengladbach-6.jpg", "bu": "Einsatzleitung vor Ort"}]'>
           <img src="bilder/ref-moenchengladbach-1.jpg" alt="Trennarbeiten in der Sperrpause" loading="lazy" />
           <span class="ref-lupe">Vergrößern</span>
-          <span class="ref-zahl">1&thinsp;/&thinsp;2</span>
+          <span class="ref-zahl">1&thinsp;/&thinsp;6</span>
         </div>
         <figcaption>
           <span class="ref-no">04</span>
@@ -640,6 +644,54 @@ form .btn{width:100%}
         <li>Schienenwechsel sowie Instandhaltungsarbeiten an Gleis- und Oberbauanlagen</li>
         <li>Durchführung von Bauleistungen unter den Bedingungen des laufenden Eisenbahnbetriebes</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AUS DER PRAXIS ================= -->
+<section class="section section-light" id="praxis">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Aus der Praxis</span>
+      <h2>Einblicke in unsere Arbeit</h2>
+      <p>Aufnahmen von unseren Baustellen — bei Tag, in der Nachtsperrpause und unter laufendem Betrieb.</p>
+    </div>
+
+    <div class="refs praxis">
+      <figure class="ref reveal">
+        <div class="ref-bild" data-bilder='[{"src": "bilder/tat-schienenarbeiten-1.jpg", "bu": "Trennschnitt an der Schiene"}, {"src": "bilder/tat-schienenarbeiten-2.jpg", "bu": "Trennarbeiten bei Nacht"}, {"src": "bilder/tat-schienenarbeiten-3.jpg", "bu": "Schienenbearbeitung auf freier Strecke"}, {"src": "bilder/tat-schienenarbeiten-4.jpg", "bu": "Schienenarbeiten am Tunnelportal"}]'>
+          <img src="bilder/tat-schienenarbeiten-1.jpg" alt="Trennschnitt an der Schiene" loading="lazy" />
+          <span class="ref-lupe">Vergrößern</span>
+          <span class="ref-zahl">1&thinsp;/&thinsp;4</span>
+        </div>
+        <figcaption>
+          <h3>Schienenarbeiten</h3>
+          <p>Trennschnitte, Schweißarbeiten und Schienenbearbeitung — auch in der Nachtsperrpause.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="ref reveal">
+        <div class="ref-bild" data-bilder='[{"src": "bilder/tat-gleisbau-1.jpg", "bu": "Weicheneinbau mit Zweiwegebagger"}, {"src": "bilder/tat-gleisbau-2.jpg", "bu": "Schwellenverlegung im Streckengleis"}]'>
+          <img src="bilder/tat-gleisbau-1.jpg" alt="Weicheneinbau mit Zweiwegebagger" loading="lazy" />
+          <span class="ref-lupe">Vergrößern</span>
+          <span class="ref-zahl">1&thinsp;/&thinsp;2</span>
+        </div>
+        <figcaption>
+          <h3>Gleis- und Weichenbau</h3>
+          <p>Einbau von Weichen und Schwellen mit Maschinenunterstützung.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="ref reveal">
+        <div class="ref-bild" data-bilder='[{"src": "bilder/tat-stopfarbeiten-1.jpg", "bu": "Stopfarbeiten von Hand"}]'>
+          <img src="bilder/tat-stopfarbeiten-1.jpg" alt="Stopfarbeiten von Hand" loading="lazy" />
+          <span class="ref-lupe">Vergrößern</span>
+        </div>
+        <figcaption>
+          <h3>Stopf- und Schotterarbeiten</h3>
+          <p>Herstellen der Gleislage und Verdichten des Schotterbetts.</p>
+        </figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -848,6 +900,7 @@ form .btn{width:100%}
         <ul>
           <li><a href="#ueber-uns">Über uns</a></li>
           <li><a href="#referenzen">Referenzen</a></li>
+          <li><a href="#praxis">Aus der Praxis</a></li>
           <li><a href="#ablauf">Ablauf</a></li>
           <li><a href="impressum.html">Impressum</a></li>
           <li><a href="datenschutz.html">Datenschutz</a></li>
