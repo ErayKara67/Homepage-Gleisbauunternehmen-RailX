@@ -1184,7 +1184,8 @@ document.getElementById('bildZurueck').addEventListener('click', e => {
 document.getElementById('bildWeiter').addEventListener('click', e => {
   e.stopPropagation(); bildSetzen(position + 1, true);
 });
-grossImg.addEventListener('click', e => e.stopPropagation());
+// Klick auf das Bild schließt die Ansicht ebenfalls —
+// der Wisch-Schutz oben verhindert, dass ein Wischen als Klick zählt.
 
 addEventListener('keydown', e => {
   if (!bildGross.classList.contains('sichtbar')) return;
