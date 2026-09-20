@@ -354,24 +354,35 @@ p{margin:0}
 
 /* Großansicht: legt sich beim Überfahren über die Seite */
 .bild-gross{
-  position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;
+  position:fixed;inset:0;z-index:300;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+  padding:max(64px,calc(env(safe-area-inset-top) + 56px)) 72px max(22px,env(safe-area-inset-bottom));
   background:rgba(15,18,28,.97);overscroll-behavior:contain;touch-action:pan-y;
   opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease;
   cursor:zoom-out;
 }
 .bild-gross.sichtbar{opacity:1;visibility:visible}
+/* Bildgröße wird per Skript exakt auf die verfügbare Fläche gerechnet;
+   die Werte hier sind nur der Ausgangszustand vor dem ersten Laden */
 .bild-gross img{
-  width:100%;height:100%;object-fit:contain;display:block;
+  display:block;flex:0 1 auto;min-height:0;
+  max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;
   transform:scale(.97);transition:transform .3s ease,opacity .18s ease;
 }
 .bild-gross img.wechsel{opacity:0}
 .bild-gross.sichtbar img{transform:scale(1)}
+/* Unterschrift steht unter dem Bild und ist genau so breit wie das Bild */
 .bild-gross figcaption{
-  position:absolute;left:0;right:0;bottom:0;
-  padding:20px 26px calc(20px + env(safe-area-inset-bottom));text-align:center;
-  font-family:var(--font-display);font-size:1.3rem;text-transform:uppercase;
-  letter-spacing:.04em;color:#fff;
-  background:linear-gradient(to top,rgba(15,18,28,.85),transparent);
+  flex:0 0 auto;box-sizing:border-box;max-width:100%;padding:0 4px;
+  text-align:center;color:#fff;
+}
+.bild-gross .bild-titel{
+  display:block;font-family:var(--font-display);font-weight:700;font-size:1.15rem;
+  text-transform:uppercase;letter-spacing:.06em;line-height:1.2;
+}
+.bild-gross .bild-text{
+  display:block;margin-top:4px;font-size:.95rem;line-height:1.45;
+  color:rgba(255,255,255,.82);text-wrap:balance;
 }
 .bild-zu{
   position:absolute;top:max(20px,env(safe-area-inset-top));right:max(24px,env(safe-area-inset-right));z-index:2;
@@ -398,9 +409,9 @@ p{margin:0}
   .bild-nav.zurueck{left:4px}
   .bild-nav.weiter{right:4px}
   .bild-nav svg{width:20px;height:20px}
-  /* Bild nicht hinter Beschriftung und Schaltflaechen laufen lassen */
-  .bild-gross img{padding:52px 0 76px}
-  .bild-gross figcaption{font-size:1rem;padding:14px 18px;line-height:1.35}
+  .bild-gross{padding:max(56px,calc(env(safe-area-inset-top) + 48px)) 14px max(16px,env(safe-area-inset-bottom));gap:10px}
+  .bild-gross .bild-titel{font-size:1rem}
+  .bild-gross .bild-text{font-size:.85rem}
   .bild-zaehler{top:16px;left:18px;font-size:.75rem}
   .bild-zu{top:10px;right:12px;padding:8px}
   .bild-zu svg{width:22px;height:22px}
@@ -738,8 +749,8 @@ form .btn{width:100%}
 
     <div class="refs">
       <figure class="ref reveal">
-        <div class="ref-bild" data-bilder='[{"src": "bilder/ref-remscheid-1.jpg?v=5", "bu": "Herstellung und Verdichtung des Planums für den anschließenden Gleisoberbau"}, {"src": "bilder/ref-remscheid-2.jpg?v=5", "bu": "Vermessung der Gleislage am neu verlegten Gleisrost"}, {"src": "bilder/ref-remscheid-3.jpg?v=5", "bu": "Neu verlegter Gleisrost auf dem vorbereiteten Schotterbett"}, {"src": "bilder/ref-remscheid-4.jpg?v=5", "bu": "Schotterarbeiten am neu verlegten Gleis"}, {"src": "bilder/ref-remscheid-5.jpg?v=5", "bu": "Ausgelegte Betonschwellen mit Schienenbefestigung vor dem Einbau der Schienen"}, {"src": "bilder/ref-remscheid-6.jpg?v=5", "bu": "Oberbauarbeiten neben dem Bestandsgleis"}, {"src": "bilder/ref-remscheid-7.jpg?v=5", "bu": "Kontrolle der Spurweite mit dem Gleismessgerät"}, {"src": "bilder/ref-remscheid-8.jpg?v=5", "bu": "Schienentrennschnitt mit der Schienentrennschleifmaschine"}, {"src": "bilder/ref-remscheid-9.jpg?v=5", "bu": "Schienenbearbeitung mit hydraulischem Aggregat"}, {"src": "bilder/ref-remscheid-10.jpg?v=5", "bu": "Weichenbereich nach Abschluss der Schotterarbeiten"}, {"src": "bilder/ref-remscheid-11.jpg?v=5", "bu": "Gleisstopfmaschine im Einsatz"}]'>
-          <img src="bilder/ref-remscheid-1.jpg?v=5" alt="Herstellung und Verdichtung des Planums für den anschließenden Gleisoberbau" loading="lazy" />
+        <div class="ref-bild" data-bilder='[{"src": "bilder/ref-remscheid-1.jpg?v=6", "bu": "Herstellung und Verdichtung des Planums für den anschließenden Gleisoberbau"}, {"src": "bilder/ref-remscheid-2.jpg?v=6", "bu": "Vermessung der Gleislage am neu verlegten Gleisjoch"}, {"src": "bilder/ref-remscheid-3.jpg?v=6", "bu": "Neu verlegtes Gleisjoch auf der vorbereiteten Schotterbettung"}, {"src": "bilder/ref-remscheid-4.jpg?v=6", "bu": "Verfüllen der Schwellenfächer mit Gleisschotter"}, {"src": "bilder/ref-remscheid-5.jpg?v=6", "bu": "Ausgelegte Betonschwellen mit vormontierter Schienenbefestigung vor dem Schieneneinbau"}, {"src": "bilder/ref-remscheid-6.jpg?v=6", "bu": "Absteckung und Schwellenverlegung neben dem Bestandsgleis"}, {"src": "bilder/ref-remscheid-7.jpg?v=6", "bu": "Kontrolle von Spurweite und Überhöhung mit der Gleismesslehre"}, {"src": "bilder/ref-remscheid-8.jpg?v=6", "bu": "Schienentrennschnitt mit der Schienentrennschleifmaschine"}, {"src": "bilder/ref-remscheid-9.jpg?v=6", "bu": "Anziehen der Schienenbefestigung mit der Gleisschraubmaschine"}, {"src": "bilder/ref-remscheid-10.jpg?v=6", "bu": "Weichenbereich nach der Einschotterung"}, {"src": "bilder/ref-remscheid-11.jpg?v=6", "bu": "Maschinelle Durcharbeitung mit der Gleisstopfmaschine"}]'>
+          <img src="bilder/ref-remscheid-1.jpg?v=6" alt="Herstellung und Verdichtung des Planums für den anschließenden Gleisoberbau" loading="lazy" />
           <span class="ref-lupe">Vergrößern</span>
           <span class="ref-zahl">1&thinsp;/&thinsp;11</span>
         </div>
@@ -751,8 +762,8 @@ form .btn{width:100%}
       </figure>
 
       <figure class="ref reveal">
-        <div class="ref-bild" data-bilder='[{"src": "bilder/ref-paderborn-1.jpg?v=5", "bu": "Gleis- und Weichenarbeiten im Werksbereich"}, {"src": "bilder/ref-paderborn-2.jpg?v=5", "bu": "Fertiggestellte Kreuzungsweiche"}, {"src": "bilder/ref-paderborn-3.jpg?v=5", "bu": "Neu eingeschotterte Gleisanlage"}, {"src": "bilder/ref-paderborn-4.jpg?v=5", "bu": "Gleisrichten und Stopfen im Werksbereich"}, {"src": "bilder/ref-paderborn-5.jpg?v=5", "bu": "Verdichtung des Planums mit Rüttelplatte"}, {"src": "bilder/ref-paderborn-6.jpg?v=5", "bu": "Kontrollmessung der Gleislage"}]'>
-          <img src="bilder/ref-paderborn-1.jpg?v=5" alt="Gleis- und Weichenarbeiten im Werksbereich" loading="lazy" />
+        <div class="ref-bild" data-bilder='[{"src": "bilder/ref-paderborn-1.jpg?v=6", "bu": "Gleis- und Weichenarbeiten im Werksbereich"}, {"src": "bilder/ref-paderborn-2.jpg?v=6", "bu": "Herzstückbereich der neu eingebauten Weiche"}, {"src": "bilder/ref-paderborn-3.jpg?v=6", "bu": "Neu eingeschotterte Gleisanlage im Werksbereich"}, {"src": "bilder/ref-paderborn-4.jpg?v=6", "bu": "Unterstopfen der Schwellen mit Stopfhacken im Werksgleis"}, {"src": "bilder/ref-paderborn-5.jpg?v=6", "bu": "Verdichtung des Planums mit der Rüttelplatte"}, {"src": "bilder/ref-paderborn-6.jpg?v=6", "bu": "Kontrollmessung an der eingebauten Weiche"}]'>
+          <img src="bilder/ref-paderborn-1.jpg?v=6" alt="Gleis- und Weichenarbeiten im Werksbereich" loading="lazy" />
           <span class="ref-lupe">Vergrößern</span>
           <span class="ref-zahl">1&thinsp;/&thinsp;6</span>
         </div>
@@ -764,8 +775,8 @@ form .btn{width:100%}
       </figure>
 
       <figure class="ref reveal">
-        <div class="ref-bild" data-bilder='[{"src": "bilder/ref-gremberg-1.jpg?v=5", "bu": "Maschinengestützter Weichenumbau"}, {"src": "bilder/ref-gremberg-2.jpg?v=5", "bu": "Fertiggestellte Weichenverbindung"}, {"src": "bilder/ref-gremberg-3.jpg?v=5", "bu": "Montagearbeiten an der Zungenvorrichtung"}, {"src": "bilder/ref-gremberg-4.jpg?v=5", "bu": "Ausgelegte Weichenschwellen zur Weichenmontage"}, {"src": "bilder/ref-gremberg-5.jpg?v=5", "bu": "Weicheneinbau"}]'>
-          <img src="bilder/ref-gremberg-1.jpg?v=5" alt="Maschinengestützter Weichenumbau" loading="lazy" />
+        <div class="ref-bild" data-bilder='[{"src": "bilder/ref-gremberg-1.jpg?v=6", "bu": "Weichenumbau mit dem Zweiwegebagger"}, {"src": "bilder/ref-gremberg-2.jpg?v=6", "bu": "Neu eingebaute Weiche mit Zungenvorrichtung und Gleitstühlen"}, {"src": "bilder/ref-gremberg-3.jpg?v=6", "bu": "Montagearbeiten an der Zungenvorrichtung"}, {"src": "bilder/ref-gremberg-4.jpg?v=6", "bu": "Ausgelegte Weichenschwellen mit vormontierten Gleitstuhlplatten"}, {"src": "bilder/ref-gremberg-5.jpg?v=6", "bu": "Vorbereiteter Weichenschwellenrost vor dem Einlegen der Schienen"}]'>
+          <img src="bilder/ref-gremberg-1.jpg?v=6" alt="Weichenumbau mit dem Zweiwegebagger" loading="lazy" />
           <span class="ref-lupe">Vergrößern</span>
           <span class="ref-zahl">1&thinsp;/&thinsp;5</span>
         </div>
@@ -777,8 +788,8 @@ form .btn{width:100%}
       </figure>
 
       <figure class="ref reveal">
-        <div class="ref-bild" data-bilder='[{"src": "bilder/ref-moenchengladbach-1.jpg?v=5", "bu": "Schienentrennschnitte an einer doppelten Kreuzungsweiche (DKW) während der Sperrpause"}, {"src": "bilder/ref-moenchengladbach-2.jpg?v=5", "bu": "Hergestelltes Schotterplanum"}, {"src": "bilder/ref-moenchengladbach-3.jpg?v=5", "bu": "Weiche W33 nach dem Einbau"}, {"src": "bilder/ref-moenchengladbach-4.jpg?v=5", "bu": "Fertiggestellte Weichenverbindung"}, {"src": "bilder/ref-moenchengladbach-5.jpg?v=5", "bu": "Abschluss der Weichenarbeiten bei Tagesanbruch"}, {"src": "bilder/ref-moenchengladbach-6.jpg?v=5", "bu": "Baustellendokumentation während des Weicheneinbaus"}]'>
-          <img src="bilder/ref-moenchengladbach-1.jpg?v=5" alt="Schienentrennschnitte an einer doppelten Kreuzungsweiche (DKW) während der Sperrpause" loading="lazy" />
+        <div class="ref-bild" data-bilder='[{"src": "bilder/ref-moenchengladbach-1.jpg?v=6", "bu": "Schienentrennschnitte an einer doppelten Kreuzungsweiche (DKW) während der Sperrpause"}, {"src": "bilder/ref-moenchengladbach-2.jpg?v=6", "bu": "Verdichtung der Schotterbettung vor dem Weicheneinbau"}, {"src": "bilder/ref-moenchengladbach-3.jpg?v=6", "bu": "Weiche 33 nach dem Einbau"}, {"src": "bilder/ref-moenchengladbach-4.jpg?v=6", "bu": "Fertig eingebaute Weiche mit neuer Bettung"}, {"src": "bilder/ref-moenchengladbach-5.jpg?v=6", "bu": "Neu eingebaute Weiche bei Tagesanbruch nach der Nachtsperrpause"}, {"src": "bilder/ref-moenchengladbach-6.jpg?v=6", "bu": "Weicheneinbau mit dem Gleisbaukran"}]'>
+          <img src="bilder/ref-moenchengladbach-1.jpg?v=6" alt="Schienentrennschnitte an einer doppelten Kreuzungsweiche (DKW) während der Sperrpause" loading="lazy" />
           <span class="ref-lupe">Vergrößern</span>
           <span class="ref-zahl">1&thinsp;/&thinsp;6</span>
         </div>
@@ -814,8 +825,8 @@ form .btn{width:100%}
 
     <div class="refs praxis">
       <figure class="ref reveal">
-        <div class="ref-bild" data-bilder='[{"src": "bilder/tat-schienenarbeiten-1.jpg?v=5", "bu": "Schienentrennschnitt mit Schienentrennschleifmaschine"}, {"src": "bilder/tat-schienenarbeiten-2.jpg?v=5", "bu": "Schienentrennschnitt am Schienenstrang"}, {"src": "bilder/tat-schienenarbeiten-3.jpg?v=5", "bu": "Schienenbearbeitung auf freier Strecke"}, {"src": "bilder/tat-schienenarbeiten-4.jpg?v=5", "bu": "Schienentrennschnitt am Tunnelportal"}]'>
-          <img src="bilder/tat-schienenarbeiten-1.jpg?v=5" alt="Schienentrennschnitt mit Schienentrennschleifmaschine" loading="lazy" />
+        <div class="ref-bild" data-bilder='[{"src": "bilder/tat-schienenarbeiten-1.jpg?v=6", "bu": "Schienentrennschnitt mit der Schienentrennschleifmaschine"}, {"src": "bilder/tat-schienenarbeiten-2.jpg?v=6", "bu": "Schienentrennschnitt in der Nachtsperrpause"}, {"src": "bilder/tat-schienenarbeiten-3.jpg?v=6", "bu": "Anziehen der Schienenbefestigung mit der Gleisschraubmaschine"}, {"src": "bilder/tat-schienenarbeiten-4.jpg?v=6", "bu": "Schienentrennschnitt am Tunnelportal"}]'>
+          <img src="bilder/tat-schienenarbeiten-1.jpg?v=6" alt="Schienentrennschnitt mit der Schienentrennschleifmaschine" loading="lazy" />
           <span class="ref-lupe">Vergrößern</span>
           <span class="ref-zahl">1&thinsp;/&thinsp;4</span>
         </div>
@@ -826,8 +837,8 @@ form .btn{width:100%}
       </figure>
 
       <figure class="ref reveal">
-        <div class="ref-bild" data-bilder='[{"src": "bilder/tat-gleisbau-1.jpg?v=5", "bu": "Maschinengestützter Gleis- und Weichenbau"}, {"src": "bilder/tat-gleisbau-2.jpg?v=5", "bu": "Schwellenverlegung im Streckengleis"}]'>
-          <img src="bilder/tat-gleisbau-1.jpg?v=5" alt="Maschinengestützter Gleis- und Weichenbau" loading="lazy" />
+        <div class="ref-bild" data-bilder='[{"src": "bilder/tat-gleisbau-1.jpg?v=6", "bu": "Maschinengestützter Gleisbau mit dem Zweiwegebagger"}, {"src": "bilder/tat-gleisbau-2.jpg?v=6", "bu": "Schwellenverlegung im Streckengleis"}]'>
+          <img src="bilder/tat-gleisbau-1.jpg?v=6" alt="Maschinengestützter Gleisbau mit dem Zweiwegebagger" loading="lazy" />
           <span class="ref-lupe">Vergrößern</span>
           <span class="ref-zahl">1&thinsp;/&thinsp;2</span>
         </div>
@@ -838,8 +849,8 @@ form .btn{width:100%}
       </figure>
 
       <figure class="ref reveal">
-        <div class="ref-bild" data-bilder='[{"src": "bilder/tat-stopfarbeiten-1.jpg?v=5", "bu": "Stopfarbeiten mit Handstopfmaschine"}]'>
-          <img src="bilder/tat-stopfarbeiten-1.jpg?v=5" alt="Stopfarbeiten mit Handstopfmaschine" loading="lazy" />
+        <div class="ref-bild" data-bilder='[{"src": "bilder/tat-stopfarbeiten-1.jpg?v=6", "bu": "Unterstopfen der Schwellen mit der Stopfhacke"}]'>
+          <img src="bilder/tat-stopfarbeiten-1.jpg?v=6" alt="Unterstopfen der Schwellen mit der Stopfhacke" loading="lazy" />
           <span class="ref-lupe">Vergrößern</span>
         </div>
         <figcaption>
@@ -1028,7 +1039,7 @@ form .btn{width:100%}
     <svg viewBox="0 0 24 24" stroke-linecap="square"><path d="M9 5l7 7-7 7"/></svg>
   </button>
   <img src="" alt="" />
-  <figcaption></figcaption>
+  <figcaption><strong class="bild-titel"></strong><span class="bild-text"></span></figcaption>
 </div>
 
 <!-- ================= FOOTER ================= -->
@@ -1123,7 +1134,32 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
 const bildGross    = document.getElementById('bildGross');
 const grossImg     = bildGross.querySelector('img');
 const grossText    = bildGross.querySelector('figcaption');
+const grossTitel   = grossText.querySelector('.bild-titel');
+const grossBu      = grossText.querySelector('.bild-text');
 const grossZaehler = document.getElementById('bildZaehler');
+
+// Bild so groß wie möglich in die Fläche einpassen und die Unterschrift
+// auf dieselbe Breite bringen — so ragt sie bei Hochformat nicht seitlich heraus
+function grossLayout() {
+  if (!grossImg.naturalWidth) return;
+  const cs      = getComputedStyle(bildGross);
+  const innenB  = bildGross.clientWidth  - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+  const innenH  = bildGross.clientHeight - parseFloat(cs.paddingTop)  - parseFloat(cs.paddingBottom);
+  const abstand = parseFloat(cs.rowGap) || 0;
+  const nb = grossImg.naturalWidth, nh = grossImg.naturalHeight;
+  let bildB = innenB, bildH = innenH;
+  // Textbreite und Bildgröße hängen voneinander ab (Zeilenumbruch) — kurz iterieren
+  for (let i = 0; i < 3; i++) {
+    grossText.style.width = Math.min(innenB, Math.max(bildB, 320)) + 'px';
+    const textH = grossText.offsetHeight + abstand;
+    const f = Math.min(innenB / nb, (innenH - textH) / nh);
+    bildB = Math.round(nb * f); bildH = Math.round(nh * f);
+  }
+  grossImg.style.width  = bildB + 'px';
+  grossImg.style.height = bildH + 'px';
+}
+grossImg.addEventListener('load', grossLayout);
+window.addEventListener('resize', () => { if (bildGross.classList.contains('sichtbar')) grossLayout(); });
 
 let galerie = [];      // Bilder des aktuell geöffneten Projekts
 let position = 0;      // Index des angezeigten Bildes
@@ -1138,7 +1174,9 @@ function bildSetzen(i, weich) {
   }
   grossImg.src = b.src;
   grossImg.alt = b.bu;
-  grossText.textContent = projektTitel + ' — ' + b.bu;
+  grossTitel.textContent = projektTitel;
+  grossBu.textContent = b.bu;
+  if (grossImg.complete) grossLayout();
   grossZaehler.textContent = galerie.length > 1
     ? (position + 1) + ' / ' + galerie.length : '';
 }
