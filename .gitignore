@@ -1,0 +1,9 @@
+# Arbeitsnotizen und Einstellungen für Claude Code — nicht veröffentlichen.
+# Der Deploy lädt das gesamte Repository auf railx-gleisbau.de hoch.
+CLAUDE.md
+CLAUDE.local.md
+.claude/
+
+# Windows-Systemdateien (entstehen z. B. in Bildordnern)
+Thumbs.db
+desktop.ini
