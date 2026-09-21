@@ -176,6 +176,7 @@
    ============================================================ */
 :root{
   --railx-orange:#E10613;   /* Signalrot */
+  --railx-orange-hell:#FA404B; /* Signalrot aufgehellt: kleine Schrift auf Nachtblau (4,6:1) */
   --railx-dark:#1a1f2e;     /* Nachtblau */
   --railx-gray:#6B7280;
   --railx-light:#F9FAFB;
@@ -426,9 +427,9 @@ p{margin:0}
 .ref h3{font-size:1.05rem;line-height:1.25;margin-bottom:9px}
 .ref figcaption p{font-size:.88rem;color:var(--railx-gray);line-height:1.55}
 .ref-works{border-left:3px solid var(--railx-orange);padding:4px 0 4px 28px}
-.ref-works h4{
+.ref-works h3{
   font-family:var(--font-display);font-size:1.15rem;text-transform:uppercase;letter-spacing:.03em;
-  margin:0 0 16px;color:var(--railx-dark);
+  margin:0 0 16px;color:var(--railx-dark);line-height:inherit;
 }
 .ref-works ul{list-style:none;margin:0;padding:0;columns:2;column-gap:44px}
 .ref-works li{
@@ -442,7 +443,7 @@ p{margin:0}
 .benefit{padding-top:26px;border-top:2px solid rgba(255,255,255,.25)}
 .benefit h3{font-size:1.1rem;margin-bottom:11px;color:#fff}
 .benefit p{color:rgba(255,255,255,.68);font-size:.92rem}
-.benefit-no{font-family:var(--font-display);font-size:.85rem;font-weight:700;color:var(--railx-orange);letter-spacing:.12em;display:block;margin-bottom:12px}
+.benefit-no{font-family:var(--font-display);font-size:.85rem;font-weight:700;color:var(--railx-orange-hell);letter-spacing:.12em;display:block;margin-bottom:12px}
 
 /* ---------- Ablauf ---------- */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
@@ -459,7 +460,7 @@ p{margin:0}
 .band{background:var(--railx-orange);padding:64px 0}
 .band-inner{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
 .band h2{color:#fff;max-width:640px}
-.band p{color:rgba(255,255,255,.9);margin-top:14px;max-width:560px}
+.band p{color:#fff;margin-top:14px;max-width:560px}
 .band .btn{background:#fff;color:var(--railx-orange);border-color:#fff}
 .band .btn:hover{background:var(--railx-dark);color:#fff;border-color:var(--railx-dark)}
 
@@ -512,7 +513,7 @@ form .btn{width:100%}
 .footer{background:var(--railx-dark);color:#fff;padding:76px 0 0}
 .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;padding-bottom:56px}
 .footer-brand p{color:rgba(255,255,255,.6);font-size:.92rem;margin-top:22px;max-width:330px}
-.footer h4{font-family:var(--font-display);font-size:1rem;text-transform:uppercase;letter-spacing:.06em;margin:0 0 20px;color:#fff}
+.footer h2{font-family:var(--font-display);font-size:1rem;text-transform:uppercase;letter-spacing:.06em;margin:0 0 20px;color:#fff;line-height:inherit}
 .footer ul{list-style:none;margin:0;padding:0}
 .footer li{margin-bottom:12px}
 .footer li a{display:inline-block;padding:3px 0}
@@ -522,7 +523,7 @@ form .btn{width:100%}
   border-top:1px solid rgba(255,255,255,.1);padding:26px 0;display:flex;
   justify-content:space-between;gap:20px;flex-wrap:wrap;
 }
-.footer-bottom p,.footer-bottom a{color:rgba(255,255,255,.45);font-size:.83rem}
+.footer-bottom p,.footer-bottom a{color:rgba(255,255,255,.5);font-size:.83rem}
 .footer-bottom a:hover{color:#fff}
 .footer-legal{display:flex;gap:26px}
 .footer-legal a{padding:6px 0}
@@ -802,7 +803,7 @@ form .btn{width:100%}
     </div>
 
     <div class="ref-works reveal">
-      <h4>Ausgeführte Arbeiten</h4>
+      <h3>Ausgeführte Arbeiten</h3>
       <ul>
         <li>Weichenerneuerungen und Weichenumbauten im Bereich der Eisenbahninfrastruktur</li>
         <li>Vorbereitende Oberbauarbeiten im Rahmen von Gleis- und Weichenerneuerungen</li>
@@ -1066,7 +1067,7 @@ form .btn{width:100%}
       </div>
 
       <div>
-        <h4>Leistungen</h4>
+        <h2>Leistungen</h2>
         <ul>
           <li><a href="#leistungen">Weichenerneuerung</a></li>
           <li><a href="#leistungen">Schienenarbeiten</a></li>
@@ -1078,7 +1079,7 @@ form .btn{width:100%}
       </div>
 
       <div>
-        <h4>Unternehmen</h4>
+        <h2>Unternehmen</h2>
         <ul>
           <li><a href="#ueber-uns">Über uns</a></li>
           <li><a href="#referenzen">Referenzen</a></li>
@@ -1090,7 +1091,7 @@ form .btn{width:100%}
       </div>
 
       <div>
-        <h4>Kontakt</h4>
+        <h2>Kontakt</h2>
         <ul>
           <li><a href="tel:+4923255943000">02325 5943000</a></li>
           <li><a href="mailto:info@railx-gleisbau.de">info@railx-gleisbau.de</a></li>
