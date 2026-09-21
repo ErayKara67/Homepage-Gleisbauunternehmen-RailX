@@ -33,11 +33,88 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      # Veröffentlicht wird nur, was hier aufgeführt ist — README.md, .gitignore und
+      # Arbeitsdateien bleiben draußen. Neue Dateien im Hauptordner hier ergänzen;
+      # bilder/ und fonts/ werden vollständig übernommen.
+      - name: Website-Dateien sammeln
+        run: |
+          mkdir _site
+          cp -r index.html impressum.html datenschutz.html robots.txt sitemap.xml CNAME \
+                favicon.ico favicon-48.png favicon-192.png apple-touch-icon.png \
+                hero-railx.jpg hero-railx-mobile.jpg logo-railx.png logo-railx-invers.png \
+                bilder fonts _site/
+      # Bricht ab, wenn eine verlinkte Datei in _site fehlt oder anders geschrieben ist
+      # (GitHub Pages unterscheidet Groß- und Kleinschreibung) — dann bleibt der bisherige Stand online.
+      - name: Verweise prüfen
+        shell: python3 {0}
+        run: |
+          import json, os, re, sys
+          from html.parser import HTMLParser
+          from urllib.parse import unquote, urlsplit
+
+          DOMAIN = 'railx-gleisbau.de'
+
+          class Verweise(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.liste = []
+
+              def handle_starttag(self, tag, attrs):
+                  for name, wert in attrs:
+                      if not wert:
+                          continue
+                      if name in ('src', 'href'):
+                          self.liste.append(wert)
+                      elif name == 'srcset':
+                          self.liste += [teil.split()[0] for teil in wert.split(',') if teil.strip()]
+                      elif name == 'data-bilder':
+                          self.liste += [bild['src'] for bild in json.loads(wert)]
+
+          def vorhanden(pfad):
+              ort = '_site'
+              for teil in pfad.split('/'):
+                  if not os.path.isdir(ort) or teil not in os.listdir(ort):
+                      return False
+                  ort = os.path.join(ort, teil)
+              return os.path.isfile(ort)
+
+          verlinkt, fehlt = set(), []
+          for datei in sorted(os.listdir('_site')):
+              if not datei.endswith(('.html', '.xml', '.txt')):
+                  continue
+              with open(os.path.join('_site', datei), encoding='utf-8') as f:
+                  text = f.read()
+              # eigene absolute URLs: canonical, og:image, JSON-LD, robots.txt, sitemap.xml
+              verweise = re.findall(r'https?://(?:www\.)?railx-gleisbau\.de[^\s"\'<>)]*', text)
+              if datei.endswith('.html'):
+                  parser = Verweise()
+                  parser.feed(text)
+                  verweise += parser.liste
+                  verweise += re.findall(r'url\(\s*[\'"]?([^\'")]+)', text)
+              for verweis in verweise:
+                  teile = urlsplit(verweis)
+                  if teile.scheme not in ('', 'http', 'https') or teile.netloc not in ('', DOMAIN, 'www.' + DOMAIN):
+                      continue  # mailto:, tel:, fremde Seiten
+                  if not teile.path and not teile.netloc:
+                      continue  # nur Anker wie #kontakt
+                  pfad = unquote(teile.path).lstrip('/')
+                  if pfad == '' or pfad.endswith('/'):
+                      pfad += 'index.html'
+                  verlinkt.add(pfad)
+                  if not vorhanden(pfad):
+                      fehlt.append(f'{verweis} (in {datei})')
+
+          for bild in sorted(os.listdir('_site/bilder')):
+              if 'bilder/' + bild not in verlinkt:
+                  print(f'::warning::bilder/{bild} ist nirgends verlinkt, wird aber veröffentlicht')
+          for eintrag in fehlt:
+              print(f'::error::Fehlt in _site: {eintrag}')
+          print(f'{len(verlinkt)} verlinkte Dateien geprüft, {len(fehlt)} fehlen')
+          sys.exit(1 if fehlt else 0)
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          path: '_site'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
