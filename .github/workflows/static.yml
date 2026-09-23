@@ -35,14 +35,14 @@ jobs:
         uses: actions/configure-pages@v5
       # Veröffentlicht wird nur, was hier aufgeführt ist — README.md, .gitignore und
       # Arbeitsdateien bleiben draußen. Neue Dateien im Hauptordner hier ergänzen;
-      # bilder/ und fonts/ werden vollständig übernommen.
+      # bilder/, fonts/ und dokumente/ werden vollständig übernommen.
       - name: Website-Dateien sammeln
         run: |
           mkdir _site
           cp -r index.html impressum.html datenschutz.html robots.txt sitemap.xml CNAME \
                 favicon.ico favicon-48.png favicon-192.png apple-touch-icon.png \
                 hero-railx.jpg hero-railx-mobile.jpg logo-railx.png logo-railx-invers.png \
-                bilder fonts _site/
+                 bilder fonts dokumente _site/
       # Bricht ab, wenn eine verlinkte Datei in _site fehlt oder anders geschrieben ist
       # (GitHub Pages unterscheidet Groß- und Kleinschreibung) — dann bleibt der bisherige Stand online.
       - name: Verweise prüfen
