@@ -61,6 +61,19 @@
   "sameAs": [
     "https://www.google.com/maps?cid=17430738684787878159"
   ],
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "name": "Präqualifikationsnachweis — Oberbau Instandsetzung (IS) Gleise/Weichen",
+    "credentialCategory": "Präqualifikation",
+    "identifier": "137658",
+    "recognizedBy": {
+      "@type": "Organization",
+      "name": "Deutsche Bahn AG"
+    },
+    "datePublished": "2026-09-22",
+    "expires": "2030-09-22",
+    "url": "https://railx-gleisbau.de/dokumente/praequalifikation-railx-gmbh.pdf"
+  },
   "areaServed": {
     "@type": "Country",
     "name": "Deutschland"
@@ -288,10 +301,15 @@ p{margin:0}
 }
 .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
 .hero-stats{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.12);
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.12);
   margin-top:66px;border-top:2px solid var(--railx-orange);
 }
 .stat{background:var(--railx-dark);padding:26px 22px}
+/* Vierte Kachel verweist auf den Eignungsnachweis */
+.stat-pq{display:block;text-decoration:none;transition:background .2s ease}
+.stat-pq:hover,.stat-pq:focus-visible{background:var(--dark-soft)}
+.stat-pq .stat-label{color:rgba(255,255,255,.72)}
+.stat-pq:hover .stat-num{color:var(--railx-orange)}
 .stat-num{font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:#fff;line-height:1}
 .stat-num span{color:var(--railx-orange)}
 .stat-label{font-size:.74rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:9px}
@@ -440,6 +458,31 @@ p{margin:0}
 
 /* ---------- Vorteile ---------- */
 .benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+
+/* ---------- Eignungsnachweis (Praequalifikation) ---------- */
+.nachweis{
+  margin-top:58px;padding:34px 38px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.16);border-left:4px solid var(--railx-orange);
+  display:grid;grid-template-columns:1.05fr 1fr;gap:28px 48px;align-items:start;
+}
+.nachweis-label{
+  display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--railx-orange);margin-bottom:14px;
+}
+.nachweis h3{font-size:1.4rem;line-height:1.2;margin-bottom:14px}
+.nachweis-kopf p{color:rgba(255,255,255,.76);font-size:.95rem;max-width:54ch}
+.nachweis-daten{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 28px;margin:0}
+.nachweis-daten dt{
+  font-size:.68rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:rgba(255,255,255,.5);
+}
+.nachweis-daten dd{margin:5px 0 0;font-size:.96rem;font-weight:600;color:#fff;line-height:1.35}
+.nachweis-link{align-self:start;justify-self:start}
+/* Fixierte Kopfzeile nicht ueber den Blockanfang laufen lassen */
+#nachweise{scroll-margin-top:132px}
+.nachweis-link svg{width:17px;height:17px;stroke:currentColor;stroke-width:2;fill:none;flex:none}
+.nachweis-fuss{grid-column:1/-1;margin:0;font-size:.78rem;color:rgba(255,255,255,.45)}
 .benefit{padding-top:26px;border-top:2px solid rgba(255,255,255,.25)}
 .benefit h3{font-size:1.1rem;margin-bottom:11px;color:#fff}
 .benefit p{color:rgba(255,255,255,.68);font-size:.92rem}
@@ -539,6 +582,7 @@ form .btn{width:100%}
   .services>.card:last-child{grid-column:auto}
   .refs,
   .refs.praxis{grid-template-columns:repeat(2,1fr)}
+  .nachweis{grid-template-columns:1fr;gap:26px;padding:30px 30px}
   .benefits{grid-template-columns:repeat(2,1fr);gap:36px}
   .steps{grid-template-columns:repeat(2,1fr);row-gap:44px}
   .contact{grid-template-columns:1fr;gap:26px}
@@ -578,7 +622,13 @@ form .btn{width:100%}
   .benefits,.steps{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr;gap:0}
-  .hero-stats{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .nachweis{padding:26px 22px}
+  .nachweis-daten{grid-template-columns:1fr;gap:16px}
+  .nachweis-link{width:100%;justify-content:space-between;padding-left:18px;padding-right:18px}
+  .nachweis h3{font-size:1.15rem}
+  .nachweis h3,.nachweis-daten dd{overflow-wrap:anywhere}
+  .dateigroesse{display:none}
   .hero-actions .btn{width:100%}
   .step{padding-right:0}
 }
@@ -671,6 +721,7 @@ form .btn{width:100%}
         <div class="stat"><div class="stat-num">10<span>+</span></div><div class="stat-label">Jahre Branchenerfahrung</div></div>
         <div class="stat"><div class="stat-num">10<span>+</span></div><div class="stat-label">Projekte realisiert</div></div>
         <div class="stat"><div class="stat-num">24<span>/7</span></div><div class="stat-label">Bundesweit einsatzbereit</div></div>
+        <a class="stat stat-pq" href="#nachweise"><div class="stat-num">PQ</div><div class="stat-label">Präqualifiziert bis 2030</div></a>
       </div>
     </div>
   </div>
@@ -905,6 +956,31 @@ form .btn{width:100%}
         <p>Zuverlässige Kommunikation mit allen Projektbeteiligten — vom Auftraggeber bis zur Betriebsleitung.</p>
       </div>
     </div>
+
+    <div class="nachweis reveal" id="nachweise">
+      <div class="nachweis-kopf">
+        <span class="nachweis-label">Eignungsnachweis</span>
+        <h3>Präqualifikationsnachweis der Deutschen Bahn AG</h3>
+        <p>
+          Unsere fachliche Eignung für Instandsetzungsarbeiten am Oberbau ist im Präqualifikationssystem
+          der Deutschen Bahn AG, Beschaffung Infrastruktur, geprüft und bestätigt. Auftraggeber können den
+          Nachweis jederzeit einsehen.
+        </p>
+      </div>
+      <dl class="nachweis-daten">
+        <div><dt>Warengruppe</dt><dd>Oberbau Instandsetzung (IS) Gleise/Weichen</dd></div>
+        <div><dt>Status</dt><dd>Präqualifiziert</dd></div>
+        <div><dt>Vorgangsnummer</dt><dd>137658</dd></div>
+        <div><dt>Gültig bis</dt><dd>22.09.2030</dd></div>
+      </dl>
+      <a class="btn btn-ghost nachweis-link"
+         href="dokumente/praequalifikation-railx-gmbh.pdf" target="_blank" rel="noopener"
+         aria-label="Präqualifikationsnachweis der Deutschen Bahn AG ansehen (PDF, 1,6 MB, öffnet in neuem Tab)">
+        <span>Nachweis ansehen (PDF<span class="dateigroesse">, 1,6 MB</span>)</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="square" aria-hidden="true"><path d="M14 3h7v7"/><path d="M10 14 21 3"/><path d="M21 14v7H3V3h7"/></svg>
+      </a>
+      <p class="nachweis-fuss">Ausgestellt am 22.09.2026 durch die Deutsche Bahn AG, Beschaffung Infrastruktur.</p>
+    </div>
   </div>
 </section>
 
@@ -1085,6 +1161,7 @@ form .btn{width:100%}
           <li><a href="#referenzen">Referenzen</a></li>
           <li><a href="#praxis">Aus der Praxis</a></li>
           <li><a href="#ablauf">Ablauf</a></li>
+          <li><a href="#nachweise">Präqualifikation</a></li>
           <li><a href="impressum.html">Impressum</a></li>
           <li><a href="datenschutz.html">Datenschutz</a></li>
         </ul>
@@ -1168,6 +1245,13 @@ function grossLayout() {
     const f = Math.min(innenB / nb, (innenH - textH) / nh);
     bildB = Math.round(nb * f); bildH = Math.round(nh * f);
   }
+  // Unterschrift exakt auf die endgueltige Bildbreite bringen — aber nur,
+  // wenn sie dadurch nicht hoeher wird und unter das Bild rutschen wuerde
+  const alteBreite = grossText.style.width;
+  const alteHoehe  = grossText.offsetHeight;
+  grossText.style.width = Math.min(innenB, Math.max(bildB, 320)) + 'px';
+  if (grossText.offsetHeight > alteHoehe) grossText.style.width = alteBreite;
+
   grossImg.style.width  = bildB + 'px';
   grossImg.style.height = bildH + 'px';
 }
