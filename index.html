@@ -305,14 +305,39 @@ p{margin:0}
   margin-top:66px;border-top:2px solid var(--railx-orange);
 }
 .stat{background:var(--railx-dark);padding:26px 22px}
-/* Vierte Kachel verweist auf den Eignungsnachweis */
-.stat-pq{display:block;text-decoration:none;transition:background .2s ease}
-.stat-pq:hover,.stat-pq:focus-visible{background:var(--dark-soft)}
-.stat-pq .stat-label{color:rgba(255,255,255,.72)}
+/* Vierte Kachel verweist auf den Eignungsnachweis — dauerhaft als Flaeche
+   erkennbar: hellerer Grund, feine Kontur und ein Pfeil hinter der Beschriftung */
+.stat-pq{
+  display:block;text-decoration:none;cursor:pointer;position:relative;
+  background:var(--dark-soft);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);
+  transition:background .2s ease,box-shadow .2s ease;
+}
+.stat-pq:hover,.stat-pq:focus-visible{
+  background:#2f374f;box-shadow:inset 0 0 0 1px rgba(225,6,19,.6);
+}
+.stat-pq .stat-label{color:rgba(255,255,255,.85)}
 .stat-pq:hover .stat-num{color:var(--railx-orange)}
+.stat-pfeil{
+  width:13px;height:13px;margin-left:7px;vertical-align:-1px;
+  stroke:var(--railx-orange);stroke-width:2.5;fill:none;
+  transition:transform .2s ease;
+}
+.stat-pq:hover .stat-pfeil{transform:translateX(4px)}
+.stat-mehr{
+  display:inline-block;white-space:nowrap;margin-top:11px;
+  font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--railx-orange);border-bottom:1px solid rgba(225,6,19,.5);padding-bottom:3px;
+}
+@media (prefers-reduced-motion:reduce){.stat-pfeil{transition:none}}
 .stat-num{font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:#fff;line-height:1}
 .stat-num span{color:var(--railx-orange)}
 .stat-label{font-size:.74rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:9px}
+/* Weiche Trennstellen (&shy;) nur dort zulassen, wo die Kacheln wirklich schmal sind */
+.stat-label{-webkit-hyphens:none;hyphens:none;overflow-wrap:break-word}
+@media (max-width:900px){.hero-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.stat-label{-webkit-hyphens:manual;hyphens:manual}}
+.nobr{white-space:nowrap}
 
 /* ---------- Sections ---------- */
 .section{padding:110px 0}
@@ -622,7 +647,13 @@ form .btn{width:100%}
   .benefits,.steps{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr;gap:0}
-  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .hero-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  /* Hinweis darf in der schmalen Kachel umbrechen; Unterstreichung folgt dem Text */
+  .stat-mehr{
+    display:inline;white-space:normal;border-bottom:0;padding-bottom:0;line-height:1.7;
+    font-size:.64rem;letter-spacing:.03em;
+    text-decoration:underline;text-decoration-color:rgba(225,6,19,.5);text-underline-offset:4px;
+  }
   .nachweis{padding:26px 22px}
   .nachweis-daten{grid-template-columns:1fr;gap:16px}
   .nachweis-link{width:100%;justify-content:space-between;padding-left:18px;padding-right:18px}
@@ -718,10 +749,10 @@ form .btn{width:100%}
       </div>
 
       <div class="hero-stats">
-        <div class="stat"><div class="stat-num">10<span>+</span></div><div class="stat-label">Jahre Branchenerfahrung</div></div>
+        <div class="stat"><div class="stat-num">10<span>+</span></div><div class="stat-label">Jahre Branchen&shy;erfahrung</div></div>
         <div class="stat"><div class="stat-num">10<span>+</span></div><div class="stat-label">Projekte realisiert</div></div>
-        <div class="stat"><div class="stat-num">24<span>/7</span></div><div class="stat-label">Bundesweit einsatzbereit</div></div>
-        <a class="stat stat-pq" href="#nachweise"><div class="stat-num">PQ</div><div class="stat-label">Präqualifiziert bis 2030</div></a>
+        <div class="stat"><div class="stat-num">24<span>/7</span></div><div class="stat-label">Bundesweit einsatz&shy;bereit</div></div>
+        <a class="stat stat-pq" href="#nachweise"><div class="stat-num">PQ</div><div class="stat-label">Präquali&shy;fiziert bis 2030</div><span class="stat-mehr">Nachweis <span class="nobr">ansehen<svg class="stat-pfeil" viewBox="0 0 24 24" stroke-linecap="square" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></a>
       </div>
     </div>
   </div>
