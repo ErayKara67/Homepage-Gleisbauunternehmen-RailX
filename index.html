@@ -369,15 +369,20 @@ p{margin:0}
 }
 @media (max-width:560px){
   .hero{padding-bottom:28px}
-  /* 500 statt 560px seit 29.09.2026: Mit dem Hochformat liegt hinter der Schlagzeile ein
-     dunklerer Bildteil, der Verlauf darf kuerzer ausfallen. Sichtbares Foto 38 -> 42-50 %
-     der Herohoehe. Weniger geht nicht: bei 460px faellt `aufs Gleis.` auf 430px Breite auf 3,00:1. */
-  .hero-bg::after{
-    height:500px;
-    background:linear-gradient(0deg,rgba(26,31,46,.97) 0%,rgba(26,31,46,.90) 45%,
-      rgba(26,31,46,.55) 75%,rgba(26,31,46,0) 100%);
+  /* Kein Verlauf auf dem Handy (Wunsch 29.09.2026): Das Foto bleibt ueber die volle Hoehe frei.
+     Die Abdunklung sitzt stattdessen als Hof direkt an den Buchstaben. Ohne diesen Hof waere der
+     Text unlesbar - er liegt genau ueber den blanken Schienen, gemessen 1,00-1,55:1.
+     Fuenf Stufen: zwei enge Radien fuer die Buchstabenkante (die tragen den Kontrast), zwei
+     mittlere fuer die Flaeche, einer weit als sanfte Absenkung. Gemessen wird das gerenderte
+     Bild, nicht der Verlauf: Seite zweimal fotografieren, einmal mit color:transparent, dann die
+     Glyphpixel vergleichen. Aendert sich das Foto oder die Schriftgroesse -> neu messen. */
+  .hero-bg::after{display:none}
+  .hero h1{
+    font-size:44px;
+    text-shadow:0 0 4px rgba(10,13,20,.96), 0 0 12px rgba(10,13,20,.93),
+      0 2px 8px rgba(10,13,20,.9), 0 8px 34px rgba(10,13,20,.85),
+      0 0 80px rgba(10,13,20,.7);
   }
-  .hero h1{font-size:44px}
   .br-handy{display:inline}
   /* Der Fliesstext waere hier ueber dem Foto zu gedraengt — er steht stattdessen
      als eigener Absatz unter dem Bild, direkt vor der roten Kante der Kennzahlen. */
@@ -388,6 +393,10 @@ p{margin:0}
   .hero-lead-unten b{font-size:17px}
   .hero-actions{margin-top:24px;gap:10px}
   .hero-actions .btn{padding:14px 20px}
+  /* Ohne Verlauf braucht der Ghost-Knopf eine eigene Flaeche, sonst steht weisse 14px-Schrift
+     direkt auf dem Foto (gemessen 1,55:1). Die Flaeche ist nur so gross wie der Knopf. */
+  .hero .btn-ghost{background:rgba(16,20,30,.62);border-color:rgba(255,255,255,.6)}
+  .hero .btn-primary{box-shadow:0 6px 24px rgba(10,13,20,.5)}
 }
 /* Kennzahlen ohne eigene Flaechen: rote Oberkante, feine Trennlinien, erste Spalte
    buendig mit dem Wrap. Nur die PQ-Kachel behaelt eine Flaeche (anklickbar).
