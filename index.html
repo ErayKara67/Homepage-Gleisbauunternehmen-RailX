@@ -369,8 +369,11 @@ p{margin:0}
 }
 @media (max-width:560px){
   .hero{padding-bottom:28px}
+  /* 500 statt 560px seit 29.09.2026: Mit dem Hochformat liegt hinter der Schlagzeile ein
+     dunklerer Bildteil, der Verlauf darf kuerzer ausfallen. Sichtbares Foto 38 -> 42-50 %
+     der Herohoehe. Weniger geht nicht: bei 460px faellt `aufs Gleis.` auf 430px Breite auf 3,00:1. */
   .hero-bg::after{
-    height:560px;
+    height:500px;
     background:linear-gradient(0deg,rgba(26,31,46,.97) 0%,rgba(26,31,46,.90) 45%,
       rgba(26,31,46,.55) 75%,rgba(26,31,46,0) 100%);
   }
@@ -814,10 +817,14 @@ form .btn{width:100%}
 <!-- ================= HERO ================= -->
 <section class="hero" id="top">
   <div class="hero-bg">
-    <!-- Ein Bild fuer alle Geraete. Auf schmalen Displays zeigt der formatfuellende
-         Zuschnitt den mittleren Streifen: Oberleitung, Hallendach, neue Weiche, Schotter. -->
-    <img src="hero-railx.jpg?v=4"
-         alt="Neu eingebaute Weiche am Bahnhof Mönchengladbach bei Tagesanbruch nach der Nachtsperrpause" width="1672" height="941" fetchpriority="high" />
+    <!-- Zwei Zuschnitte desselben Motivs. Quer 1672x941 ab 561px; hochkant 941x1672 bis 560px,
+         damit auf dem Handy das ganze Motiv zu sehen ist statt nur des mittleren Streifens.
+         Aendert sich eine der Dateien -> Kontraste ueber dem Foto neu messen (Pruefroutine 7). -->
+    <picture>
+      <source media="(max-width:560px)" srcset="hero-railx-mobile.jpg?v=1" width="941" height="1672" />
+      <img src="hero-railx.jpg?v=4"
+           alt="Neu eingebaute Weiche am Bahnhof Mönchengladbach bei Tagesanbruch nach der Nachtsperrpause" width="1672" height="941" fetchpriority="high" />
+    </picture>
   </div>
 
   <div class="wrap hero-inner">
