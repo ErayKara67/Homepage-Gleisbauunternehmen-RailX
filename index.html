@@ -303,7 +303,9 @@ p{margin:0}
     rgba(26,31,46,.55) 75%,rgba(26,31,46,0) 100%);
 }
 .hero-inner{position:relative;z-index:2;width:100%}
-/* Ab 1100px zweispaltig: links Eyebrow und Schlagzeile, rechts Fliesstext und Knoepfe */
+/* Erst ab 1200px zweispaltig — das ist die volle Wrap-Breite. Darunter bliebe fuer die
+   rechte Spalte zu wenig Platz (bei 1100px nur 356px): der Fliesstext wuerde sechszeilig
+   und ragte in den hellen Teil des Fotos, wo die rote Unterstreichung auf 1,71:1 faellt. */
 .hero-content{
   max-width:none;display:grid;grid-template-columns:640px minmax(0,1fr);
   gap:56px;align-items:end;
@@ -314,7 +316,6 @@ p{margin:0}
    sich 3,2:1 fuer #FF1A27, gleicher Farbton wie #E10613, Saettigung 90 statt 74 Prozent.
    In den Kennzahlen auf deckendem Nachtblau bleibt das Signalrot (40px, 3,31:1). */
 .hero h1 em{font-style:normal;color:var(--railx-orange-hero)}
-.hero .eyebrow{margin-bottom:16px}
 /* Wortlaut unveraendert, aber in drei Stufen gesetzt statt als ein Satz mit Doppelpunkt:
    Einordnung (hell), Leistungen (gedaempft), Besonderheit (eigene Zeile mit rotem Strich).
    Der Strich nimmt die Eyebrow darueber auf, nur schmaler — 20 statt 28 px. */
@@ -330,6 +331,19 @@ p{margin:0}
   color:rgba(255,255,255,.92);font-size:15.5px;line-height:1.5;
 }
 .lead-zusatz::before{content:"";width:20px;height:3px;flex:none;background:var(--railx-orange-hero)}
+/* Das Wort verlinkt den Praequalifikationsnachweis. Erkennbar an der roten Unterstreichung
+   und dem Symbol, nicht allein an der Farbe — die Schrift bleibt weiss. */
+.lead-pq{
+  white-space:nowrap;text-decoration:underline;
+  text-decoration-color:var(--railx-orange-hero);text-decoration-thickness:2px;
+  text-underline-offset:4px;
+}
+.lead-pq svg{
+  width:.66em;height:.66em;margin-left:.28em;vertical-align:baseline;
+  fill:none;stroke:var(--railx-orange-hero);stroke-width:2.5;stroke-linecap:square;
+}
+.lead-pq:hover,.lead-pq:focus-visible{text-decoration-color:#fff}
+.lead-pq:hover svg,.lead-pq:focus-visible svg{stroke:#fff}
 .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
 .hero-actions .btn{padding:15px 22px;white-space:nowrap}
 .hero .btn-ghost{border-color:rgba(255,255,255,.45)}
@@ -337,7 +351,7 @@ p{margin:0}
 .br-handy{display:none}
 .hero-lead-unten{display:none}
 /* Tablet und schmaler Desktop: einspaltig gestapelt, hoeherer Verlauf (Hochformat-Foto) */
-@media (max-width:1099px){
+@media (max-width:1199px){
   .hero{padding-bottom:52px}
   /* 740 statt 680px seit 29.09.2026: der zweiteilige Fliesstext ist rund 34px hoeher,
      dadurch rutscht die Schlagzeile nach oben in helleres Bild (gemessen 2,86:1). */
@@ -362,11 +376,6 @@ p{margin:0}
   }
   .hero h1{font-size:44px}
   .br-handy{display:inline}
-  .hero .eyebrow{
-    display:flex;align-items:flex-start;
-    font-size:11px;letter-spacing:.14em;line-height:1.5;margin-bottom:12px;
-  }
-  .hero .eyebrow::before{width:22px;flex:none;margin-top:7px}
   /* Der Fliesstext waere hier ueber dem Foto zu gedraengt — er steht stattdessen
      als eigener Absatz unter dem Bild, direkt vor der roten Kante der Kennzahlen. */
   .hero .hero-lead{display:none}
@@ -814,14 +823,14 @@ form .btn{width:100%}
   <div class="wrap hero-inner">
     <div class="hero-content">
       <div class="hero-titel">
-        <span class="eyebrow on-dark">Weichenbau · Gleis- &amp; Oberbau · Instandhaltung</span>
         <h1>Wir bringen <br class="br-handy" />Ihr Projekt<br /><em>aufs Gleis.</em></h1>
       </div>
       <div class="hero-text">
         <p class="hero-lead">
-          <b>Präqualifiziertes Fachunternehmen für Eisenbahninfrastruktur</b>
+          <b><a class="lead-pq" href="dokumente/praequalifikation-railx-gmbh.pdf" target="_blank" rel="noopener"
+             aria-label="Präqualifikationsnachweis der Deutschen Bahn AG ansehen (PDF, 1,6 MB, öffnet in neuem Tab)">Präqualifiziertes<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7"/><path d="M10 14 21 3"/><path d="M21 14v7H3V3h7"/></svg></a> Fachunternehmen für Eisenbahninfrastruktur</b>
           <span class="lead-leistungen">Weichenerneuerungen, Schienenarbeiten, Gleis- und Oberbauarbeiten sowie Instandhaltung</span>
-          <span class="lead-zusatz">auch unter laufendem Betrieb</span>
+          <span class="lead-zusatz">bundesweit auch unter laufendem Betrieb</span>
         </p>
         <div class="hero-actions">
           <a href="#kontakt" class="btn btn-primary">
@@ -840,9 +849,10 @@ form .btn{width:100%}
   <!-- Nur auf dem Handy sichtbar: der Fliesstext aus dem Hero. Steht bewusst ausserhalb
        von .wrap, weil er seinen eigenen Innenabstand mitbringt (sonst doppelt eingerueckt). -->
   <p class="hero-lead-unten">
-    <b>Präqualifiziertes Fachunternehmen für Eisenbahninfrastruktur</b>
+    <b><a class="lead-pq" href="dokumente/praequalifikation-railx-gmbh.pdf" target="_blank" rel="noopener"
+       aria-label="Präqualifikationsnachweis der Deutschen Bahn AG ansehen (PDF, 1,6 MB, öffnet in neuem Tab)">Präqualifiziertes<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7"/><path d="M10 14 21 3"/><path d="M21 14v7H3V3h7"/></svg></a> Fachunternehmen für Eisenbahninfrastruktur</b>
     <span class="lead-leistungen">Weichenerneuerungen, Schienenarbeiten, Gleis- und Oberbauarbeiten sowie Instandhaltung</span>
-    <span class="lead-zusatz">auch unter laufendem Betrieb</span>
+    <span class="lead-zusatz">bundesweit auch unter laufendem Betrieb</span>
   </p>
   <div class="wrap">
     <div class="hero-stats">
