@@ -293,25 +293,30 @@ p{margin:0}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 55%}
 /* Hochformat: Bahnhofshallen und Team im oberen Drittel halten */
 @media (max-width:820px){.hero-bg img{object-position:center 40%}}
-/* Abgedunkelt wird nur, wo Text steht — die drei Stufen folgen der Textbreite.
-   Ab 1200px endet der Text bei hoechstens 71% der Breite, rechts bleibt das Foto frei.
-   Darunter laeuft er bis 97%, dann muss die ganze Flaeche kraeftig bleiben.
-   Ab 820px steht er ueber die volle Breite, dort deckt ein senkrechter Verlauf ab.
-   Gemessen gegen das Foto: kleinster Kontrast 3,27:1 (grosse Schrift, gefordert 3:1). */
+/* Abgedunkelt wird nur die Flaeche um den Text, nicht die ganze Spalte — so bleibt vom
+   Foto so viel wie moeglich stehen. Breit und mittel: weiche Ellipse um den Textblock,
+   waagerecht auf dessen Mitte gelegt (ab 1200px sitzt der Wrap mittig, darunter linksbuendig).
+   Ab 820px laeuft der Text ueber die volle Breite; dort deckt ein senkrechter Verlauf die
+   Mitte ab und oeffnet oben und unten, wo kein Text steht.
+   Gemessen gegen das Foto: kleinster Kontrast 3,3:1 (grosse Schrift, gefordert 3:1).
+   Aendert sich Foto, Hero-Text oder Textbreite → neu messen (Pruefroutine Punkt 7). */
 .hero-bg::after{
   content:"";position:absolute;inset:0;
-  background:linear-gradient(100deg,
-    rgba(26,31,46,.96) 0%,rgba(26,31,46,.93) 44%,rgba(26,31,46,.74) 62%,
-    rgba(26,31,46,.34) 82%,rgba(26,31,46,.16) 100%);
+  background:radial-gradient(ellipse 760px 520px at calc(50% - 348px) 54%,
+    rgba(26,31,46,.95) 0%,rgba(26,31,46,.92) 50%,
+    rgba(26,31,46,.55) 78%,rgba(26,31,46,.10) 100%);
 }
 @media (max-width:1199px){
   .hero-bg::after{
-    background:linear-gradient(100deg,rgba(26,31,46,.94) 0%,rgba(26,31,46,.90) 58%,rgba(26,31,46,.72) 100%);
+    background:radial-gradient(ellipse 720px 520px at 252px 54%,
+      rgba(26,31,46,.95) 0%,rgba(26,31,46,.92) 50%,
+      rgba(26,31,46,.60) 78%,rgba(26,31,46,.20) 100%);
   }
 }
 @media (max-width:820px){
   .hero-bg::after{
-    background:linear-gradient(180deg,rgba(26,31,46,.84) 0%,rgba(26,31,46,.90) 45%,rgba(26,31,46,.93) 100%);
+    background:linear-gradient(180deg,rgba(26,31,46,.22) 0%,rgba(26,31,46,.86) 15%,
+      rgba(26,31,46,.90) 76%,rgba(26,31,46,.20) 100%);
   }
 }
 /* Signatur: Gleisraster als Hintergrundstruktur */
@@ -327,10 +332,13 @@ p{margin:0}
 }
 .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
 /* Kennzahlen ohne eigene Flaechen: rote Oberkante, feine Trennlinien, erste Spalte
-   buendig mit dem Text darueber. Nur die PQ-Kachel behaelt eine Flaeche (anklickbar). */
+   buendig mit dem Wrap. Nur die PQ-Kachel behaelt eine Flaeche (anklickbar).
+   Seit 28.09.2026 als eigenes Band unter dem Hero statt darin: im Hero waren sie mit
+   25–31 % der Hoehe der groesste Block und haben das Titelbild zugedeckt. */
+.kennzahlen-band{background:var(--railx-dark);padding:0 0 6px}
 .hero-stats{
   display:grid;grid-template-columns:repeat(4,1fr);
-  margin-top:66px;border-top:2px solid var(--railx-orange);
+  border-top:2px solid var(--railx-orange);
 }
 .stat{padding:26px 22px;border-left:1px solid rgba(255,255,255,.16)}
 .stat:first-child{padding-left:0;border-left:0}
@@ -656,8 +664,10 @@ form .btn{width:100%}
   .header-inner{height:76px}
   .logo-img{height:48px}
   .footer .logo-img{height:60px}
-  .hero{min-height:auto;padding:112px 0 60px}
-  .hero-stats{margin-top:50px}
+  /* volle Bildschirmhoehe: ohne die Kennzahlen passt der Hero aufs Display, und die
+     frei gewordene Flaeche zeigt das Foto statt nur kuerzer zu werden. svh, damit die
+     ein- und ausfahrende Browserleiste die Hoehe nicht springen laesst. */
+  .hero{min-height:100svh;padding:112px 0 60px}
   .stat{padding:20px 14px}
   .stat-num{font-size:2rem}
   .section{padding:74px 0}
@@ -784,13 +794,18 @@ form .btn{width:100%}
         </a>
         <a href="#leistungen" class="btn btn-ghost">Leistungen ansehen</a>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="hero-stats">
-        <div class="stat"><div class="stat-num">10<span>+</span></div><div class="stat-label">Jahre Branchen&shy;erfahrung</div></div>
-        <div class="stat"><div class="stat-num">10<span>+</span></div><div class="stat-label">Projekte realisiert</div></div>
-        <div class="stat"><div class="stat-num">24<span>/7</span></div><div class="stat-label">Bundesweit einsatz&shy;bereit</div></div>
-        <a class="stat stat-pq" href="#nachweise"><div class="stat-num">PQ</div><div class="stat-label">Präquali&shy;fiziert bis 2030</div><span class="stat-mehr">Nachweis <span class="nobr">ansehen<svg class="stat-pfeil" viewBox="0 0 24 24" stroke-linecap="square" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></a>
-      </div>
+<!-- Kennzahlen: eigenes Band direkt unter dem Hero, damit das Titelbild frei bleibt -->
+<section class="kennzahlen-band">
+  <div class="wrap">
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">10<span>+</span></div><div class="stat-label">Jahre Branchen&shy;erfahrung</div></div>
+      <div class="stat"><div class="stat-num">10<span>+</span></div><div class="stat-label">Projekte realisiert</div></div>
+      <div class="stat"><div class="stat-num">24<span>/7</span></div><div class="stat-label">Bundesweit einsatz&shy;bereit</div></div>
+      <a class="stat stat-pq" href="#nachweise"><div class="stat-num">PQ</div><div class="stat-label">Präquali&shy;fiziert bis 2030</div><span class="stat-mehr">Nachweis <span class="nobr">ansehen<svg class="stat-pfeil" viewBox="0 0 24 24" stroke-linecap="square" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></a>
     </div>
   </div>
 </section>
