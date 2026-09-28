@@ -34,8 +34,8 @@ datenschutz.html        Datenschutzerklärung
 fonts/                  lokal eingebundene Schriften (kein externer Request)
 logo-railx.png          Logo
 logo-railx-invers.png   Logo für dunkle Flächen
-hero-railx.jpg          Hero-Bild Desktop
-hero-railx-mobile.jpg   Hero-Bild Mobil
+hero-railx.jpg          Hero-Bild Desktop (Querformat 1600×900)
+hero-railx-mobile.jpg   Hero-Bild Mobil (Hochformat 900×1200, per <picture> bis 820px)
 CNAME                   eigene Domain für GitHub Pages
 .github/workflows/      Deployment bei jedem Push auf main
 ```
