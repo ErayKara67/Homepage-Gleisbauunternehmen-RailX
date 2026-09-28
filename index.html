@@ -190,6 +190,8 @@
 :root{
   --railx-orange:#E10613;   /* Signalrot */
   --railx-orange-hell:#FA404B; /* Signalrot aufgehellt: kleine Schrift auf Nachtblau (4,6:1) */
+  --railx-orange-hero:#FF1A27; /* Signalrot, nur leicht aufgehellt: Schlagzeile ueber dem Hero-Foto (3,2:1).
+     Nicht fuer kleine Schrift — auf Nachtblau nur 4,2:1, dort gilt --railx-orange-hell. */
   --railx-dark:#1a1f2e;     /* Nachtblau */
   --railx-gray:#6B7280;
   --railx-light:#F9FAFB;
@@ -307,10 +309,11 @@ p{margin:0}
   gap:56px;align-items:end;
 }
 .hero h1{color:#fff;font-size:64px;line-height:1.02}
-/* Aufgehelltes Rot: Signalrot auf Nachtblau ist bei 3,31:1 gedeckelt und faellt ueber dem
-   Foto darunter — gemessen 2,42–2,92:1 selbst mit dem verstaerkten Verlauf. In den Kennzahlen
-   auf deckendem Nachtblau bleibt das Signalrot (40px, 3,31:1 reicht fuer grosse Schrift). */
-.hero h1 em{font-style:normal;color:var(--railx-orange-hell)}
+/* So kraeftig wie moeglich: Signalrot selbst erreicht ueber dem Foto nur 2,5:1. Gemessen
+   wurde der hellste Untergrund hinter dieser Zeile (Luminanz 0,034 bei 1024px) — daraus ergibt
+   sich 3,2:1 fuer #FF1A27, gleicher Farbton wie #E10613, Saettigung 90 statt 74 Prozent.
+   In den Kennzahlen auf deckendem Nachtblau bleibt das Signalrot (40px, 3,31:1). */
+.hero h1 em{font-style:normal;color:var(--railx-orange-hero)}
 .hero .eyebrow{margin-bottom:16px}
 .hero-lead{
   color:rgba(255,255,255,.86);font-size:16.5px;line-height:1.6;
