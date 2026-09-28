@@ -270,6 +270,11 @@ p{margin:0}
 .header-cta{display:flex;align-items:center;gap:18px}
 .header-phone{display:flex;align-items:center;gap:9px;color:#fff;font-size:.88rem;font-weight:600}
 .header-phone svg{width:16px;height:16px;stroke:var(--railx-orange)}
+/* Praequalifikations-Kuerzel in der Kopfzeile, nur wo die Navigation eingeklappt ist.
+   Gegenueber Bahn-Auftraggebern ist der Nachweis das staerkste Argument; mobil steht er
+   sonst erst weit unten. Die Kopfzeile ist fixiert, also jederzeit erreichbar.
+   Am Desktop bewusst nicht: dort stehen schon Telefonnummer und Anfrage-Knopf. */
+.header-pq{display:none}
 .burger{display:none;background:none;border:0;padding:10px;cursor:pointer}
 .burger span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;transition:transform .25s ease,opacity .2s ease}
 .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -283,7 +288,21 @@ p{margin:0}
    ab 1161px, ohne Telefon ab 1001px) — sonst wurde das Logo zusammengedrueckt */
 .logo{flex-shrink:0}
 @media (max-width:1180px){.header-phone{display:none}}
-@media (max-width:1020px){.nav{display:none}.burger{display:block}}
+@media (max-width:1020px){
+  .nav{display:none}
+  .burger{display:block}
+  /* Dieselbe Grenze wie der Burger: Sobald die Navigation eingeklappt ist, fuehrt kein
+     sichtbarer Weg mehr zum Nachweis. Die Kopfzeile ist fixiert, also immer erreichbar. */
+  .header-pq{
+    display:inline-flex;align-items:center;gap:5px;flex:none;
+    padding:7px 9px;border:1px solid rgba(255,255,255,.34);
+    font-family:var(--font-display);font-size:.82rem;font-weight:600;
+    letter-spacing:.1em;line-height:1;color:#fff;
+    transition:border-color .18s ease,background .18s ease;
+  }
+  .header-pq svg{width:15px;height:15px;flex:none;fill:none;stroke:var(--railx-orange-hell);stroke-width:2;stroke-linecap:square}
+  .header-pq:hover,.header-pq:focus-visible{border-color:var(--railx-orange-hell);background:rgba(250,64,75,.12)}
+}
 
 /* ---------- Hero ---------- */
 .hero{
@@ -728,6 +747,7 @@ form .btn{width:100%}
 @media (max-width:820px){
   .nav,.header-phone{display:none}
   .burger{display:block}
+  .header-cta{gap:12px}
   .header-inner{height:76px}
   .logo-img{height:48px}
   .footer .logo-img{height:60px}
@@ -746,6 +766,14 @@ form .btn{width:100%}
   .header-cta .btn-primary{display:none}
   .header-inner{height:68px}
   .logo-img{height:44px}
+
+  /* Sehr schmale Displays: Logo und PQ-Kuerzel stossen sonst aneinander.
+     Muss nach der Zeile darueber stehen, sonst gewinnt die 44px. */
+  @media (max-width:360px){
+    .logo-img{height:39px}
+    .header-pq{padding:6px 7px;gap:4px;letter-spacing:.06em}
+    .header-cta{gap:9px}
+  }
 
   .services{grid-template-columns:1fr}
   .services>.card,
@@ -806,6 +834,11 @@ form .btn{width:100%}
         <span>02325 5943000</span>
       </a>
       <a href="#kontakt" class="btn btn-primary">Projekt anfragen</a>
+      <a class="header-pq" href="dokumente/praequalifikation-railx-gmbh.pdf" target="_blank" rel="noopener"
+         aria-label="Präqualifikationsnachweis der Deutschen Bahn AG ansehen (PDF, 1,6 MB, öffnet in neuem Tab)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg>
+        <span>PQ</span>
+      </a>
       <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
