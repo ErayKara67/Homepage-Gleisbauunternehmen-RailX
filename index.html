@@ -620,11 +620,26 @@ p{margin:0}
 .ref-works li::before{content:"";position:absolute;left:0;top:10px;width:8px;height:2px;background:var(--railx-orange)}
 
 /* ---------- Vorteile ---------- */
-/* Einleitung links, Teamfoto rechts. Der Abstand nach unten kommt hier her, damit
-   .section-head ihn nicht doppelt mitbringt. */
-.ueber-kopf{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:58px}
-.ueber-kopf .section-head{max-width:none;margin-bottom:0}
-.ueber-bild{margin:0}
+/* Einleitung links, Teamfoto rechts. Drei Entscheidungen, damit das Bild nicht
+   danebengelegt wirkt:
+   1. Spalten 1.25/0.75 statt 1/1 — bei gleich breiten Spalten war das Bild 134 px hoeher
+      als der Text, jetzt nur noch 56 px. Der Text wird dabei nicht zu breit (685 px, die
+      globale Regel deckelt .section-head ohnehin bei 720 px).
+   2. `align-items:end` — beide Spalten enden auf derselben Linie, 58 px ueber der
+      Oberkante der vier Werte. Zentriert schwamm der Text zwischen zwei Luecken.
+   3. Rote Kante links und Haarlinie aussen: genau die Bauteile, die der Nachweis-Block
+      weiter unten im selben Abschnitt schon traegt (4 px `--railx-orange`, 1 px Weiss).
+      Die Haarlinie verhindert ausserdem, dass dunkle Bildpartien ins Nachtblau auslaufen. */
+.ueber-kopf{
+  display:grid;grid-template-columns:1.25fr .75fr;gap:56px;
+  align-items:end;margin-bottom:58px;
+}
+.ueber-kopf .section-head{margin-bottom:0}
+.ueber-bild{
+  margin:0;
+  border:1px solid rgba(255,255,255,.16);
+  border-left:4px solid var(--railx-orange);
+}
 .ueber-bild img{display:block;width:100%;height:auto}
 .benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
 
