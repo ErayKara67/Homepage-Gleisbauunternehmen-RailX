@@ -625,16 +625,19 @@ p{margin:0}
    1. Spalten 1.25/0.75 statt 1/1 — bei gleich breiten Spalten war das Bild 134 px hoeher
       als der Text, jetzt nur noch 56 px. Der Text wird dabei nicht zu breit (685 px, die
       globale Regel deckelt .section-head ohnehin bei 720 px).
-   2. `align-items:end` — beide Spalten enden auf derselben Linie, 58 px ueber der
-      Oberkante der vier Werte. Zentriert schwamm der Text zwischen zwei Luecken.
+   2. Die Eyebrow steht als eigene Zeile ueber beiden Spalten (`grid-column:1/-1`), nicht
+      mehr in `.section-head`. Dadurch beginnt das Bild zwangslaeufig unterhalb von
+      „Warum RailX“ und auf derselben Linie wie die Ueberschrift — ohne festen Zahlenwert,
+      der beim naechsten Schriftwechsel falsch waere. `align-items:start` fuer die zweite Zeile.
    3. Kanten wie am Nachweis-Block weiter unten, aber kraeftiger und ohne Passepartout:
       Das Bild fuellt die Karte randlos aus. Weisse Linie 2 px in .25 — derselbe Wert wie die
       Oberkanten der vier Werte darunter. Rote Kante links 6 px statt 4. Ohne die Linie
       wuerden dunkle Bildpartien ins Nachtblau auslaufen. */
 .ueber-kopf{
-  display:grid;grid-template-columns:1.25fr .75fr;gap:56px;
-  align-items:end;margin-bottom:58px;
+  display:grid;grid-template-columns:1.25fr .75fr;
+  column-gap:56px;row-gap:0;align-items:start;margin-bottom:58px;
 }
+.ueber-kopf>.eyebrow{grid-column:1/-1}
 .ueber-kopf .section-head{margin-bottom:0}
 .ueber-bild{
   margin:0;
@@ -770,8 +773,10 @@ form .btn{width:100%}
   .benefits{grid-template-columns:repeat(2,1fr);gap:36px}
   /* Einspaltig gestapelt. Ohne Deckel waere das Bild bei 1024px 961x722 gross und wuerde
      den Abschnitt erschlagen — es steht linksbuendig unter dem Text wie die Ueberschrift. */
-  .ueber-kopf{grid-template-columns:1fr;gap:34px}
-  .ueber-bild{max-width:560px}
+  .ueber-kopf{grid-template-columns:1fr;column-gap:0}
+  /* Einspaltig gestapelt: Der Abstand kommt hier her, weil row-gap 0 bleiben muss
+     (sonst steht die Eyebrow doppelt weit ueber der Ueberschrift). */
+  .ueber-bild{max-width:560px;margin-top:34px}
   .steps{grid-template-columns:repeat(2,1fr);row-gap:44px}
   .contact{grid-template-columns:1fr;gap:26px}
   .map-wrap{flex:none;aspect-ratio:4/3;min-height:0}
@@ -1159,10 +1164,10 @@ form .btn{width:100%}
          Referenzen (dort zaehlen Projektergebnisse) oder in der Praxis (dort zaehlen
          Taetigkeiten) — es zeigt die Leute, nicht ein Ergebnis. Ohne Bildunterschrift. -->
     <div class="ueber-kopf">
+      <span class="eyebrow on-dark reveal">Warum RailX</span>
       <div class="section-head reveal">
-        <span class="eyebrow on-dark">Warum RailX</span>
         <h2>Erfahrung, auf die Sie bauen können</h2>
-        <p>Unser Team besteht aus erfahrenen Fachkräften, Polieren und Bauverantwortlichen mit umfangreicher praktischer Erfahrung im Bahnbau — auch unter den besonderen Bedingungen des laufenden Eisenbahnbetriebes.</p>
+        <p>Unser Team besteht aus erfahrenen Fachkräften, Polieren und Bauverantwortlichen mit umfangreicher praktischer Erfahrung im Bahnbau — auch unter den besonderen Bedingungen des laufenden Eisenbahnbetriebes, wo jede Bewegung im Gleisbereich abgestimmt und gesichert sein muss.</p>
       </div>
       <figure class="ueber-bild reveal">
         <img src="bilder/team-1.jpg?v=1" alt="Mitarbeiter mit Helm und Warnkleidung im Gleisbereich; dahinter drei Kollegen in Warnkleidung, ein Kran mit Hebegeschirr und neu verlegte Schwellen" width="1447" height="1087" loading="lazy" />
