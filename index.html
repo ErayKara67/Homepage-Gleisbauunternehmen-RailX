@@ -620,6 +620,12 @@ p{margin:0}
 .ref-works li::before{content:"";position:absolute;left:0;top:10px;width:8px;height:2px;background:var(--railx-orange)}
 
 /* ---------- Vorteile ---------- */
+/* Einleitung links, Teamfoto rechts. Der Abstand nach unten kommt hier her, damit
+   .section-head ihn nicht doppelt mitbringt. */
+.ueber-kopf{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:58px}
+.ueber-kopf .section-head{max-width:none;margin-bottom:0}
+.ueber-bild{margin:0}
+.ueber-bild img{display:block;width:100%;height:auto}
 .benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
 
 /* ---------- Eignungsnachweis (Praequalifikation) ---------- */
@@ -747,6 +753,10 @@ form .btn{width:100%}
   .refs.praxis{grid-template-columns:repeat(2,1fr)}
   .nachweis{grid-template-columns:1fr;gap:26px;padding:30px 30px}
   .benefits{grid-template-columns:repeat(2,1fr);gap:36px}
+  /* Einspaltig gestapelt. Ohne Deckel waere das Bild bei 1024px 961x722 gross und wuerde
+     den Abschnitt erschlagen — es steht linksbuendig unter dem Text wie die Ueberschrift. */
+  .ueber-kopf{grid-template-columns:1fr;gap:34px}
+  .ueber-bild{max-width:560px}
   .steps{grid-template-columns:repeat(2,1fr);row-gap:44px}
   .contact{grid-template-columns:1fr;gap:26px}
   .map-wrap{flex:none;aspect-ratio:4/3;min-height:0}
@@ -1130,10 +1140,18 @@ form .btn{width:100%}
 <!-- ================= ÜBER UNS ================= -->
 <section class="section section-dark" id="ueber-uns">
   <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow on-dark">Warum RailX</span>
-      <h2>Erfahrung, auf die Sie bauen können</h2>
-      <p>Unser Team besteht aus erfahrenen Fachkräften, Polieren und Bauverantwortlichen mit umfangreicher praktischer Erfahrung im Bahnbau — auch unter den besonderen Bedingungen des laufenden Eisenbahnbetriebes.</p>
+    <!-- Einleitung und Teamfoto nebeneinander. Das Bild steht bewusst hier und nicht in den
+         Referenzen (dort zaehlen Projektergebnisse) oder in der Praxis (dort zaehlen
+         Taetigkeiten) — es zeigt die Leute, nicht ein Ergebnis. Ohne Bildunterschrift. -->
+    <div class="ueber-kopf">
+      <div class="section-head reveal">
+        <span class="eyebrow on-dark">Warum RailX</span>
+        <h2>Erfahrung, auf die Sie bauen können</h2>
+        <p>Unser Team besteht aus erfahrenen Fachkräften, Polieren und Bauverantwortlichen mit umfangreicher praktischer Erfahrung im Bahnbau — auch unter den besonderen Bedingungen des laufenden Eisenbahnbetriebes.</p>
+      </div>
+      <figure class="ueber-bild reveal">
+        <img src="bilder/team-1.jpg?v=1" alt="Mitarbeiter mit Helm und Warnkleidung im Gleisbereich; dahinter drei Kollegen in Warnkleidung, ein Kran mit Hebegeschirr und neu verlegte Schwellen" width="1447" height="1087" loading="lazy" />
+      </figure>
     </div>
     <div class="benefits">
       <div class="benefit reveal">
