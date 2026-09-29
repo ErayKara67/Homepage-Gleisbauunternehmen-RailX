@@ -627,18 +627,20 @@ p{margin:0}
       globale Regel deckelt .section-head ohnehin bei 720 px).
    2. `align-items:end` — beide Spalten enden auf derselben Linie, 58 px ueber der
       Oberkante der vier Werte. Zentriert schwamm der Text zwischen zwei Luecken.
-   3. Rote Kante links und Haarlinie aussen: genau die Bauteile, die der Nachweis-Block
-      weiter unten im selben Abschnitt schon traegt (4 px `--railx-orange`, 1 px Weiss).
-      Die Haarlinie verhindert ausserdem, dass dunkle Bildpartien ins Nachtblau auslaufen. */
+   3. Dieselbe Karte wie der Nachweis-Block weiter unten im selben Abschnitt: Flaeche
+      `rgba(255,255,255,.04)`, Haarlinie 1 px Weiss, rote Kante 4 px links, dazu ein
+      Innenabstand als Passepartout. Der Abstand ist 16 statt 34/38 px, weil die Karte hier
+      nur ein Bild traegt und keinen Textsatz. Die Haarlinie verhindert ausserdem, dass
+      dunkle Bildpartien ins Nachtblau auslaufen. */
 .ueber-kopf{
   display:grid;grid-template-columns:1.25fr .75fr;gap:56px;
   align-items:end;margin-bottom:58px;
 }
 .ueber-kopf .section-head{margin-bottom:0}
 .ueber-bild{
-  margin:0;
-  border:1px solid rgba(255,255,255,.16);
-  border-left:4px solid var(--railx-orange);
+  margin:0;padding:16px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.16);border-left:4px solid var(--railx-orange);
 }
 .ueber-bild img{display:block;width:100%;height:auto}
 .benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
@@ -771,7 +773,7 @@ form .btn{width:100%}
   /* Einspaltig gestapelt. Ohne Deckel waere das Bild bei 1024px 961x722 gross und wuerde
      den Abschnitt erschlagen — es steht linksbuendig unter dem Text wie die Ueberschrift. */
   .ueber-kopf{grid-template-columns:1fr;gap:34px}
-  .ueber-bild{max-width:560px}
+  .ueber-bild{max-width:560px;padding:12px}
   .steps{grid-template-columns:repeat(2,1fr);row-gap:44px}
   .contact{grid-template-columns:1fr;gap:26px}
   .map-wrap{flex:none;aspect-ratio:4/3;min-height:0}
@@ -830,6 +832,9 @@ form .btn{width:100%}
     text-decoration:underline;text-decoration-color:rgba(225,6,19,.5);text-underline-offset:4px;
   }
   .nachweis{padding:26px 22px}
+  /* Passepartout mitskalieren wie beim Nachweis-Block, sonst frisst es auf dem
+     Handy zu viel vom Bild (bei 320px blieben sonst nur 235px Bildbreite). */
+  .ueber-bild{padding:10px}
   .nachweis-daten{grid-template-columns:1fr;gap:16px}
   .nachweis-link{width:100%;justify-content:space-between;padding-left:18px;padding-right:18px}
   .nachweis h3{font-size:1.15rem}
