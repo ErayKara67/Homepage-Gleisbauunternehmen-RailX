@@ -283,6 +283,16 @@ p{margin:0}
 .mobile-nav{display:none;background:var(--railx-dark);border-top:1px solid rgba(255,255,255,.1);padding:14px 0 26px}
 .mobile-nav.open{display:block}
 .mobile-nav a{display:block;padding:14px 24px;color:#fff;font-weight:500;border-bottom:1px solid rgba(255,255,255,.06)}
+/* Eigener Eintrag fuer den Nachweis: im Klappmenue ist Platz fuer die volle Bezeichnung,
+   die das Kuerzel in der Kopfzeile aus Platzgruenden nicht unterbringt. Der Zusatz nennt
+   Format und Groesse, weil der Verweis die Seite verlaesst. */
+/* Selektor mit dem Element davor, sonst gewinnt `.mobile-nav a{display:block}` — gleiche
+   Klassenzahl, aber ein Typselektor mehr. Ohne das Raster steht das Symbol ueber dem Titel. */
+.mobile-nav a.mobile-nav-pq{
+  display:grid;grid-template-columns:18px 1fr;align-items:start;column-gap:11px;
+}
+.mobile-nav-pq svg{width:18px;height:18px;margin-top:3px;fill:none;stroke:var(--railx-orange-hell);stroke-width:2;stroke-linecap:square}
+.mobile-nav-datei{display:block;margin-top:3px;font-size:.78rem;font-weight:400;color:rgba(255,255,255,.6)}
 .mobile-nav .btn{margin:20px 24px 0;width:calc(100% - 48px)}
 /* Kopfzeile: volle Navigation nur, wenn alles in eine Zeile passt (gemessen: mit Telefon
    ab 1161px, ohne Telefon ab 1001px) — sonst wurde das Logo zusammengedrueckt */
@@ -852,6 +862,11 @@ form .btn{width:100%}
     <a href="#ablauf">Ablauf</a>
     <a href="#ueber-uns">Über uns</a>
     <a href="#kontakt">Kontakt</a>
+    <a class="mobile-nav-pq" href="dokumente/praequalifikation-railx-gmbh.pdf" target="_blank" rel="noopener"
+       aria-label="Präqualifikation Deutsche Bahn (PDF, 1,6 MB, öffnet in neuem Tab)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg>
+      <span>Präqualifikation Deutsche Bahn<span class="mobile-nav-datei">PDF, 1,6 MB</span></span>
+    </a>
     <a href="#kontakt" class="btn btn-primary">Projekt anfragen</a>
   </div>
 </header>
