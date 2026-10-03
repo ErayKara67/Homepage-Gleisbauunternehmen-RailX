@@ -1236,7 +1236,7 @@ starter.addEventListener('submit', e => {
   if (w.zeitraum) document.getElementById('zeitraum').value = w.zeitraum;
   const genannt = [w.leistung && 'Leistung', w.ort && 'Ort', w.zeitraum && 'Zeitraum'].filter(Boolean);
   uebernommen.textContent = genannt.length
-    ? genannt.join(', ').replace(/, ([^,]*)$/, ' und $1') + ' aus dem ersten Schritt sind übernommen. Ergänzen Sie bitte Name, E-Mail und Ihr Projekt.'
+    ? genannt.join(', ').replace(/, ([^,]*)$/, ' und $1') + (genannt.length > 1 ? ' aus dem ersten Schritt sind' : ' aus dem ersten Schritt ist') + ' übernommen. Ergänzen Sie bitte Name, E-Mail und Ihr Projekt.'
     : 'Ergänzen Sie bitte Name, E-Mail und Ihr Projekt.';
   uebernommen.hidden = false;
   document.getElementById('name').setAttribute('aria-describedby', 'uebernommen name-fehler');
