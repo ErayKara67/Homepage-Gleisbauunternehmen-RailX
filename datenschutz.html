@@ -8,369 +8,273 @@
 <link rel="icon" href="favicon.ico" sizes="any" />
 <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png" />
 <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png" />
-<meta name="theme-color" content="#1a1f2e" />
+<meta name="theme-color" content="#1b2228" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-<link rel="preload" href="fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="fonts/barlow-condensed-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="canonical" href="https://railx-gleisbau.de/datenschutz.html" />
 <meta name="robots" content="noindex, follow" />
 <style>
-/* Lokal eingebundene Schriften — keine Verbindung zu Google */
-@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:500;font-display:swap;
-  src:url('fonts/barlow-condensed-latin-500-normal.woff2') format('woff2')}
-@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:600;font-display:swap;
-  src:url('fonts/barlow-condensed-latin-600-normal.woff2') format('woff2')}
-@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;
-  src:url('fonts/barlow-condensed-latin-700-normal.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;
-  src:url('fonts/inter-latin-400-normal.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;
-  src:url('fonts/inter-latin-500-normal.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;
-  src:url('fonts/inter-latin-600-normal.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;
-  src:url('fonts/inter-latin-700-normal.woff2') format('woff2')}
-</style>
+/* Lokal eingebundene Schriften, keine Verbindung zu Google.
+   Barlow Condensed fuer Betriebsstellen, Ueberschriften und Uhrzeiten, Barlow fuer Text. */
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/barlow-condensed-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/barlow-condensed-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/barlow-condensed-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/barlow-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/barlow-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/barlow-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/barlow-latin-700-normal.woff2') format('woff2')}
 
-<style>
-/* ============================================================
-   RailX GmbH — Landing Page
-   Farbwerte 1:1 aus tailwind.config.js (theme.extend.colors.railx)
-   ============================================================ */
+
 :root{
-  --railx-orange:#E10613;   /* Signalrot */
-  --railx-dark:#1a1f2e;     /* Nachtblau */
-  --railx-gray:#6B7280;
-  --railx-light:#F9FAFB;
-  --white:#ffffff;
-  --border:#E5E7EB;
-  --dark-soft:#252b3d;
-  --font-display:'Barlow Condensed',system-ui,sans-serif;
-  --font-body:'Inter',system-ui,-apple-system,sans-serif;
-  --wrap:1200px;
+  --bogen:#f1f3ef;          /* Plotbogen */
+  --bogen-hell:#fafbf8;     /* Blattflaechen */
+  --raster:#dfe3de;         /* Zeitraster (dekorativ) */
+  --station:#c3cac4;        /* Betriebsstellen-Linien (dekorativ) */
+  --tinte:#13181b;          /* Text: 16,9:1 auf Bogen */
+  --tinte-2:#4b5459;        /* Nebentext: 7,0:1 auf Bogen */
+  --kante:#7b858a;          /* Feld- und Rahmenlinien: 3,6:1 auf Bogen */
+  --nacht:#1b2228;          /* Sperrpausenfenster */
+  --nacht-2:#26303a;
+  --auf-nacht:#eef1f3;      /* 14,6:1 auf Nacht */
+  --auf-nacht-2:#b9c1c7;    /* 8,9:1 auf Nacht */
+  --rot:#e10613;            /* Signalrot: Anfrage-Trasse, Schraffur, Hauptaktion */
+  --rot-dunkel:#b8050f;     /* kleine rote Schrift auf Bogen: 6,1:1 */
+  --rot-hell:#fa404b;       /* kleine rote Elemente auf Nacht: 4,6:1 */
+  --trasse-grau:#8f9a94;
+  --trasse-blau:#4f7aa6;
+  --display:'Barlow Condensed','Arial Narrow',sans-serif;
+  --text:'Barlow',system-ui,sans-serif;
+  --wrap:1280px;
+  --kopf:76px;
+  --leiste:0px;
+  /* Plan-Schraffur der Sperrpause: feine Linien, nur wo eine Sperrpause belegt ist */
+  --schraffur:repeating-linear-gradient(-45deg,var(--rot) 0 1.5px,transparent 1.5px 6px);
 }
 *,*::before,*::after{box-sizing:border-box}
-a,button{-webkit-tap-highlight-color:rgba(225,6,19,.15)}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--kopf) + 16px);scroll-padding-bottom:var(--leiste);-webkit-text-size-adjust:100%;
+  scrollbar-color:var(--kante) var(--bogen)}
 body{
-  margin:0;font-family:var(--font-body);color:var(--railx-dark);
-  background:var(--white);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;
+  margin:0;color:var(--tinte);font:400 1.0625rem/1.6 var(--text);-webkit-font-smoothing:antialiased;
+  background-color:var(--bogen);
+  /* Zeitraster: eine Linie je Stunde */
+  background-image:repeating-linear-gradient(to bottom,transparent 0 63px,var(--raster) 63px 64px);
+  caret-color:var(--rot);padding-bottom:var(--leiste);
 }
+::selection{background:var(--rot);color:#fff}
 img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-.wrap{width:100%;max-width:var(--wrap);margin:0 auto;
-  padding:0 max(24px,env(safe-area-inset-left)) 0 max(24px,env(safe-area-inset-right))}
-h1,h2,h3,.display{font-family:var(--font-display);font-weight:700;line-height:1.05;letter-spacing:.005em;margin:0}
-h1{font-size:clamp(2.6rem,6.2vw,4.6rem);text-transform:uppercase}
-h2{font-size:clamp(2rem,4.2vw,3.1rem);text-transform:uppercase}
-h3{font-size:1.3rem;text-transform:uppercase;letter-spacing:.02em}
-p{margin:0}
-:focus-visible{outline:3px solid var(--railx-orange);outline-offset:3px}
+a{color:inherit}
+p{margin:0;text-wrap:pretty}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1;letter-spacing:0;text-wrap:balance;hyphens:auto;overflow-wrap:break-word}
+h2{font-size:clamp(2.1rem,3.6vw,3.1rem);font-weight:600}
+h3{font-size:1.45rem;font-weight:600;line-height:1.1}
+[hidden]{display:none!important}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 32px}
+.nr{font-variant-numeric:tabular-nums lining-nums}
+:focus-visible{outline:3px solid var(--rot);outline-offset:3px}
+.nacht :focus-visible,.fuss :focus-visible{outline-color:#fff}
+a,button,input,select,textarea{scroll-margin-top:calc(var(--kopf) + 24px);scroll-margin-bottom:calc(var(--leiste) + 16px)}
+html:not(.js) .starter,html:not(.js) .galerie-etikett{display:none}
+.ohne-js{display:none}
+html:not(.js) .ohne-js{display:inline-flex}
+.skip-link{position:absolute;left:-9999px;top:8px;z-index:400;background:var(--tinte);color:#fff;padding:12px 18px;font-weight:600}
+.skip-link:focus{left:8px}
+#inhalt:focus{outline:none}
 
-/* ---------- Eyebrow ---------- */
-.eyebrow{
-  display:inline-flex;align-items:center;gap:10px;font-family:var(--font-body);
-  font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--railx-orange);margin-bottom:18px;
+
+/* ---------- Tasten: rasten beim Druecken ein ---------- */
+.taste{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 22px;
+  border:2px solid transparent;cursor:pointer;text-decoration:none;
+  font:600 1.12rem/1 var(--display);letter-spacing:.04em;text-transform:uppercase;
+  box-shadow:0 2px 0 rgba(0,0,0,.28),0 6px 14px -6px rgba(0,0,0,.35);
+  transition:transform .08s ease,box-shadow .08s ease,background-color .15s ease,color .15s ease;
 }
-.eyebrow::before{content:"";width:28px;height:3px;background:var(--railx-orange);display:block}
-.eyebrow.on-dark{color:#fff}
-.eyebrow.on-dark::before{background:var(--railx-orange)}
+.taste:active{transform:translateY(2px);box-shadow:inset 0 2px 5px rgba(0,0,0,.35)}
+.taste svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:square}
+.taste-rot{background:var(--rot);color:#fff}
+.taste-rot:hover{background:var(--rot-dunkel);color:#fff}
+.taste-rot *{color:#fff}
+.taste-linie{background:transparent;color:var(--tinte);border-color:var(--tinte);box-shadow:none}
+.taste-linie:hover{background:var(--tinte);color:#fff}
+.nacht .taste-linie{color:var(--auf-nacht);border-color:var(--auf-nacht)}
+.nacht .taste-linie:hover{background:var(--auf-nacht);color:var(--nacht)}
+.verweis{font-weight:600;text-decoration:underline;text-decoration-color:var(--rot);text-decoration-thickness:2px;text-underline-offset:4px}
+.verweis:hover{color:var(--rot-dunkel)}
+.nacht .verweis{text-decoration-color:var(--rot-hell)}
+.nacht .verweis:hover{color:#fff;text-decoration-color:#fff}
 
-/* ---------- Buttons ---------- */
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  font-family:var(--font-body);font-size:.9rem;font-weight:600;letter-spacing:.02em;
-  padding:15px 30px;border:2px solid transparent;cursor:pointer;
-  transition:background .18s ease,color .18s ease,border-color .18s ease,transform .18s ease;
+/* ---------- Kopfzeile: Betriebsstellen als Navigation ---------- */
+.kopf{position:fixed;inset:0 0 auto 0;z-index:200;background:var(--bogen-hell);border-bottom:2px solid var(--tinte)}
+.kopf-innen{display:flex;align-items:center;gap:28px;height:var(--kopf)}
+.logo{flex:none;display:flex}
+.logo img{height:44px;width:auto}
+.stationen{flex:1;min-width:0}
+.stationen ol{list-style:none;margin:0;padding:0;display:flex;justify-content:space-between}
+.stationen a{
+  position:relative;display:block;padding:8px 2px 18px;text-decoration:none;white-space:nowrap;
+  font:600 1rem/1 var(--display);letter-spacing:.05em;text-transform:uppercase;color:var(--tinte-2);
 }
-.btn:hover{transform:translateY(-2px)}
-.btn-primary{background:var(--railx-orange);color:#fff;border-color:var(--railx-orange)}
-.btn-primary:hover{background:#b8050f;border-color:#b8050f}
-.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
-.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
-.btn-outline{background:transparent;color:var(--railx-dark);border-color:var(--railx-dark)}
-.btn-outline:hover{background:var(--railx-dark);color:#fff}
-.btn svg{width:17px;height:17px}
-
-/* ---------- Header ---------- */
-.header{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  background:rgba(26,31,46,.92);backdrop-filter:blur(10px);
-  border-bottom:1px solid rgba(255,255,255,.09);transition:background .25s ease;
+/* Betriebsstellen-Kaestchen: die senkrechte Stationslinie beginnt hier */
+.stationen a::after{content:"";position:absolute;left:50%;bottom:2px;width:10px;height:10px;margin-left:-5px;border:2px solid var(--kante);background:var(--bogen-hell)}
+.stationen a:hover{color:var(--tinte)}
+.stationen a[aria-current]{color:var(--tinte);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
+.stationen a[aria-current]::after{background:var(--rot);border-color:var(--rot)}
+.kopf-aktion{flex:none;display:flex;align-items:center;gap:20px}
+.kopf-tel{display:flex;flex-direction:column;text-decoration:none;line-height:1.15}
+.kopf-tel b{font:600 1.15rem/1.1 var(--display);letter-spacing:.03em;font-variant-numeric:tabular-nums}
+.kopf-tel span{font-size:.8rem;color:var(--tinte-2)}
+.kopf-tel:hover b{color:var(--rot-dunkel)}
+.kopf-aktion .taste{min-height:46px;padding:10px 18px;font-size:1.02rem}
+.pq-pille{display:none}
+.burger{display:none;width:48px;height:48px;padding:12px;border:2px solid var(--tinte);background:transparent;cursor:pointer}
+.burger span{display:block;height:2px;background:var(--tinte);margin:4px 0;transition:transform .2s ease,opacity .2s ease}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+/* Stationsstreifen fuer schmale Bildschirme: sechs Halte, der aktuelle rot */
+.streifen{display:none}
+.menue{display:none;background:var(--bogen-hell);border-top:1px solid var(--kante);max-height:calc(100svh - var(--kopf));overflow-y:auto;overscroll-behavior:contain}
+.menue.offen{display:block}
+.menue ol{list-style:none;margin:0;padding:0}
+.menue a{display:block;padding:15px 24px;border-bottom:1px solid var(--raster);text-decoration:none;font:600 1.15rem/1.3 var(--display);letter-spacing:.04em;text-transform:uppercase}
+.menue .menue-tel,.menue .menue-pq{display:grid;grid-template-columns:22px 1fr;column-gap:12px;align-items:start;text-transform:none;letter-spacing:.01em}
+.menue svg{width:20px;height:20px;margin-top:2px;fill:none;stroke:var(--rot-dunkel);stroke-width:2;stroke-linecap:square}
+.menue small{display:block;font:400 .9rem/1.4 var(--text);color:var(--tinte-2);margin-top:2px}
+.menue .taste{margin:18px 24px 22px;display:flex;border-bottom:0}
+/* 1101-1320 px: Navigation enger, damit Telefon und Anfrage in der Kopfzeile bleiben */
+@media (max-width:1320px){
+  .kopf-innen{gap:18px}
+  .stationen a{font-size:.9rem;letter-spacing:.02em}
+  .logo img{height:40px}
+  .kopf-aktion{gap:14px}
+  .kopf-aktion .taste{padding:10px 14px}
 }
-.header.scrolled{background:rgba(26,31,46,.99)}
-.header-inner{display:flex;align-items:center;justify-content:space-between;height:92px}
-.logo{display:flex;align-items:center}
-.logo-img{height:62px;width:auto;display:block}
-.footer .logo-img{height:76px}
-.nav{display:flex;align-items:center;gap:34px}
-.nav a{
-  font-size:.86rem;font-weight:500;color:rgba(255,255,255,.82);letter-spacing:.03em;
-  position:relative;padding:6px 0;transition:color .18s ease;
-}
-.nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--railx-orange);transition:width .22s ease}
-.nav a:hover{color:#fff}
-.nav a:hover::after{width:100%}
-.header-cta{display:flex;align-items:center;gap:18px}
-.header-phone{display:flex;align-items:center;gap:9px;color:#fff;font-size:.88rem;font-weight:600}
-.header-phone svg{width:16px;height:16px;stroke:var(--railx-orange)}
-.burger{display:none;background:none;border:0;padding:10px;cursor:pointer}
-.burger span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;transition:transform .25s ease,opacity .2s ease}
-.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.burger.open span:nth-child(2){opacity:0}
-.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.mobile-nav{display:none;background:var(--railx-dark);border-top:1px solid rgba(255,255,255,.1);padding:14px 0 26px}
-.mobile-nav.open{display:block}
-.mobile-nav a{display:block;padding:14px 24px;color:#fff;font-weight:500;border-bottom:1px solid rgba(255,255,255,.06)}
-.mobile-nav .btn{margin:20px 24px 0;width:calc(100% - 48px)}
-
-/* ---------- Hero ---------- */
-.hero{
-  position:relative;min-height:100vh;display:flex;align-items:center;
-  background:var(--railx-dark);overflow:hidden;padding:146px 0 70px;
-}
-.hero-bg{position:absolute;inset:0;z-index:0}
-.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.34}
-.hero-bg::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(100deg,rgba(26,31,46,.96) 0%,rgba(26,31,46,.86) 46%,rgba(26,31,46,.55) 100%);
-}
-/* Signatur: Gleisraster als Hintergrundstruktur */
-.rails{position:absolute;inset:0;z-index:1;opacity:.5;pointer-events:none}
-.hero-inner{position:relative;z-index:2;width:100%}
-.hero-content{max-width:820px}
-.hero h1{color:#fff}
-.hero h1 em{font-style:normal;color:var(--railx-orange)}
-.hero-lead{
-  color:rgba(255,255,255,.78);font-size:clamp(1.02rem,1.6vw,1.2rem);
-  max-width:610px;margin-top:26px;
-}
-.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
-.hero-stats{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.12);
-  margin-top:66px;border-top:2px solid var(--railx-orange);
-}
-.stat{background:var(--railx-dark);padding:26px 22px}
-.stat-num{font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:#fff;line-height:1}
-.stat-num span{color:var(--railx-orange)}
-.stat-label{font-size:.74rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:9px}
-
-/* ---------- Sections ---------- */
-.section{padding:110px 0}
-.section-light{background:var(--railx-light)}
-.section-dark{background:var(--railx-dark);color:#fff}
-.section-head{max-width:720px;margin-bottom:58px}
-.section-head p{color:var(--railx-gray);font-size:1.05rem;margin-top:20px}
-.section-dark .section-head p{color:rgba(255,255,255,.7)}
-
-/* ---------- Leistungen ---------- */
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.card{
-  background:#fff;border:1px solid var(--border);padding:38px 32px 34px;
-  position:relative;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
-}
-.card::before{content:"";position:absolute;top:0;left:0;width:0;height:3px;background:var(--railx-orange);transition:width .3s ease}
-.card:hover{transform:translateY(-5px);box-shadow:0 16px 44px rgba(26,31,46,.11);border-color:transparent}
-.card:hover::before{width:100%}
-.card-icon{width:54px;height:54px;background:rgba(225,6,19,.08);display:grid;place-items:center;margin-bottom:24px}
-.card-icon svg{width:26px;height:26px;stroke:var(--railx-orange)}
-.card h3{margin-bottom:13px}
-.card p{color:var(--railx-gray);font-size:.95rem}
-.card ul{list-style:none;margin:20px 0 0;padding:0}
-.card li{position:relative;padding-left:20px;font-size:.88rem;color:var(--railx-gray);margin-bottom:7px}
-.card li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:2px;background:var(--railx-orange)}
-
-/* ---------- Maschinen ---------- */
-.machines{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
-.machine-list{display:grid;gap:1px;background:rgba(255,255,255,.12);border-left:3px solid var(--railx-orange)}
-.machine{background:var(--railx-dark);padding:24px 28px;display:flex;align-items:flex-start;gap:20px}
-.machine-no{font-family:var(--font-display);font-size:1.05rem;color:var(--railx-orange);font-weight:700;padding-top:2px;min-width:26px}
-.machine h4{margin:0 0 5px;font-family:var(--font-display);font-size:1.2rem;text-transform:uppercase;letter-spacing:.02em;color:#fff}
-.machine p{color:rgba(255,255,255,.6);font-size:.9rem}
-
-/* ---------- Vorteile ---------- */
-.benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
-.benefit{padding-top:26px;border-top:2px solid var(--railx-dark)}
-.benefit h3{font-size:1.1rem;margin-bottom:11px}
-.benefit p{color:var(--railx-gray);font-size:.92rem}
-.benefit-no{font-family:var(--font-display);font-size:.85rem;font-weight:700;color:var(--railx-orange);letter-spacing:.12em;display:block;margin-bottom:12px}
-
-/* ---------- Ablauf ---------- */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
-.step{position:relative;padding:0 26px 0 0}
-.step-marker{display:flex;align-items:center;margin-bottom:22px}
-.step-dot{width:15px;height:15px;background:var(--railx-orange);flex:0 0 auto;border-radius:50%}
-.step-line{height:2px;background:var(--border);flex:1}
-.step:last-child .step-line{background:transparent}
-.step h3{font-size:1.08rem;margin-bottom:10px}
-.step p{color:var(--railx-gray);font-size:.9rem}
-.step-idx{font-family:var(--font-display);font-size:.8rem;letter-spacing:.14em;color:var(--railx-orange);font-weight:700;display:block;margin-bottom:8px}
-
-/* ---------- CTA-Band ---------- */
-.band{background:var(--railx-orange);padding:64px 0}
-.band-inner{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
-.band h2{color:#fff;max-width:640px}
-.band p{color:rgba(255,255,255,.9);margin-top:14px;max-width:560px}
-.band .btn{background:#fff;color:var(--railx-orange);border-color:#fff}
-.band .btn:hover{background:var(--railx-dark);color:#fff;border-color:var(--railx-dark)}
-
-/* ---------- Kontakt ---------- */
-.contact{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px}
-.contact-info h2{margin-bottom:22px}
-.contact-info>p{color:var(--railx-gray);margin-bottom:38px}
-.info-item{display:flex;gap:18px;padding:22px 0;border-top:1px solid var(--border)}
-.info-item svg{width:21px;height:21px;stroke:var(--railx-orange);flex:0 0 auto;margin-top:3px}
-.info-item strong{display:block;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--railx-gray);font-weight:600;margin-bottom:5px}
-.info-item span{font-size:1rem;font-weight:500;color:var(--railx-dark)}
-form{background:#fff;border:1px solid var(--border);padding:42px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.field{margin-bottom:20px}
-label{display:block;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--railx-dark);margin-bottom:8px}
-input,select,textarea{
-  width:100%;padding:14px 16px;border:1px solid var(--border);background:var(--railx-light);
-  font-family:var(--font-body);font-size:.95rem;color:var(--railx-dark);transition:border-color .18s ease,background .18s ease;
-}
-input:focus,select:focus,textarea:focus{outline:none;border-color:var(--railx-orange);background:#fff}
-textarea{resize:vertical;min-height:130px}
-.consent{display:flex;gap:12px;align-items:flex-start;margin:6px 0 26px}
-.consent input{width:18px;height:18px;flex:0 0 auto;margin-top:3px;accent-color:var(--railx-orange)}
-.consent label{text-transform:none;letter-spacing:0;font-size:.85rem;font-weight:400;color:var(--railx-gray);margin:0;line-height:1.5}
-.consent a{color:var(--railx-orange);text-decoration:underline}
-form .btn{width:100%}
-.form-note{font-size:.82rem;color:var(--railx-gray);margin-top:16px;text-align:center}
-
-/* ---------- Footer ---------- */
-.footer{background:var(--railx-dark);color:#fff;padding:76px 0 0}
-.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;padding-bottom:56px}
-.footer-brand p{color:rgba(255,255,255,.6);font-size:.92rem;margin-top:22px;max-width:330px}
-.footer h2{font-family:var(--font-display);font-size:1rem;text-transform:uppercase;letter-spacing:.06em;margin:0 0 20px;color:#fff;line-height:inherit}
-.footer ul{list-style:none;margin:0;padding:0}
-.footer li{margin-bottom:12px}
-.footer li a{display:inline-block;padding:3px 0}
-.footer li a{color:rgba(255,255,255,.62);font-size:.9rem;transition:color .18s ease}
-.footer li a:hover{color:var(--railx-orange)}
-.footer-bottom{
-  border-top:1px solid rgba(255,255,255,.1);padding:26px 0;display:flex;
-  justify-content:space-between;gap:20px;flex-wrap:wrap;
-}
-.footer-bottom p,.footer-bottom a{color:rgba(255,255,255,.5);font-size:.83rem}
-.footer-bottom a:hover{color:#fff}
-.footer-legal{display:flex;gap:26px}
-.footer-legal a{padding:6px 0}
-
-/* ---------- Reveal ---------- */
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
-.reveal.in{opacity:1;transform:none}
-
-/* ---------- Responsive ---------- */
-@media (max-width:1024px){
-  .services{grid-template-columns:repeat(2,1fr)}
-  .machines{grid-template-columns:1fr;gap:44px}
-  .benefits{grid-template-columns:repeat(2,1fr);gap:36px}
-  .steps{grid-template-columns:repeat(2,1fr);row-gap:44px}
-  .contact{grid-template-columns:1fr;gap:48px}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
-}
-@media (max-width:820px){
-  .nav,.header-phone{display:none}
+@media (max-width:1100px){
+  .stationen,.kopf-tel{display:none}
+  .kopf-innen{justify-content:space-between}
+  .kopf-aktion .taste{display:none}
   .burger{display:block}
-  .header-inner{height:76px}
-  .logo-img{height:48px}
-  .footer .logo-img{height:60px}
-  .hero{min-height:auto;padding:132px 0 66px}
-  .hero-stats{grid-template-columns:repeat(2,1fr);margin-top:50px}
-  .section{padding:74px 0}
-  form{padding:28px}
+  .streifen{display:flex;justify-content:space-around;position:absolute;left:0;right:0;bottom:-8px;height:14px;pointer-events:none}
+  .streifen::before{content:"";position:absolute;left:0;right:0;top:6px;height:2px;background:var(--tinte)}
+  .streifen i{position:relative;width:12px;height:12px;border:2px solid var(--tinte);background:var(--bogen-hell)}
+  .streifen i.aktiv{background:var(--rot);border-color:var(--rot)}
+  .pq-pille{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:0 12px;border:2px solid var(--tinte);text-decoration:none;font:600 .98rem/1 var(--display);letter-spacing:.06em;text-transform:uppercase}
+  .pq-pille svg{width:16px;height:16px;fill:none;stroke:var(--rot-dunkel);stroke-width:2;stroke-linecap:square}
 }
+
+
 @media (max-width:560px){
-  /* Platz fuer das groessere Logo: CTA steckt im Klappmenue */
-  .header-cta .btn-primary{display:none}
-  .header-inner{height:68px}
-  .logo-img{height:44px}
-
-  .services{grid-template-columns:1fr}
-  .benefits,.steps{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr}
-  .form-row{grid-template-columns:1fr;gap:0}
-  .hero-actions .btn{width:100%}
-  .step{padding-right:0}
+  .kopf-innen{gap:10px}
+  .logo img{height:38px}
+  .pq-pille{padding:0 10px}
 }
-@media (prefers-reduced-motion:reduce){
-  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-  .reveal{opacity:1;transform:none}
+@media (max-width:440px){.pq-lang{display:none}}
+
+/* ---------- Fusszeile: wieder Nacht ---------- */
+.fuss{margin-top:150px;background:var(--nacht);color:var(--auf-nacht);border-top:2px solid var(--tinte)}
+.fuss-raster{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr 1.2fr;gap:36px;padding:64px 0 48px}
+.fuss .logo img{height:52px}
+.fuss p{margin-top:16px;color:var(--auf-nacht-2);font-size:.98rem}
+.fuss h2{font:600 1.75rem/1.2 var(--display);letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px}
+.fuss ul{list-style:none;margin:0;padding:0}
+.fuss li{color:var(--auf-nacht-2);font-size:.98rem}
+.fuss li a{display:inline-block;padding:6px 0;color:var(--auf-nacht-2);text-decoration:none}
+.fuss li a:hover{color:#fff;text-decoration:underline;text-decoration-color:var(--rot-hell);text-underline-offset:4px}
+.fuss-unten{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;padding:22px 0;border-top:1px solid rgba(238,241,243,.2);font-size:.92rem;color:var(--auf-nacht-2)}
+.fuss-unten a{display:inline-block;padding:6px 0;color:var(--auf-nacht-2)}
+.fuss-unten nav{display:flex;gap:24px}
+@media (max-width:1100px){.fuss-raster{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.fuss-raster{grid-template-columns:1fr}}
+
+
+/* ---------- Rechtstext ---------- */
+main{position:relative;z-index:1}
+/* Rechtsseiten: Nachtflaeche ohne Schraffur (dort ist keine Sperrpause) */
+.nacht{background:var(--nacht);color:var(--auf-nacht)}
+.streifen{display:none!important}
+@media (max-height:500px){.kopf{position:absolute}html{scroll-padding-top:16px}.menue{max-height:none}}
+.recht-kopf{padding-top:calc(var(--kopf) + 28px)}
+.recht-kopf .nacht{padding:46px 48px 44px}
+.recht-kopf h1{font-size:clamp(2.6rem,5vw,4.2rem);font-weight:600;color:#fff}
+.zurueck{display:inline-flex;align-items:center;gap:8px;margin:40px 0 8px;font-weight:600;text-decoration:none}
+.zurueck svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:square}
+.zurueck span{text-decoration:underline;text-decoration-color:var(--rot);text-decoration-thickness:2px;text-underline-offset:4px}
+.recht{max-width:74ch;margin-top:24px;padding:40px 44px 44px;background:var(--bogen-hell);border:1px solid var(--kante)}
+.recht h2{font-size:clamp(1.6rem,2.6vw,2rem);margin:40px 0 12px}
+.recht h2:first-child{margin-top:0}
+.recht h3{font-size:1.4rem;margin:26px 0 8px}
+.recht p,.recht li{color:var(--tinte)}
+.recht p + p{margin-top:12px}
+.recht ul{padding-left:1.2em}
+.recht a{font-weight:600;text-decoration:underline;text-decoration-color:var(--rot);text-decoration-thickness:2px;text-underline-offset:4px;overflow-wrap:anywhere}
+.recht a:hover{color:var(--rot-dunkel)}
+@media (max-width:760px){
+  .wrap{padding:0 18px}
+  .recht-kopf .nacht{padding:36px 20px 34px}
+  .recht{padding:28px 20px 30px}
 }
+@media (forced-colors:active){.burger span{forced-color-adjust:none;background:CanvasText}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+@media print{.kopf,.menue,.burger{display:none!important}body{background:#fff}.nacht,.fuss{background:#fff!important;color:#000!important}.nacht h1,.fuss h2,.fuss li,.fuss li a,.fuss p,.fuss-unten a{color:#000!important}}
 </style>
-
-<style>
-.legal-hero{background:var(--railx-dark);padding:166px 0 60px}
-.legal-hero .eyebrow{margin-bottom:14px}
-.legal-hero h1{color:#fff;font-size:clamp(2.1rem,4.4vw,3rem)}
-.legal{padding:70px 0 110px}
-.legal-body{max-width:760px}
-.legal-body h2{font-size:1.35rem;text-transform:none;margin:46px 0 14px}
-.legal-body h2:first-child{margin-top:0}
-.legal-body h3{font-size:1.02rem;text-transform:none;letter-spacing:0;margin:26px 0 8px;font-weight:700}
-.legal-body p{color:var(--railx-gray);font-size:.98rem;margin-bottom:14px}
-.legal-body ul{margin:0 0 14px;padding-left:20px;color:var(--railx-gray);font-size:.98rem}
-.legal-body li{margin-bottom:6px}
-.legal-body a{color:var(--railx-orange);text-decoration:underline}
-.legal-body strong{color:var(--railx-dark)}
-.fill{color:inherit;font-weight:inherit}
-.back-link{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;font-weight:600;color:var(--railx-orange);margin-bottom:26px}
-.back-link svg{width:15px;height:15px}
-@media (max-width:820px){.legal-hero{padding:112px 0 44px}}
-</style>
-
 </head>
 <body>
-
-<header class="header" id="header">
-  <div class="wrap header-inner">
-    <a href="index.html" class="logo" aria-label="RailX — Gleisbau und Infrastruktur, zur Startseite">
-      <img class="logo-img" src="logo-railx-invers.png" alt="RailX — Gleisbau und Infrastruktur" width="1141" height="300" />
+<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+<header class="kopf">
+  <div class="wrap kopf-innen">
+    <a class="logo" href="index.html" aria-label="RailX GmbH, zur Startseite">
+      <img src="logo-railx.png" alt="RailX, Gleisbau und Infrastruktur" width="1141" height="300" />
     </a>
-    <nav class="nav" aria-label="Hauptnavigation">
-      <a href="index.html#leistungen">Leistungen</a>
-      <a href="index.html#referenzen">Referenzen</a>
-      <a href="index.html#praxis">Praxis</a>
-      <a href="index.html#ablauf">Ablauf</a>
-      <a href="index.html#ueber-uns">Über uns</a>
-      <a href="index.html#kontakt">Kontakt</a>
+    <nav class="stationen" aria-label="Hauptnavigation">
+      <ol>
+        <li><a href="index.html#praequalifikation">Präqualifikation</a></li>
+        <li><a href="index.html#leistungen">Leistungen</a></li>
+        <li><a href="index.html#referenzen">Referenzen</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="index.html#ablauf">Ablauf</a></li>
+        <li><a href="index.html#kontakt">Kontakt</a></li>
+      </ol>
     </nav>
-    <div class="header-cta">
-      <a href="tel:+4923255943000" class="header-phone">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        <span>02325 5943000</span>
+    <div class="kopf-aktion">
+      <a class="kopf-tel" href="tel:+4923255943000" aria-label="Anrufen: 02325 5943000, Büro Mo–Fr 10–18 Uhr"><b>02325 5943000</b><span>Büro Mo–Fr 10–18 Uhr</span></a>
+      <a class="taste taste-rot" href="index.html#anfrage">Projekt anfragen</a>
+      <a class="pq-pille" href="dokumente/praequalifikation-railx-gmbh.pdf" target="_blank" rel="noopener"
+         aria-label="PQ-Nachweis: Präqualifikation der Deutschen Bahn AG (PDF, 1,6 MB, öffnet in neuem Tab)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6v20h12V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg><span>PQ<span class="pq-lang">-Nachweis</span></span>
       </a>
-      <a href="index.html#kontakt" class="btn btn-primary">Anfrage senden</a>
-      <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menue" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
     </div>
   </div>
-  <div class="mobile-nav" id="mobileNav">
-    <a href="index.html#leistungen">Leistungen</a>
-    <a href="index.html#referenzen">Referenzen</a>
-    <a href="index.html#praxis">Praxis</a>
-    <a href="index.html#ablauf">Ablauf</a>
-    <a href="index.html#ueber-uns">Über uns</a>
-    <a href="index.html#kontakt">Kontakt</a>
-    <a href="index.html#kontakt" class="btn btn-primary">Anfrage senden</a>
-  </div>
+  <div class="streifen" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <nav class="menue" id="menue" aria-label="Hauptnavigation">
+    <a class="menue-tel" href="tel:+4923255943000" aria-label="Anrufen: 02325 5943000, Büro Mo–Fr 10–18 Uhr">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      <span>Anrufen: 02325 5943000<small>Büro Mo–Fr 10–18 Uhr</small></span>
+    </a>
+    <ol>
+      <li><a href="index.html#praequalifikation">Präqualifikation</a></li>
+      <li><a href="index.html#leistungen">Leistungen</a></li>
+      <li><a href="index.html#referenzen">Referenzen</a></li>
+      <li><a href="index.html#team">Team</a></li>
+      <li><a href="index.html#ablauf">Ablauf</a></li>
+      <li><a href="index.html#kontakt">Kontakt</a></li>
+    </ol>
+    <a class="menue-pq" href="dokumente/praequalifikation-railx-gmbh.pdf" target="_blank" rel="noopener"
+       aria-label="Nachweis als PDF öffnen: Präqualifikation der Deutschen Bahn AG (1,6 MB, öffnet in neuem Tab)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6v20h12V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg>
+      <span>Nachweis als PDF öffnen<small>Präqualifikation Deutsche Bahn AG, 1,6 MB</small></span>
+    </a>
+    <a class="taste taste-rot" href="index.html#anfrage">Projekt anfragen</a>
+  </nav>
 </header>
 
-<section class="legal-hero">
-  <div class="wrap">
-    <span class="eyebrow on-dark">Rechtliches</span>
-    <h1>Datenschutzerklärung</h1>
-  </div>
-</section>
-<section class="legal">
-  <div class="wrap">
-    <a href="index.html" class="back-link">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
-      Zurück zur Startseite
-    </a>
-    <div class="legal-body">
+<main id="inhalt">
+<div class="wrap recht-kopf">
+  <div class="nacht"><h1>Datenschutzerklärung</h1></div>
+  <a class="zurueck" href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span>Zurück zur Startseite</span></a>
+  <div class="recht">
 
       <h2>1. Datenschutz auf einen Blick</h2>
       <h3>Allgemeine Hinweise</h3>
@@ -535,73 +439,77 @@ form .btn{width:100%}
         rechtlichen Anforderungen entspricht. Stand: September 2026.
       </p>
 
-    </div>
   </div>
-</section>
+</div>
+</main>
 
-<footer class="footer">
+<footer class="fuss nacht">
   <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="logo"><img class="logo-img" src="logo-railx-invers.png" alt="RailX — Gleisbau und Infrastruktur" width="1141" height="300" /></div>
-        <p>Fachunternehmen für Eisenbahninfrastruktur: Weichenerneuerungen, Schienenarbeiten, Gleis- und Oberbauarbeiten sowie Instandhaltung im Gleisbereich.</p>
+    <div class="fuss-raster">
+      <div>
+        <a class="logo" href="index.html" aria-label="RailX GmbH, zur Startseite"><img src="logo-railx-invers.png" alt="RailX, Gleisbau und Infrastruktur" width="1141" height="300" loading="lazy" /></a>
+        <p>Oberbauarbeiten mit Schwerpunkt Weichen. Sitz in Herne, bundesweit im Einsatz.</p>
       </div>
       <div>
         <h2>Leistungen</h2>
         <ul>
-          <li><a href="index.html#leistungen">Weichenerneuerung</a></li>
-          <li><a href="index.html#leistungen">Schienenarbeiten</a></li>
-          <li><a href="index.html#leistungen">Gleis- &amp; Oberbau</a></li>
-          <li><a href="index.html#leistungen">Instandhaltung</a></li>
-          <li><a href="index.html#leistungen">Vegetationsarbeiten</a></li>
-          <li><a href="index.html#leistungen">Winterdienst</a></li>
+          <li><a href="index.html#weichen">Weichenerneuerung und -umbau</a></li>
+          <li><a href="index.html#gleisbau">Gleis- und Oberbauarbeiten</a></li>
+          <li><a href="index.html#schienen">Schienenarbeiten</a></li>
+          <li><a href="index.html#instandhaltung">Instandhaltung</a></li>
+          <li><a href="index.html#ergaenzend">Bahninfrastruktur</a></li>
+          <li><a href="index.html#ergaenzend">Vegetationsarbeiten</a></li>
+          <li><a href="index.html#ergaenzend">Winterdienst</a></li>
         </ul>
       </div>
       <div>
-        <h2>Unternehmen</h2>
+        <h2>Übersicht</h2>
         <ul>
-          <li><a href="index.html#ueber-uns">Über uns</a></li>
+          <li><a href="index.html#praequalifikation">Präqualifikation</a></li>
           <li><a href="index.html#referenzen">Referenzen</a></li>
-          <li><a href="index.html#praxis">Aus der Praxis</a></li>
+          <li><a href="index.html#team">Team</a></li>
           <li><a href="index.html#ablauf">Ablauf</a></li>
-          <li><a href="impressum.html">Impressum</a></li>
-          <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="index.html#kontakt">Kontakt</a></li>
         </ul>
       </div>
       <div>
         <h2>Kontakt</h2>
         <ul>
-          <li><a href="tel:+4923255943000">02325 5943000</a></li>
+          <li><a href="tel:+4923255943000" class="nr">02325 5943000</a></li>
+          <li>Büro Mo–Fr 10–18 Uhr</li>
           <li><a href="mailto:info@railx-gleisbau.de">info@railx-gleisbau.de</a></li>
-          <li><a href="index.html#kontakt">Flöz-Hugo-Siedlung 18<br />44653 Herne</a></li>
+          <li>Flöz-Hugo-Siedlung 18, 44653 Herne</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Nachweis und Firmendaten</h2>
+        <ul>
+          <li>Präqualifikation Deutsche Bahn AG, Nr. <span class="nr">137658</span>, gültig bis <span class="nr">22.09.2030</span></li>
+          <li><a href="dokumente/praequalifikation-railx-gmbh.pdf" target="_blank" rel="noopener" aria-label="Nachweis öffnen: Präqualifikation der Deutschen Bahn AG (PDF, 1,6 MB, öffnet in neuem Tab)">Nachweis öffnen (PDF, 1,6 MB)</a></li>
+          <li>Amtsgericht Bochum, HRB 22969</li>
+          <li>USt-IdNr. DE460319619</li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>© <span id="jahr">2026</span> RailX GmbH. Alle Rechte vorbehalten.</p>
-      <div class="footer-legal">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
-      </div>
+    <div class="fuss-unten">
+      <p>© <span id="jahr">2026</span> RailX GmbH</p>
+      <nav aria-label="Rechtliches"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></nav>
     </div>
   </div>
 </footer>
+
 <script>
 document.getElementById('jahr').textContent = new Date().getFullYear();
-const header = document.getElementById('header');
-addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 40), {passive:true});
-const burger = document.getElementById('burger');
-const mobileNav = document.getElementById('mobileNav');
-burger.addEventListener('click', () => {
-  const open = mobileNav.classList.toggle('open');
-  burger.classList.toggle('open', open);
-  burger.setAttribute('aria-expanded', String(open));
-  burger.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
-});
-mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  mobileNav.classList.remove('open'); burger.classList.remove('open'); burger.setAttribute('aria-expanded','false');
-}));
+const kopf = document.querySelector('.kopf'), burger = document.getElementById('burger'), menue = document.getElementById('menue');
+function menueSetzen(offen) { menue.classList.toggle('offen', offen); burger.setAttribute('aria-expanded', String(offen)); burger.setAttribute('aria-label', offen ? 'Menü schließen' : 'Menü öffnen'); }
+burger.addEventListener('click', () => menueSetzen(!menue.classList.contains('offen')));
+menue.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menueSetzen(false)));
+addEventListener('keydown', e => { if (e.key === 'Escape' && menue.classList.contains('offen')) { menueSetzen(false); burger.focus(); } });
+document.addEventListener('click', e => { if (menue.classList.contains('offen') && !kopf.contains(e.target)) menueSetzen(false); });
+kopf.addEventListener('focusout', e => { if (menue.classList.contains('offen') && e.relatedTarget && !kopf.contains(e.relatedTarget)) menueSetzen(false); });
+matchMedia('(min-width:1101px)').addEventListener('change', e => { if (e.matches) menueSetzen(false); });
+const inhalt = document.getElementById('inhalt');
+document.querySelector('.skip-link').addEventListener('click', e => { e.preventDefault(); inhalt.tabIndex = -1; inhalt.focus(); inhalt.addEventListener('blur', () => inhalt.removeAttribute('tabindex'), { once: true }); });
 </script>
-
 </body>
 </html>

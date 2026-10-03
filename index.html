@@ -3,15 +3,16 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>RailX GmbH | Gleisbau, Weichenerneuerung &amp; Instandhaltung</title>
-<meta name="description" content="Fachunternehmen für Eisenbahninfrastruktur: Gleis- &amp; Oberbauarbeiten, Weichenerneuerung – bundesweit, auch unter laufendem Betrieb. 24/7 einsatzbereit." />
+<title>RailX GmbH | Weichenerneuerung, Gleis- und Oberbau</title>
+<meta name="description" content="RailX GmbH, Herne: Weichenerneuerung, Gleis- und Oberbau. Präqualifiziert bei der Deutschen Bahn AG. Bundesweit, auch unter laufendem Betrieb." />
 <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png" />
 <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
-<meta name="theme-color" content="#1a1f2e" />
+<meta name="theme-color" content="#1b2228" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link rel="preload" href="fonts/barlow-condensed-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="canonical" href="https://railx-gleisbau.de/" />
 <meta property="og:url" content="https://railx-gleisbau.de/" />
 <script type="application/ld+json">
@@ -24,7 +25,7 @@
   "vatID": "DE460319619",
   "identifier": "HRB 22969, Amtsgericht Bochum",
   "mainEntityOfPage": "https://railx-gleisbau.de/",
-  "description": "Fachunternehmen für Eisenbahninfrastruktur mit Sitz in Herne (NRW), bundesweit im Einsatz: Weichenerneuerung, Schienenwechsel, Gleis- und Oberbauarbeiten – auch unter laufendem Betrieb.",
+  "description": "Fachunternehmen für Oberbauarbeiten an Gleisen und Weichen mit Sitz in Herne (NRW), bundesweit im Einsatz, auch unter laufendem Betrieb.",
   "url": "https://railx-gleisbau.de",
   "logo": "https://railx-gleisbau.de/logo-railx.png",
   "image": "https://railx-gleisbau.de/hero-railx.jpg",
@@ -144,7 +145,7 @@
   "inLanguage": "de-DE",
   "about": { "@id": "https://railx-gleisbau.de/#organisation" },
   "publisher": { "@id": "https://railx-gleisbau.de/#organisation" },
-  "name": "RailX GmbH | Gleisbau, Weichenerneuerung & Instandhaltung",
+  "name": "RailX GmbH | Weichenerneuerung, Gleis- und Oberbau",
   "primaryImageOfPage": {
     "@type": "ImageObject",
     "url": "https://railx-gleisbau.de/hero-railx.jpg",
@@ -157,1527 +158,1540 @@
 </script>
 
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="RailX" />
-<meta property="og:title" content="RailX GmbH | Gleisbau, Weichenerneuerung &amp; Instandhaltung" />
-<meta property="og:description" content="Fachunternehmen für Eisenbahninfrastruktur: Gleis- &amp; Oberbauarbeiten, Weichenerneuerung – bundesweit, auch unter laufendem Betrieb. 24/7 einsatzbereit." />
+<meta property="og:site_name" content="RailX GmbH" />
+<meta property="og:title" content="RailX GmbH | Weichenerneuerung, Gleis- und Oberbau" />
+<meta property="og:description" content="RailX GmbH, Herne: Weichenerneuerung, Gleis- und Oberbau. Präqualifiziert bei der Deutschen Bahn AG. Bundesweit, auch unter laufendem Betrieb." />
 <meta property="og:image" content="https://railx-gleisbau.de/hero-railx.jpg" />
 <meta property="og:image:alt" content="Neu eingebaute Weiche am Bahnhof Mönchengladbach bei Tagesanbruch nach der Nachtsperrpause" />
 <meta property="og:locale" content="de_DE" />
 <meta name="twitter:card" content="summary_large_image" />
+<script>document.documentElement.classList.add('js')</script>
 <style>
-/* Lokal eingebundene Schriften — keine Verbindung zu Google */
-@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:500;font-display:swap;
-  src:url('fonts/barlow-condensed-latin-500-normal.woff2') format('woff2')}
-@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:600;font-display:swap;
-  src:url('fonts/barlow-condensed-latin-600-normal.woff2') format('woff2')}
-@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;
-  src:url('fonts/barlow-condensed-latin-700-normal.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;
-  src:url('fonts/inter-latin-400-normal.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;
-  src:url('fonts/inter-latin-500-normal.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;
-  src:url('fonts/inter-latin-600-normal.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;
-  src:url('fonts/inter-latin-700-normal.woff2') format('woff2')}
-</style>
+/* Lokal eingebundene Schriften, keine Verbindung zu Google.
+   Barlow Condensed fuer Betriebsstellen, Ueberschriften und Uhrzeiten, Barlow fuer Text. */
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/barlow-condensed-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/barlow-condensed-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/barlow-condensed-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/barlow-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/barlow-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/barlow-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/barlow-latin-700-normal.woff2') format('woff2')}
 
-<style>
 /* ============================================================
-   RailX GmbH — Landing Page
-   Farbwerte 1:1 aus tailwind.config.js (theme.extend.colors.railx)
+   RailX — Bildfahrplan
+   Die Seite ist ein Zeit-Weg-Diagramm: oben die Betriebsstellen (Navigation), Zeit laeuft nach
+   unten, Zugtrassen kreuzen schraeg. RailX arbeitet im schraffierten Sperrpausenfenster, in dem
+   die Trassen abbrechen. Die rote Anfrage-Trasse fuehrt vom ersten Bildschirm zum Kontakt.
    ============================================================ */
 :root{
-  --railx-orange:#E10613;   /* Signalrot */
-  --railx-orange-hell:#FA404B; /* Signalrot aufgehellt: kleine Schrift auf Nachtblau (4,6:1) */
-  --railx-orange-hero:#FF1A27; /* Signalrot, nur leicht aufgehellt: Schlagzeile ueber dem Hero-Foto (3,2:1).
-     Nicht fuer kleine Schrift — auf Nachtblau nur 4,2:1, dort gilt --railx-orange-hell. */
-  --railx-dark:#1a1f2e;     /* Nachtblau */
-  --railx-gray:#6B7280;
-  --railx-light:#F9FAFB;
-  --white:#ffffff;
-  --border:#E5E7EB;
-  --dark-soft:#252b3d;
-  --font-display:'Barlow Condensed',system-ui,sans-serif;
-  --font-body:'Inter',system-ui,-apple-system,sans-serif;
-  --wrap:1200px;
+  --bogen:#f1f3ef;          /* Plotbogen */
+  --bogen-hell:#fafbf8;     /* Blattflaechen */
+  --raster:#dfe3de;         /* Zeitraster (dekorativ) */
+  --station:#c3cac4;        /* Betriebsstellen-Linien (dekorativ) */
+  --tinte:#13181b;          /* Text: 16,9:1 auf Bogen */
+  --tinte-2:#4b5459;        /* Nebentext: 7,0:1 auf Bogen */
+  --kante:#7b858a;          /* Feld- und Rahmenlinien: 3,6:1 auf Bogen */
+  --nacht:#1b2228;          /* Sperrpausenfenster */
+  --nacht-2:#26303a;
+  --auf-nacht:#eef1f3;      /* 14,6:1 auf Nacht */
+  --auf-nacht-2:#b9c1c7;    /* 8,9:1 auf Nacht */
+  --rot:#e10613;            /* Signalrot: Anfrage-Trasse, Schraffur, Hauptaktion */
+  --rot-dunkel:#b8050f;     /* kleine rote Schrift auf Bogen: 6,1:1 */
+  --rot-hell:#fa404b;       /* kleine rote Elemente auf Nacht: 4,6:1 */
+  --trasse-grau:#8f9a94;
+  --trasse-blau:#4f7aa6;
+  --display:'Barlow Condensed','Arial Narrow',sans-serif;
+  --text:'Barlow',system-ui,sans-serif;
+  --wrap:1280px;
+  --kopf:76px;
+  --leiste:0px;
+  /* Plan-Schraffur der Sperrpause: feine Linien, nur wo eine Sperrpause belegt ist */
+  --schraffur:repeating-linear-gradient(-45deg,var(--rot) 0 1.5px,transparent 1.5px 6px);
 }
 *,*::before,*::after{box-sizing:border-box}
-a,button{-webkit-tap-highlight-color:rgba(225,6,19,.15)}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--kopf) + 16px);scroll-padding-bottom:var(--leiste);-webkit-text-size-adjust:100%;
+  scrollbar-color:var(--kante) var(--bogen)}
 body{
-  margin:0;font-family:var(--font-body);color:var(--railx-dark);
-  background:var(--white);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;
+  margin:0;color:var(--tinte);font:400 1.0625rem/1.6 var(--text);-webkit-font-smoothing:antialiased;
+  background-color:var(--bogen);
+  /* Zeitraster: eine Linie je Stunde */
+  background-image:repeating-linear-gradient(to bottom,transparent 0 63px,var(--raster) 63px 64px);
+  caret-color:var(--rot);padding-bottom:var(--leiste);
 }
+::selection{background:var(--rot);color:#fff}
 img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-.wrap{width:100%;max-width:var(--wrap);margin:0 auto;
-  padding:0 max(24px,env(safe-area-inset-left)) 0 max(24px,env(safe-area-inset-right))}
-h1,h2,h3,.display{font-family:var(--font-display);font-weight:700;line-height:1.05;letter-spacing:.005em;margin:0}
-h1{font-size:clamp(2.6rem,6.2vw,4.6rem);text-transform:uppercase}
-h2{font-size:clamp(2rem,4.2vw,3.1rem);text-transform:uppercase}
-h3{font-size:1.3rem;text-transform:uppercase;letter-spacing:.02em}
-p{margin:0}
-:focus-visible{outline:3px solid var(--railx-orange);outline-offset:3px}
-.skip-link{position:absolute;left:-9999px;top:0;z-index:200;background:var(--railx-orange);color:#fff;padding:12px 20px;font-weight:600;font-size:.9rem}
-.skip-link:focus{left:0}
+a{color:inherit}
+p{margin:0;text-wrap:pretty}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1;letter-spacing:0;text-wrap:balance;hyphens:auto;overflow-wrap:break-word}
+h2{font-size:clamp(2.1rem,3.6vw,3.1rem);font-weight:600}
+h3{font-size:1.45rem;font-weight:600;line-height:1.1}
+[hidden]{display:none!important}
+/* Zeitangaben nicht am Strich umbrechen */
+.nb{white-space:nowrap}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 32px}
+.nr{font-variant-numeric:tabular-nums lining-nums}
+:focus-visible{outline:3px solid var(--rot);outline-offset:3px}
+.nacht :focus-visible,.fuss :focus-visible{outline-color:#fff}
+a,button,input,select,textarea{scroll-margin-top:calc(var(--kopf) + 24px);scroll-margin-bottom:calc(var(--leiste) + 16px)}
+.feld :is(input,select,textarea){scroll-margin-bottom:calc(var(--leiste) + 64px)}
+html:not(.js) .starter,html:not(.js) .galerie-etikett{display:none}
+/* Ersatzknopf nur ohne Skript (dann fehlt der Anfrage-Starter) */
+html.js .ohne-js{display:none}
+html:not(.js) .galerie{cursor:default}
+html:not(.js) .galerie-etikett{display:none}
+html:not(.js) .ohne-js{margin-top:26px;align-self:flex-start}
+.skip-link{position:absolute;left:-9999px;top:8px;z-index:400;background:var(--tinte);color:#fff;padding:12px 18px;font-weight:600}
+.skip-link:focus{left:8px}
+#inhalt:focus{outline:none}
 
-/* ---------- Eyebrow ---------- */
-.eyebrow{
-  display:inline-flex;align-items:center;gap:10px;font-family:var(--font-body);
-  font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--railx-orange);margin-bottom:18px;
-}
-.eyebrow::before{content:"";width:28px;height:3px;background:var(--railx-orange);display:block}
-.eyebrow.on-dark{color:#fff}
-.eyebrow.on-dark::before{background:var(--railx-orange)}
+/* ---------- Bildfahrplan-Ebene (Stationslinien, Zugtrassen, Anfrage-Trasse) ---------- */
+#fahrplan{position:absolute;top:0;left:0;width:100%;pointer-events:none;z-index:0;overflow:visible}
+#fahrplan .zug{fill:none;stroke-width:1.5;opacity:.7}
+#fahrplan .zug-grau{stroke:var(--trasse-grau)}
+#fahrplan .zug-blau{stroke:var(--trasse-blau)}
+#fahrplan .bedarf{stroke-dasharray:10 7}
+#fahrplan .stationslinie{stroke:var(--station);stroke-width:1}
+#fahrplan .anfrage{fill:none;stroke:var(--rot);stroke-width:3;stroke-linejoin:round}
+#fahrplan .zug-ende{stroke-dasharray:none;stroke-width:2;opacity:.85}
+#fahrplan .stunde{font:500 15px var(--display);fill:var(--tinte-2);font-variant-numeric:tabular-nums}
+#fahrplan .stundenstrich{stroke:var(--tinte);stroke-width:2}
+main,.fuss{position:relative;z-index:1}
 
-/* ---------- Buttons ---------- */
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  font-family:var(--font-body);font-size:.9rem;font-weight:600;letter-spacing:.02em;
-  padding:15px 30px;border:2px solid transparent;cursor:pointer;
-  transition:background .18s ease,color .18s ease,border-color .18s ease,transform .18s ease;
+/* ---------- Tasten: rasten beim Druecken ein ---------- */
+.taste{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 22px;
+  border:2px solid transparent;cursor:pointer;text-decoration:none;
+  font:600 1.12rem/1 var(--display);letter-spacing:.04em;text-transform:uppercase;
+  box-shadow:0 2px 0 rgba(0,0,0,.28),0 6px 14px -6px rgba(0,0,0,.35);
+  transition:transform .08s ease,box-shadow .08s ease,background-color .15s ease,color .15s ease;
 }
-.btn:hover{transform:translateY(-2px)}
-.btn-primary{background:var(--railx-orange);color:#fff;border-color:var(--railx-orange)}
-.btn-primary:hover{background:#b8050f;border-color:#b8050f}
-.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
-.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
-.btn-outline{background:transparent;color:var(--railx-dark);border-color:var(--railx-dark)}
-.btn-outline:hover{background:var(--railx-dark);color:#fff}
-.btn svg{width:17px;height:17px}
+.taste:active{transform:translateY(2px);box-shadow:inset 0 2px 5px rgba(0,0,0,.35)}
+.taste svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:square}
+.taste-rot{background:var(--rot);color:#fff}
+.taste-rot:hover{background:var(--rot-dunkel);color:#fff}
+.taste-rot *{color:#fff}
+.taste-linie{background:transparent;color:var(--tinte);border-color:var(--tinte);box-shadow:none}
+.taste-linie:hover{background:var(--tinte);color:#fff}
+.nacht .taste-linie{color:var(--auf-nacht);border-color:var(--auf-nacht)}
+.nacht .taste-linie:hover{background:var(--auf-nacht);color:var(--nacht)}
+.verweis{font-weight:600;text-decoration:underline;text-decoration-color:var(--rot);text-decoration-thickness:2px;text-underline-offset:4px}
+.verweis:hover{color:var(--rot-dunkel)}
+.nacht .verweis{text-decoration-color:var(--rot-hell)}
+.nacht .verweis:hover{color:#fff;text-decoration-color:#fff}
 
-/* ---------- Header ---------- */
-.header{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  background:rgba(26,31,46,.92);backdrop-filter:blur(10px);
-  border-bottom:1px solid rgba(255,255,255,.09);transition:background .25s ease;
+/* ---------- Kopfzeile: Betriebsstellen als Navigation ---------- */
+.kopf{position:fixed;inset:0 0 auto 0;z-index:200;background:var(--bogen-hell);border-bottom:2px solid var(--tinte)}
+.kopf-innen{display:flex;align-items:center;gap:28px;height:var(--kopf)}
+.logo{flex:none;display:flex}
+.logo img{height:44px;width:auto}
+.stationen{flex:1;min-width:0}
+.stationen ol{list-style:none;margin:0;padding:0;display:flex;justify-content:space-between}
+.stationen a{
+  position:relative;display:block;padding:8px 2px 18px;text-decoration:none;white-space:nowrap;
+  font:600 1rem/1 var(--display);letter-spacing:.05em;text-transform:uppercase;color:var(--tinte-2);
 }
-.header.scrolled{background:rgba(26,31,46,.99)}
-.header-inner{display:flex;align-items:center;justify-content:space-between;height:92px}
-.logo{display:flex;align-items:center}
-.logo-img{height:62px;width:auto;display:block}
-.footer .logo-img{height:76px}
-.nav{display:flex;align-items:center;gap:34px}
-.nav a{
-  font-size:.86rem;font-weight:500;color:rgba(255,255,255,.82);letter-spacing:.03em;
-  position:relative;padding:6px 0;transition:color .18s ease;
+/* Betriebsstellen-Kaestchen: die senkrechte Stationslinie beginnt hier */
+.stationen a::after{content:"";position:absolute;left:50%;bottom:2px;width:10px;height:10px;margin-left:-5px;border:2px solid var(--kante);background:var(--bogen-hell)}
+.stationen a:hover{color:var(--tinte)}
+.stationen a[aria-current]{color:var(--tinte);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
+.stationen a[aria-current]::after{background:var(--rot);border-color:var(--rot)}
+.kopf-aktion{flex:none;display:flex;align-items:center;gap:20px}
+.kopf-tel{display:flex;flex-direction:column;text-decoration:none;line-height:1.15}
+.kopf-tel b{font:600 1.15rem/1.1 var(--display);letter-spacing:.03em;font-variant-numeric:tabular-nums}
+.kopf-tel span{font-size:.8rem;color:var(--tinte-2)}
+.kopf-tel:hover b{color:var(--rot-dunkel)}
+.kopf-aktion .taste{min-height:46px;padding:10px 18px;font-size:1.02rem}
+.pq-pille{display:none}
+.burger{display:none;width:48px;height:48px;padding:12px;border:2px solid var(--tinte);background:transparent;cursor:pointer}
+.burger span{display:block;height:2px;background:var(--tinte);margin:4px 0;transition:transform .2s ease,opacity .2s ease}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+/* Stationsstreifen fuer schmale Bildschirme: sechs Halte, der aktuelle rot */
+.streifen{display:none}
+.menue{display:none;background:var(--bogen-hell);border-top:1px solid var(--kante);max-height:calc(100svh - var(--kopf));overflow-y:auto;overscroll-behavior:contain}
+.menue.offen{display:block}
+.menue ol{list-style:none;margin:0;padding:0}
+.menue a{display:block;padding:15px 24px;border-bottom:1px solid var(--raster);text-decoration:none;font:600 1.15rem/1.3 var(--display);letter-spacing:.04em;text-transform:uppercase}
+.menue .menue-tel,.menue .menue-pq{display:grid;grid-template-columns:22px 1fr;column-gap:12px;align-items:start;text-transform:none;letter-spacing:.01em}
+.menue svg{width:20px;height:20px;margin-top:2px;fill:none;stroke:var(--rot-dunkel);stroke-width:2;stroke-linecap:square}
+.menue small{display:block;font:400 .9rem/1.4 var(--text);color:var(--tinte-2);margin-top:2px}
+.menue .taste{margin:18px 24px 22px;display:flex;border-bottom:0}
+/* 1101-1320 px: Navigation enger, damit Telefon und Anfrage in der Kopfzeile bleiben */
+@media (max-width:1320px){
+  .kopf-innen{gap:18px}
+  .stationen a{font-size:.9rem;letter-spacing:.02em}
+  .logo img{height:40px}
+  .kopf-aktion{gap:14px}
+  .kopf-aktion .taste{padding:10px 14px}
 }
-.nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--railx-orange);transition:width .22s ease}
-.nav a:hover{color:#fff}
-.nav a:hover::after{width:100%}
-.header-cta{display:flex;align-items:center;gap:18px}
-.header-phone{display:flex;align-items:center;gap:9px;color:#fff;font-size:.88rem;font-weight:600}
-.header-phone svg{width:16px;height:16px;stroke:var(--railx-orange)}
-/* Praequalifikations-Kuerzel in der Kopfzeile, nur wo die Navigation eingeklappt ist.
-   Gegenueber Bahn-Auftraggebern ist der Nachweis das staerkste Argument; mobil steht er
-   sonst erst weit unten. Die Kopfzeile ist fixiert, also jederzeit erreichbar.
-   Am Desktop bewusst nicht: dort stehen schon Telefonnummer und Anfrage-Knopf. */
-.header-pq{display:none}
-.burger{display:none;background:none;border:0;padding:10px;cursor:pointer}
-.burger span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;transition:transform .25s ease,opacity .2s ease}
-.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.burger.open span:nth-child(2){opacity:0}
-.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.mobile-nav{display:none;background:var(--railx-dark);border-top:1px solid rgba(255,255,255,.1);padding:14px 0 26px}
-.mobile-nav.open{display:block}
-.mobile-nav a{display:block;padding:14px 24px;color:#fff;font-weight:500;border-bottom:1px solid rgba(255,255,255,.06)}
-/* Eigener Eintrag fuer den Nachweis: im Klappmenue ist Platz fuer die volle Bezeichnung,
-   die das Kuerzel in der Kopfzeile aus Platzgruenden nicht unterbringt. Der Zusatz nennt
-   Format und Groesse, weil der Verweis die Seite verlaesst. */
-/* Selektor mit dem Element davor, sonst gewinnt `.mobile-nav a{display:block}` — gleiche
-   Klassenzahl, aber ein Typselektor mehr. Ohne das Raster steht das Symbol ueber dem Titel. */
-.mobile-nav a.mobile-nav-pq{
-  display:grid;grid-template-columns:18px 1fr;align-items:start;column-gap:11px;
-}
-.mobile-nav-pq svg{width:18px;height:18px;margin-top:3px;fill:none;stroke:var(--railx-orange-hell);stroke-width:2;stroke-linecap:square}
-.mobile-nav-datei{display:block;margin-top:3px;font-size:.78rem;font-weight:400;color:rgba(255,255,255,.6)}
-.mobile-nav .btn{margin:20px 24px 0;width:calc(100% - 48px)}
-/* Kopfzeile: volle Navigation nur, wenn alles in eine Zeile passt (gemessen: mit Telefon
-   ab 1161px, ohne Telefon ab 1001px) — sonst wurde das Logo zusammengedrueckt */
-.logo{flex-shrink:0}
-@media (max-width:1180px){.header-phone{display:none}}
-@media (max-width:1020px){
-  .nav{display:none}
+@media (max-width:1100px){
+  .stationen,.kopf-tel{display:none}
+  .kopf-innen{justify-content:space-between}
+  .kopf-aktion .taste{display:none}
   .burger{display:block}
-  /* Dieselbe Grenze wie der Burger: Sobald die Navigation eingeklappt ist, fuehrt kein
-     sichtbarer Weg mehr zum Nachweis. Die Kopfzeile ist fixiert, also immer erreichbar. */
-  .header-pq{
-    display:inline-flex;align-items:center;gap:5px;flex:none;
-    padding:7px 9px;border:1px solid rgba(255,255,255,.34);
-    font-family:var(--font-display);font-size:.82rem;font-weight:600;
-    letter-spacing:.1em;line-height:1;color:#fff;
-    transition:border-color .18s ease,background .18s ease;
-  }
-  .header-pq svg{width:15px;height:15px;flex:none;fill:none;stroke:var(--railx-orange-hell);stroke-width:2;stroke-linecap:square}
-  .header-pq:hover,.header-pq:focus-visible{border-color:var(--railx-orange-hell);background:rgba(250,64,75,.12)}
+  .streifen{display:flex;justify-content:space-around;position:absolute;left:0;right:0;bottom:-8px;height:14px;pointer-events:none}
+  .streifen::before{content:"";position:absolute;left:0;right:0;top:6px;height:2px;background:var(--tinte)}
+  .streifen i{position:relative;width:12px;height:12px;border:2px solid var(--tinte);background:var(--bogen-hell)}
+  .streifen i.aktiv{background:var(--rot);border-color:var(--rot)}
+  .pq-pille{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:0 12px;border:2px solid var(--tinte);text-decoration:none;font:600 .98rem/1 var(--display);letter-spacing:.06em;text-transform:uppercase}
+  .pq-pille svg{width:16px;height:16px;fill:none;stroke:var(--rot-dunkel);stroke-width:2;stroke-linecap:square}
 }
 
-/* ---------- Hero ---------- */
-.hero{
-  position:relative;min-height:100vh;display:flex;align-items:flex-end;
-  background:var(--railx-dark);overflow:hidden;padding:146px 0 56px;
-}
-.hero-bg{position:absolute;inset:0;z-index:0}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 55%}
-/* Variante 4a: Das Foto bleibt in voller Helligkeit, abgedunkelt wird nur der untere Rand,
-   auf dem der Text sitzt. Himmel, Bahnhof, Zug, Team und Weiche bleiben dadurch frei.
-   Hoehe und Stufen sind gegenueber dem Entwurf verstaerkt (dort 420px/.94/.74): gemessen
-   lagen Eyebrow und Schlagzeile sonst unter der Kontrastgrenze, auf schmalen Geraeten bis 1,88:1.
-   Aendert sich Foto, Hero-Text oder Verlaufshoehe → Kontraste neu messen (Pruefroutine Punkt 7). */
-.hero-bg::after{
-  content:"";position:absolute;top:auto;left:0;right:0;bottom:0;height:560px;
-  background:linear-gradient(0deg,rgba(26,31,46,.97) 0%,rgba(26,31,46,.90) 45%,
-    rgba(26,31,46,.55) 75%,rgba(26,31,46,0) 100%);
-}
-.hero-inner{position:relative;z-index:2;width:100%}
-/* Erst ab 1200px zweispaltig — das ist die volle Wrap-Breite. Darunter bliebe fuer die
-   rechte Spalte zu wenig Platz (bei 1100px nur 356px): der Fliesstext wuerde sechszeilig
-   und ragte in den hellen Teil des Fotos, wo die rote Unterstreichung auf 1,71:1 faellt. */
-.hero-content{
-  max-width:none;display:grid;grid-template-columns:640px minmax(0,1fr);
-  gap:56px;align-items:end;
-}
-.hero h1{color:#fff;font-size:64px;line-height:1.02}
-/* So kraeftig wie moeglich: Signalrot selbst erreicht ueber dem Foto nur 2,5:1. Gemessen
-   wurde der hellste Untergrund hinter dieser Zeile (Luminanz 0,034 bei 1024px) — daraus ergibt
-   sich 3,2:1 fuer #FF1A27, gleicher Farbton wie #E10613, Saettigung 90 statt 74 Prozent.
-   In den Kennzahlen auf deckendem Nachtblau bleibt das Signalrot (40px, 3,31:1). */
-.hero h1 em{font-style:normal;color:var(--railx-orange-hero)}
-/* Wortlaut unveraendert, aber in drei Stufen gesetzt statt als ein Satz mit Doppelpunkt:
-   Einordnung (hell), Leistungen (gedaempft), Besonderheit (eigene Zeile mit rotem Strich).
-   Der Strich nimmt die Eyebrow darueber auf, nur schmaler — 20 statt 28 px. */
-.hero-lead{max-width:none;margin-top:0;text-wrap:pretty}
-.hero-lead b,
-.hero-lead-unten b{display:block;color:#fff;font-size:18px;font-weight:500;line-height:1.45}
-.lead-leistungen{
-  display:block;margin-top:8px;text-wrap:pretty;
-  color:rgba(255,255,255,.72);font-size:15.5px;line-height:1.55;
-}
-.lead-zusatz{
-  display:flex;align-items:center;gap:10px;margin-top:13px;
-  color:rgba(255,255,255,.92);font-size:15.5px;line-height:1.5;
-}
-.lead-zusatz::before{content:"";width:20px;height:3px;flex:none;background:var(--railx-orange-hero)}
-/* Das Wort verlinkt den Praequalifikationsnachweis. Erkennbar an der roten Unterstreichung
-   und dem Symbol, nicht allein an der Farbe — die Schrift bleibt weiss. */
-.lead-pq{
-  white-space:nowrap;text-decoration:underline;
-  text-decoration-color:var(--railx-orange-hero);text-decoration-thickness:2px;
-  text-underline-offset:4px;
-}
-.lead-pq svg{
-  width:.66em;height:.66em;margin-left:.28em;vertical-align:baseline;
-  fill:none;stroke:var(--railx-orange-hero);stroke-width:2.5;stroke-linecap:square;
-}
-.lead-pq:hover,.lead-pq:focus-visible{text-decoration-color:#fff}
-.lead-pq:hover svg,.lead-pq:focus-visible svg{stroke:#fff}
-.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-.hero-actions .btn{padding:15px 22px;white-space:nowrap}
-.hero .btn-ghost{border-color:rgba(255,255,255,.45)}
-/* Nur auf dem Handy: dritte Zeile in der Schlagzeile, Fliesstext unter dem Bild */
-.br-handy{display:none}
-.hero-lead-unten{display:none}
-/* Tablet und schmaler Desktop: einspaltig gestapelt, hoeherer Verlauf (Hochformat-Foto) */
-@media (max-width:1199px){
-  .hero{padding-bottom:52px}
-  /* 740 statt 680px seit 29.09.2026: der zweiteilige Fliesstext ist rund 34px hoeher,
-     dadurch rutscht die Schlagzeile nach oben in helleres Bild (gemessen 2,86:1). */
-  .hero-bg::after{
-    height:740px;
-    background:linear-gradient(0deg,rgba(26,31,46,.97) 0%,rgba(26,31,46,.90) 45%,
-      rgba(26,31,46,.55) 75%,rgba(26,31,46,0) 100%);
-  }
-  .hero-content{grid-template-columns:1fr;gap:0}
-  .hero h1{font-size:clamp(2.75rem,7.6vw,4rem)}
-  .hero-lead{margin-top:18px;max-width:620px}
-  .hero-lead b{font-size:19px}
-  .hero-actions{margin-top:28px}
-  .hero-actions .btn{padding:15px 30px}
-}
+/* ---------- Mobile Aktionsleiste ---------- */
+.leiste{display:none}
 @media (max-width:560px){
-  .hero{padding-bottom:28px}
-  /* Kein Verlauf auf dem Handy (Wunsch 29.09.2026): Das Foto bleibt ueber die volle Hoehe frei.
-     Die Abdunklung sitzt stattdessen als Hof direkt an den Buchstaben. Ohne diesen Hof waere der
-     Text unlesbar - er liegt genau ueber den blanken Schienen, gemessen 1,00-1,55:1.
-     Fuenf Stufen: zwei enge Radien fuer die Buchstabenkante (die tragen den Kontrast), zwei
-     mittlere fuer die Flaeche, einer weit als sanfte Absenkung. Gemessen wird das gerenderte
-     Bild, nicht der Verlauf: Seite zweimal fotografieren, einmal mit color:transparent, dann die
-     Glyphpixel vergleichen. Aendert sich das Foto oder die Schriftgroesse -> neu messen. */
-  .hero-bg::after{display:none}
-  .hero h1{
-    font-size:44px;
-    text-shadow:0 0 4px rgba(10,13,20,.96), 0 0 12px rgba(10,13,20,.93),
-      0 2px 8px rgba(10,13,20,.9), 0 8px 34px rgba(10,13,20,.85),
-      0 0 80px rgba(10,13,20,.7);
-  }
-  .br-handy{display:inline}
-  /* Der Fliesstext waere hier ueber dem Foto zu gedraengt — er steht stattdessen
-     als eigener Absatz unter dem Bild, direkt vor der roten Kante der Kennzahlen. */
-  .hero .hero-lead{display:none}
-  .hero-lead-unten{
-    display:block;margin:0;background:var(--railx-dark);padding:28px 24px 30px;
-  }
-  .hero-lead-unten b{font-size:17px}
-  .hero-actions{margin-top:24px;gap:10px}
-  .hero-actions .btn{padding:14px 20px}
-  /* Ohne Verlauf braucht der Ghost-Knopf eine eigene Flaeche, sonst steht weisse 14px-Schrift
-     direkt auf dem Foto (gemessen 1,55:1). Die Flaeche ist nur so gross wie der Knopf. */
-  .hero .btn-ghost{background:rgba(16,20,30,.62);border-color:rgba(255,255,255,.6)}
-  .hero .btn-primary{box-shadow:0 6px 24px rgba(10,13,20,.5)}
+  .kopf-innen{gap:10px}
+  .logo img{height:38px}
+  .pq-pille{padding:0 10px}
 }
-/* Kennzahlen ohne eigene Flaechen: rote Oberkante, feine Trennlinien, erste Spalte
-   buendig mit dem Wrap. Nur die PQ-Kachel behaelt eine Flaeche (anklickbar).
-   Seit 28.09.2026 als eigenes Band unter dem Hero statt darin: im Hero waren sie mit
-   25–31 % der Hoehe der groesste Block und haben das Titelbild zugedeckt. */
-.kennzahlen-band{background:var(--railx-dark);padding:0 0 6px}
-.hero-stats{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  border-top:2px solid var(--railx-orange);
+@media (max-width:440px){.pq-lang{display:none}}
+@media (max-width:1100px){
+  .leiste{position:fixed;inset:auto 0 0 0;z-index:150;display:grid;grid-template-columns:1fr 1fr;gap:10px;
+    padding:10px 12px max(10px,env(safe-area-inset-bottom));background:var(--bogen-hell);border-top:2px solid var(--tinte);
+    transition:transform .2s ease}
+  .leiste .taste{min-height:56px;padding:6px 10px;flex-direction:column;gap:2px;font-size:1.05rem}
+  .leiste .taste small{font:500 .78rem/1.1 var(--text);letter-spacing:0;text-transform:none}
+  .leiste.weg{transform:translateY(110%)}
+  /* Rueckfall ohne Skript; das Skript misst und ueberschreibt */
+  :root{--leiste:78px}
 }
-.stat{padding:26px 22px;border-left:1px solid rgba(255,255,255,.16)}
-.stat:first-child{padding-left:0;border-left:0}
-/* Vierte Kachel verweist auf den Eignungsnachweis — dauerhaft als Flaeche
-   erkennbar: hellerer Grund, feine Kontur und ein Pfeil hinter der Beschriftung */
-.stat-pq{
-  display:block;text-decoration:none;cursor:pointer;position:relative;border-left:0;
-  background:var(--dark-soft);
-  box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);
-  transition:background .2s ease,box-shadow .2s ease;
+/* Geringe Hoehe (Querformat, starker Zoom): nichts fest am Rand, damit Inhalt sichtbar bleibt */
+@media (max-height:500px){
+  .kopf{position:absolute}
+  html{scroll-padding-top:16px}
+  a,button,input,select,textarea{scroll-margin-top:24px}
+  .leiste{display:none!important}
+  .menue{max-height:none}
+  :root{--leiste:0px}
 }
-.stat-pq:hover,.stat-pq:focus-visible{
-  background:#2f374f;box-shadow:inset 0 0 0 1px rgba(225,6,19,.6);
+
+/* ---------- Erster Bildschirm: Nachtsperrpause ---------- */
+.hero{padding-top:calc(var(--kopf) + 28px);padding-bottom:140px}
+.hero-raster{display:grid;grid-template-columns:56px minmax(0,1fr);column-gap:16px}
+/* Zeitachse: die Nacht von 22 bis 6 Uhr, so lang wie das Fenster */
+.zeitachse{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;justify-content:space-between;
+  font:500 .95rem/1 var(--display);color:var(--tinte-2);text-align:right;border-right:2px solid var(--tinte);padding-right:10px}
+.zeitachse li{position:relative;background:var(--bogen);padding:2px 0}
+.zeitachse li::after{content:"";position:absolute;right:-12px;top:50%;width:8px;height:2px;background:var(--tinte)}
+.nacht{background:var(--nacht);color:var(--auf-nacht)}
+.sperrpause{position:relative;background:var(--nacht);color:var(--auf-nacht)}
+/* Schraffur oben und unten: so wird eine Sperrpause im Bildfahrplan gezeichnet */
+.sperrpause::before,.sperrpause::after{content:"";position:absolute;left:0;right:0;height:12px;background:var(--schraffur)}
+.sperrpause::before{top:0;border-bottom:1px solid var(--rot)}
+.sperrpause::after{bottom:0;border-top:1px solid var(--rot)}
+.hero .sperrpause{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.9fr);column-gap:48px;padding:60px 56px 0}
+/* Erster Abschnitt der Anfrage-Trasse: verlaesst sichtbar den Knopf */
+.trasse-start{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;overflow:visible}
+.trasse-start polyline{fill:none;stroke:var(--rot);stroke-width:3;stroke-linejoin:round}
+.hero h1,.hero-text{position:relative;z-index:2}
+.hero-text{padding-bottom:64px;display:flex;flex-direction:column}
+.hero h1{grid-column:1/-1;font-size:clamp(3rem,5.4vw,5rem);font-weight:500;line-height:.95;color:#fff;margin-bottom:6px}
+.hero h1 span{display:block;font-weight:700}
+.unterzeile{margin-top:24px;max-width:46ch;font-size:1.2rem;line-height:1.5;color:var(--auf-nacht-2)}
+/* Dichte Belegleiste: die Praequalifikation in einer Zeile */
+.pq-zeile{margin-top:28px;padding:12px 0;border-top:1px solid rgba(238,241,243,.35);border-bottom:1px solid rgba(238,241,243,.35);
+  font:500 1.08rem/1.45 var(--display);letter-spacing:.02em;color:var(--auf-nacht)}
+.pq-zeile .trenner{color:var(--auf-nacht-2)}
+.pq-zeile .nr{font-weight:600}
+.starter{margin-top:30px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 14px;align-items:end}
+.starter label{display:block;margin-bottom:6px;font:600 .9rem/1.3 var(--display);letter-spacing:.06em;text-transform:uppercase;color:var(--auf-nacht-2)}
+.starter select,.starter input{width:100%;min-height:48px;padding:10px 12px;font:400 1rem var(--text);color:var(--auf-nacht);
+  background:var(--nacht-2);border:1px solid #8c979f;border-radius:0}
+.starter select:focus,.starter input:focus{outline:2px solid var(--rot-hell);outline-offset:1px;border-color:var(--auf-nacht)}
+.starter input::placeholder{color:#98a2a9}
+.starter option{color:var(--tinte);background:#fff}
+.starter-aktion{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;margin-top:6px}
+.uebernommen{margin:0 0 18px;padding:10px 14px;border:2px solid var(--tinte);background:#fff;font-weight:500}
+.unterzeile,.hero-tel{position:relative;background:var(--nacht)}
+.hero-tel{display:inline-flex;flex-direction:column;align-self:flex-start;margin-top:22px;color:var(--auf-nacht);text-decoration:none;line-height:1.25}
+.hero-tel b{font:600 1.25rem/1.2 var(--display);letter-spacing:.03em}
+.hero-tel small{font-size:.9rem;color:var(--auf-nacht-2)}
+.hero-tel:hover b{text-decoration:underline;text-decoration-color:var(--rot-hell);text-underline-offset:4px}
+.hero-bild{margin:0;align-self:end;position:relative;z-index:2;margin-bottom:-96px}
+.hero-bild img{width:100%;height:auto;border:2px solid var(--auf-nacht)}
+.hero-bild figcaption{margin-top:10px;font-size:.95rem;line-height:1.45;color:var(--tinte-2);background:var(--bogen);padding:6px 8px 6px 0}
+.hero-bild figcaption a{color:var(--tinte)}
+/* Die Bildzeile steht auf hellem Grund, obwohl sie im Nachtfenster liegt */
+.hero-bild figcaption :focus-visible{outline-color:var(--rot)}
+.hero-bild figcaption .verweis{text-decoration-color:var(--rot)}
+.hero-bild figcaption .verweis:hover{color:var(--rot-dunkel);text-decoration-color:var(--rot-dunkel)}
+@media (max-width:1100px){
+  .hero .sperrpause{grid-template-columns:1fr;row-gap:0;padding:52px 40px 0}
+  .hero-bild{margin-top:36px}
+  .hero-text{padding-bottom:0}
+  .hero-bild{max-width:720px}
 }
-.stat-pq .stat-label{color:rgba(255,255,255,.85)}
-.stat-pq:hover .stat-num{color:var(--railx-orange)}
-.stat-pfeil{
-  width:13px;height:13px;margin-left:7px;vertical-align:-1px;
-  stroke:var(--railx-orange);stroke-width:2.5;fill:none;
-  transition:transform .2s ease;
+@media (max-width:760px){
+  .wrap{padding:0 18px}
+  .hero{padding-top:calc(var(--kopf) + 12px);padding-bottom:120px}
+  .hero-raster{grid-template-columns:30px minmax(0,1fr);column-gap:8px}
+  .zeitachse{font-size:.85rem;padding-right:5px}
+  .zeitachse li:nth-child(even){visibility:hidden}
+  .zeitachse li::after{right:-7px;width:5px}
+  .hero .sperrpause{padding:30px 20px 0}
+  .hero h1{font-size:clamp(2.5rem,11vw,3.4rem)}
+  .unterzeile{font-size:1.08rem}
+  .starter{grid-template-columns:1fr;margin-top:16px;gap:10px}
+  .starter label{margin-bottom:4px}
+  .starter-aktion .taste{width:100%}
+  .hero-bild{margin-bottom:-72px}
+  /* Handy: Schlagzeile, Kurzfassung der Praequalifikation, dann die Anfrage; die Unterzeile danach */
+  .pq-zeile{order:1;margin-top:14px;padding:8px 0}
+  .starter{order:2}
+  .unterzeile{order:3;margin-top:26px}
+  .hero-tel{display:none}
 }
-.stat-pq:hover .stat-pfeil{transform:translateX(4px)}
-.stat-mehr{
-  display:inline-block;white-space:nowrap;margin-top:11px;
-  font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
-  color:var(--railx-orange);border-bottom:1px solid rgba(225,6,19,.5);padding-bottom:3px;
+@media (max-width:560px){.pq-zeile .pq-lang{display:none}}
+
+/* ---------- Abschnitte ---------- */
+.abschnitt{position:relative;padding:150px 0 30px}
+/* Freistellung wie die Beschriftung im Bildfahrplan: Linien laufen hinter dem Text durch */
+.abschnitt-kopf{position:relative;display:block;max-width:calc(68ch + 28px);margin:-14px -14px 34px;padding:14px;background:var(--bogen)}
+/* Halt: das Betriebsstellen-Kaestchen dieses Abschnitts. Die Anfrage-Trasse laeuft von Halt zu Halt. */
+.halt{position:absolute;top:-44px;left:var(--halt-x,0);width:16px;height:16px;margin-left:-8px;border:2px solid var(--tinte);background:var(--bogen-hell)}
+.halt.erreicht{background:var(--rot);border-color:var(--rot)}
+.abschnitt-kopf p{margin-top:16px;font-size:1.15rem;color:var(--tinte-2)}
+.blatt{position:relative;background:var(--bogen-hell);border:1px solid var(--kante)}
+
+/* ---------- Praequalifikation: Kursbuchtabelle ---------- */
+.pq-raster{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:36px 56px;padding:44px}
+.pq-raster .taste{margin-top:26px}
+.pq-hinweis{margin-top:14px;font-size:.95rem;color:var(--tinte-2);max-width:46ch}
+.kursbuch{margin:0}
+.kursbuch div{display:flex;align-items:baseline;gap:10px;padding:9px 0;border-bottom:1px solid var(--raster)}
+/* Kursbuch: Bezeichnung, Leitpunkte, Wert */
+.kursbuch dt{flex:1 1 auto;display:flex;align-items:baseline;gap:10px;color:var(--tinte-2);white-space:nowrap}
+.kursbuch dt::after{content:"";flex:1;min-width:24px;border-bottom:2px dotted var(--kante);transform:translateY(-4px)}
+.kursbuch dd{flex:0 0 58%;margin:0;text-align:left;font:600 1.18rem/1.3 var(--display);letter-spacing:.01em;font-variant-numeric:tabular-nums}
+.pq-firma{grid-column:1/-1;border-top:2px solid var(--tinte);padding-top:24px}
+.pq-firma h3{margin-bottom:10px}
+.pq-firma .kursbuch dd{font-family:var(--text);font-size:1rem;font-weight:500}
+@media (max-width:900px){.pq-raster{grid-template-columns:1fr;padding:28px 22px}}
+@media (max-width:560px){
+  .kursbuch div{flex-wrap:wrap;gap:2px 10px}
+  .kursbuch dt::after{display:none}
+  .kursbuch dt{flex-basis:100%;font-size:.95rem}
+  .kursbuch dd{flex-basis:100%;text-align:left}
 }
-@media (prefers-reduced-motion:reduce){.stat-pfeil{transition:none}}
-.stat-num{font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:#fff;line-height:1}
-.stat-num span{color:var(--railx-orange)}
-.stat-label{font-size:.74rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.68);margin-top:9px}
-/* Weiche Trennstellen (&shy;) nur dort zulassen, wo die Kacheln wirklich schmal sind */
-.stat-label{-webkit-hyphens:none;hyphens:none;overflow-wrap:break-word}
+
+/* ---------- Leistungen: Zeichenerklaerung mit Linienform ---------- */
+.linie{display:block;width:72px;height:10px;margin-bottom:14px}
+.linie-doppelt{border-top:3px solid var(--tinte);border-bottom:3px solid var(--tinte);height:12px}
+.linie-voll{border-top:3px solid var(--tinte);height:3px}
+.linie-bedarf{height:3px;background:repeating-linear-gradient(to right,var(--tinte) 0 10px,transparent 10px 16px)}
+.kern{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:0}
+.kern-text{padding:44px}
+.kern h3{font-size:clamp(1.9rem,3vw,2.6rem)}
+.kern-text > p{margin-top:16px;font-size:1.15rem;max-width:52ch}
+.punkte-liste{list-style:none;margin:20px 0 0;padding:0}
+.punkte-liste li{position:relative;padding:6px 0 6px 22px;border-bottom:1px solid var(--raster)}
+.punkte-liste li::before{content:"";position:absolute;left:0;top:1.05em;width:10px;height:2px;background:var(--tinte)}
+.beleg{margin-top:20px;font-size:1rem;color:var(--tinte-2);max-width:56ch}
+.beleg a{color:var(--tinte)}
+.galerie{position:relative;display:block;width:100%;padding:0;margin:0;border:0;background:var(--nacht);cursor:zoom-in;color:#fff;font:inherit;text-align:left;overflow:hidden}
+.galerie img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.galerie:hover img,.galerie:focus-visible img{transform:scale(1.03)}
+.galerie:focus-visible{outline:3px solid var(--rot);outline-offset:3px}
+.galerie-etikett{position:absolute;left:0;bottom:0;display:inline-flex;align-items:center;gap:8px;padding:10px 14px;background:var(--tinte);color:#fff;
+  font:600 .98rem/1 var(--display);letter-spacing:.05em;text-transform:uppercase}
+.galerie-etikett svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:square}
+.galerie:hover .galerie-etikett,.galerie:focus-visible .galerie-etikett{background:var(--rot-dunkel);color:#fff}
+.kern .galerie{aspect-ratio:3/4;height:100%}
+/* Oberbau als Tafel: eine Zeile je Leistung, keine Kartenreihe */
+.tafel{margin-top:28px}
+.tafel-zeile{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.3fr) 240px;gap:28px;padding:28px 30px;border-top:1px solid var(--raster)}
+.tafel-zeile:first-child{border-top:0}
+.tafel-zeile h3{margin-top:2px}
+.tafel-zeile > div > p{color:var(--tinte)}
+.tafel-zeile .punkte-liste{margin-top:14px}
+.tafel-zeile .galerie{aspect-ratio:4/3}
+.tafel-zeile .verweis{align-self:start}
+.leistungen-kopf{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:40px;align-items:start}
+.legende{margin:0;padding:18px 20px;background:var(--bogen-hell);border:1px solid var(--kante)}
+.legende-titel{font:600 1.05rem/1.3 var(--display);letter-spacing:.05em;text-transform:uppercase;margin-bottom:8px}
+.legende div{display:grid;grid-template-columns:56px 1fr;gap:12px;align-items:center;padding:5px 0}
+.legende dt .linie{margin:0;width:56px}
+.legende dd{margin:0;font-size:.95rem}
+.linie-rot{border-top:3px solid var(--rot);height:3px}
+.linie-zuege{height:9px;background:linear-gradient(var(--trasse-grau),var(--trasse-grau)) 0 0/100% 1.5px no-repeat,repeating-linear-gradient(to right,var(--trasse-blau) 0 10px,transparent 10px 17px) 0 7.5px/100% 1.5px no-repeat}
+.linie-schraffur{height:12px;background:var(--schraffur);border-top:1px solid var(--rot);border-bottom:1px solid var(--rot)}
+.ergaenzend{margin-top:28px;padding:30px 28px}
+.ergaenzend-liste{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 28px;margin:18px 0 0}
+.ergaenzend-liste dt{font:600 1.25rem/1.3 var(--display)}
+.ergaenzend-liste dd{margin:8px 0 0;color:var(--tinte-2)}
+@media (max-width:1000px){
+  .kern{grid-template-columns:1fr}
+  .kern .galerie{aspect-ratio:4/3;height:auto}
+  .ergaenzend-liste{grid-template-columns:1fr}
+  .tafel-zeile{grid-template-columns:1fr;gap:14px}
+  .tafel-zeile .galerie{max-width:420px}
+  .leistungen-kopf{grid-template-columns:1fr;gap:0}
+  .legende{margin-bottom:32px;max-width:420px}
+}
+@media (max-width:760px){.kern-text,.tafel-zeile,.ergaenzend{padding:26px 20px}}
+
+/* ---------- Referenzen: vier Sperrpausen ---------- */
+.referenzen{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 40px;align-items:start}
+.referenz{padding:0}
+.referenz.sperrpause{padding:12px 0}
+.referenz:nth-child(even){margin-top:96px}
+.referenz .galerie{aspect-ratio:4/3}
+.referenz-text{padding:26px 30px 30px}
+.referenz h3{font-size:1.9rem;color:#fff}
+.datenzeilen{margin:16px 0 0}
+.datenzeilen div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px;padding:9px 0;border-top:1px solid rgba(238,241,243,.18)}
+.datenzeilen dt{font:500 .98rem/1.4 var(--display);letter-spacing:.05em;text-transform:uppercase;color:var(--auf-nacht-2)}
+.datenzeilen dd{margin:0;color:var(--auf-nacht)}
+.datenzeilen .nr{font-weight:600}
 @media (max-width:900px){
-  .hero-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .stat:nth-child(odd){padding-left:0;border-left:0}
-  .stat:nth-child(n+3){border-top:1px solid rgba(255,255,255,.16)}
-  .stat.stat-pq{border-top:0}
+  .referenzen{grid-template-columns:1fr}
+  .referenz:nth-child(even){margin-top:0}
 }
-@media (max-width:480px){.stat-label{-webkit-hyphens:manual;hyphens:manual}}
-.nobr{white-space:nowrap}
-
-/* ---------- Sections ---------- */
-.section{padding:110px 0}
-.section-light{background:var(--railx-light)}
-.section-dark{background:var(--railx-dark);color:#fff}
-.section-head{max-width:720px;margin-bottom:58px}
-.section-head p{color:var(--railx-gray);font-size:1.05rem;margin-top:20px}
-.section-dark .section-head p{color:rgba(255,255,255,.7)}
-
-/* ---------- Leistungen ---------- */
-.services{display:grid;grid-template-columns:repeat(6,1fr);gap:26px}
-.services>.card{grid-column:span 2}
-.services>.card:last-child{grid-column:3/5}
-.card{
-  background:#fff;border:1px solid var(--border);padding:38px 32px 34px;
-  position:relative;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
-}
-.card::before{content:"";position:absolute;top:0;left:0;width:0;height:3px;background:var(--railx-orange);transition:width .3s ease}
-.card:hover{transform:translateY(-5px);box-shadow:0 16px 44px rgba(26,31,46,.11);border-color:transparent}
-.card:hover::before{width:100%}
-.card-icon{width:54px;height:54px;background:rgba(225,6,19,.08);display:grid;place-items:center;margin-bottom:24px}
-.card-icon svg{width:26px;height:26px;stroke:var(--railx-orange)}
-.card h3{margin-bottom:13px}
-.card p{color:var(--railx-gray);font-size:.95rem}
-.card ul{list-style:none;margin:20px 0 0;padding:0}
-.card li{position:relative;padding-left:20px;font-size:.88rem;color:var(--railx-gray);margin-bottom:7px}
-.card li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:2px;background:var(--railx-orange)}
-
-/* ---------- Maschinen ---------- */
-
-/* ---------- Referenzen ---------- */
-.refs{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-bottom:52px}
-.refs.praxis{grid-template-columns:repeat(4,1fr);margin-bottom:0}
-.refs.praxis .ref h3{margin-bottom:9px}
-.ref{
-  background:#fff;border:1px solid var(--border);margin:0;overflow:hidden;position:relative;
-  display:flex;flex-direction:column;
-  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
-}
-.ref::before{content:"";position:absolute;top:0;left:0;width:0;height:3px;background:var(--railx-orange);transition:width .3s ease;z-index:2}
-.ref:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(26,31,46,.1);border-color:transparent}
-.ref:hover::before{width:100%}
-.ref-bild{position:relative;aspect-ratio:4/3;background:var(--railx-dark);overflow:hidden;cursor:zoom-in}
-.ref img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
-.ref:hover img{transform:scale(1.04)}
-.ref-lupe{
-  position:absolute;right:10px;bottom:10px;z-index:2;
-  background:rgba(26,31,46,.72);color:#fff;font-size:.68rem;font-weight:600;
-  letter-spacing:.08em;text-transform:uppercase;padding:5px 9px;
-  opacity:1;transition:opacity .25s ease;pointer-events:none;
-}
-.ref:hover .ref-lupe{opacity:0}
-.ref-zahl{
-  position:absolute;left:10px;bottom:10px;z-index:2;
-  background:var(--railx-orange);color:#fff;font-size:.68rem;font-weight:700;
-  letter-spacing:.06em;padding:5px 9px;pointer-events:none;
+@media (max-width:560px){
+  .referenz-text{padding:22px 18px 24px}
+  .datenzeilen div{grid-template-columns:1fr;gap:2px}
 }
 
-/* Großansicht: legt sich beim Überfahren über die Seite */
-.bild-gross{
-  position:fixed;inset:0;z-index:300;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+/* ---------- Team ---------- */
+.team{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:56px;align-items:start}
+.team .abschnitt-kopf{margin-bottom:0}
+.team-text p + p{margin-top:16px}
+.team-bild{margin:0}
+.team-bild img{width:100%;height:auto;border:1px solid var(--kante)}
+@media (max-width:900px){.team{grid-template-columns:1fr;gap:32px}.team-bild{max-width:560px}}
+
+/* ---------- Ablauf: vier Halte, eine Trasse ---------- */
+.halte-rahmen{position:relative}
+.halte-rahmen > svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.halte-rahmen svg line{stroke:var(--tinte);stroke-width:2}
+.halte-rahmen svg .intervall{font:600 15px var(--display);fill:var(--tinte);letter-spacing:.03em}
+.halte-rahmen svg .stationslinie{stroke:var(--kante);stroke-width:1}
+.halte{position:relative;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.halte li{position:relative;padding:0 24px 0 0}
+.halte h3{display:inline-block;padding:10px 14px;background:var(--bogen-hell);border:2px solid var(--tinte);font-size:1.3rem;letter-spacing:.03em;text-transform:uppercase}
+.halte p{margin-top:16px;padding:10px 14px 12px 0;background:var(--bogen);max-width:30ch;position:relative}
+.halte li:nth-child(2){margin-top:70px}
+.halte li:nth-child(3){margin-top:140px}
+.halte li:nth-child(4){margin-top:210px}
+.ablauf-hinweis{margin-top:48px;max-width:62ch;color:var(--tinte-2);background:var(--bogen);display:inline-block}
+@media (max-width:900px){
+  .halte{grid-template-columns:1fr;gap:28px}
+  .halte li,.halte li:nth-child(n){margin-top:0;padding:0 0 0 0}
+  .halte-rahmen > svg{display:none}
+}
+
+/* ---------- Kontakt: Zielbahnhof ---------- */
+.kontakt{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);grid-template-rows:auto auto 1fr;gap:28px 40px;align-items:start}
+.kontakt .formular{grid-column:2;grid-row:1/span 3}
+.kontakt .kurzfristig{grid-column:1;grid-row:1}
+.kontakt .kontaktdaten{grid-column:1;grid-row:2}
+.kontakt .karte{grid-column:1;grid-row:3}
+.kurzfristig{padding:40px 34px 34px}
+.kurzfristig h3{color:#fff;font-size:1.8rem}
+.kurzfristig p{margin-top:12px;color:var(--auf-nacht)}
+.kurzfristig .taste{margin-top:22px}
+.kurzfristig .verweis{display:inline-block;margin-top:16px}
+.kurzfristig p a{color:#fff;text-decoration:underline;text-decoration-color:var(--rot-hell);text-underline-offset:3px}
+.kontaktdaten{padding:26px 28px}
+.kontaktdaten .kursbuch dd{font-family:var(--text);font-size:1.02rem;font-weight:500}
+.kontaktdaten .kursbuch dd small{display:block;font-size:.9rem;font-weight:400;color:var(--tinte-2)}
+.kontaktdaten a{color:var(--tinte)}
+.karte-platz{padding:28px;text-align:left}
+.karte-platz strong{display:block;font:600 1.2rem/1.3 var(--display)}
+.karte-platz p{margin:8px 0 16px;color:var(--tinte-2);font-size:.95rem;max-width:52ch}
+.karte iframe{display:block;width:100%;aspect-ratio:4/3;border:0}
+.formular{padding:40px 36px 36px}
+.formular h3{font-size:2rem}
+.pflicht-hinweis{margin:10px 0 22px;color:var(--tinte-2);font-size:.95rem}
+.feld{margin-bottom:18px}
+.feld-reihe{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}
+.feld label{display:block;margin-bottom:6px;font:600 .98rem/1.3 var(--display);letter-spacing:.05em;text-transform:uppercase}
+.feld .hilfe{margin:6px 0 0;font-size:.92rem;color:var(--tinte-2)}
+.feld .hilfe a{color:var(--tinte);font-weight:600}
+/* Schreibanleitung des einspaltigen Textfelds steht vor dem Feld */
+.feld .hilfe-vorab{margin:-2px 0 7px}
+.feld input,.feld select,.feld textarea{width:100%;min-height:48px;padding:11px 13px;font:400 1rem var(--text);color:var(--tinte);
+  background:#fff;border:1px solid var(--kante);border-radius:0}
+.feld textarea{min-height:150px;max-height:360px;resize:vertical}
+.feld input:focus,.feld select:focus,.feld textarea:focus{outline:2px solid var(--rot);outline-offset:1px;border-color:var(--tinte)}
+[aria-invalid="true"]{border-color:var(--rot-dunkel)!important;border-width:2px!important}
+.fehler{margin:6px 0 0;font-size:.92rem;font-weight:600;color:var(--rot-dunkel)}
+.einwilligung{display:grid;grid-template-columns:24px 1fr;gap:10px;align-items:start;margin:6px 0 4px}
+.einwilligung input{width:24px;height:24px;margin:2px 0 0;accent-color:var(--rot)}
+.einwilligung label{font-size:.95rem;color:var(--tinte-2)}
+.einwilligung-fehler{margin:0 0 12px 34px}
+.sammel{margin:12px 0 0;font-weight:600;color:var(--rot-dunkel)}
+.formular .taste{width:100%;margin-top:14px}
+.unter-knopf{margin-top:12px;font-size:.95rem;color:var(--tinte-2)}
+.status{display:none;margin-top:16px;padding:14px 16px;border:2px solid;font-weight:500}
+.status.zeigen{display:block}
+.status.ok{color:#14532d;border-color:#15803d;background:#eef8f1}
+.status.err{color:var(--rot-dunkel);border-color:var(--rot-dunkel);background:#fdf0f1}
+.status a{font-weight:600}
+.status .taste{margin-top:12px;width:auto}
+.status .ablage{margin-top:10px;font-weight:400}
+@media (max-width:1000px){
+  .kontakt{grid-template-columns:1fr;grid-template-rows:none}
+  .kontakt .kurzfristig,.kontakt .formular,.kontakt .kontaktdaten,.kontakt .karte{grid-column:1;grid-row:auto}
+}
+@media (max-width:560px){.feld-reihe{grid-template-columns:1fr}.formular,.kurzfristig{padding:30px 20px 24px}.kontaktdaten{padding:20px}}
+
+/* ---------- Fusszeile: wieder Nacht ---------- */
+.fuss{margin-top:150px;background:var(--nacht);color:var(--auf-nacht);border-top:2px solid var(--tinte)}
+.fuss-raster{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr 1.2fr;gap:36px;padding:64px 0 48px}
+.fuss .logo img{height:52px}
+.fuss p{margin-top:16px;color:var(--auf-nacht-2);font-size:.98rem}
+.fuss h2{font:600 1.75rem/1.2 var(--display);letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px}
+.fuss ul{list-style:none;margin:0;padding:0}
+.fuss li{color:var(--auf-nacht-2);font-size:.98rem}
+.fuss li a{display:inline-block;padding:6px 0;color:var(--auf-nacht-2);text-decoration:none}
+.fuss li a:hover{color:#fff;text-decoration:underline;text-decoration-color:var(--rot-hell);text-underline-offset:4px}
+.fuss-unten{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;padding:22px 0;border-top:1px solid rgba(238,241,243,.2);font-size:.92rem;color:var(--auf-nacht-2)}
+.fuss-unten a{display:inline-block;padding:6px 0;color:var(--auf-nacht-2)}
+.fuss-unten nav{display:flex;gap:24px}
+@media (max-width:1100px){.fuss-raster{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.fuss-raster{grid-template-columns:1fr}}
+
+/* ---------- Grossansicht ---------- */
+.gross{position:fixed;inset:0;z-index:500;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
   padding:max(64px,calc(env(safe-area-inset-top) + 56px)) 72px max(22px,env(safe-area-inset-bottom));
-  background:rgba(15,18,28,.97);overscroll-behavior:contain;touch-action:pan-y;
-  opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease;
-  cursor:zoom-out;
-}
-.bild-gross.sichtbar{opacity:1;visibility:visible}
-/* Bildgröße wird per Skript exakt auf die verfügbare Fläche gerechnet;
-   die Werte hier sind nur der Ausgangszustand vor dem ersten Laden */
-.bild-gross img{
-  display:block;flex:0 1 auto;min-height:0;
-  max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;
-  transform:scale(.97);transition:transform .3s ease,opacity .18s ease;
-}
-.bild-gross img.wechsel{opacity:0}
-.bild-gross.sichtbar img{transform:scale(1)}
-/* Unterschrift steht unter dem Bild und ist genau so breit wie das Bild */
-.bild-gross figcaption{
-  flex:0 0 auto;box-sizing:border-box;max-width:100%;padding:0 4px;
-  text-align:center;color:#fff;
-}
-.bild-gross .bild-titel{
-  display:block;font-family:var(--font-display);font-weight:700;font-size:1.15rem;
-  text-transform:uppercase;letter-spacing:.06em;line-height:1.2;
-}
-.bild-gross .bild-text{
-  display:block;margin-top:4px;font-size:.95rem;line-height:1.45;
-  color:rgba(255,255,255,.82);text-wrap:balance;
-}
-.bild-zu{
-  position:absolute;top:max(20px,env(safe-area-inset-top));right:max(24px,env(safe-area-inset-right));z-index:2;
-  background:none;border:0;color:#fff;cursor:pointer;line-height:0;padding:10px;
-  opacity:.75;transition:opacity .2s ease;
-}
-.bild-zu:hover{opacity:1}
-.bild-nav{
-  position:absolute;top:50%;transform:translateY(-50%);z-index:2;
-  background:rgba(255,255,255,.1);border:0;color:#fff;cursor:pointer;
-  padding:16px 12px;line-height:0;transition:background .2s ease;
-}
-.bild-nav:hover{background:var(--railx-orange)}
-.bild-nav svg{width:24px;height:24px;stroke:currentColor;stroke-width:2;fill:none}
-.bild-nav.zurueck{left:16px}
-.bild-nav.weiter{right:16px}
-.bild-gross.einzeln .bild-nav{display:none}
-.bild-zaehler{
-  position:absolute;top:max(24px,env(safe-area-inset-top));left:max(26px,env(safe-area-inset-left));z-index:2;
-  color:rgba(255,255,255,.8);font-size:.82rem;font-weight:600;letter-spacing:.1em;
-}
+  background:rgba(13,17,20,.97);color:#fff;touch-action:pan-y pinch-zoom;overscroll-behavior:contain;
+  opacity:0;visibility:hidden;transition:opacity .25s ease,visibility 0s linear .25s}
+.gross.offen{opacity:1;visibility:visible;transition:opacity .25s ease,visibility 0s}
+.gross img{display:block;flex:0 1 auto;min-height:0;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;transition:opacity .18s ease}
+.gross img.wechsel{opacity:0}
+.gross-unterschrift{flex:0 0 auto;max-width:100%;text-align:center}
+.gross-titel{display:block;font:600 1.3rem/1.3 var(--display);letter-spacing:.04em;text-transform:uppercase}
+.gross-text{display:block;margin-top:4px;color:#cfd5d9;text-wrap:balance}
+.gross-erneut{margin-top:10px;background:#fff;color:var(--tinte);border:0;padding:10px 16px;font:600 .95rem var(--text);cursor:pointer}
+.gross.laedt::after{content:"Aufnahme wird geladen …";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:#cfd5d9}
+.gross-zu,.gross-nav{position:absolute;display:grid;place-items:center;width:52px;height:52px;border:0;background:rgba(255,255,255,.12);color:#fff;cursor:pointer}
+.gross-zu{top:max(14px,env(safe-area-inset-top));right:max(16px,env(safe-area-inset-right))}
+.gross-nav{top:50%;transform:translateY(-50%)}
+.gross-nav.zurueck{left:12px}
+.gross-nav.weiter{right:12px}
+.gross-zu:hover,.gross-nav:hover{background:var(--rot)}
+.gross svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:square}
+.gross.einzeln .gross-nav{display:none}
+.gross-zaehler{position:absolute;top:max(28px,env(safe-area-inset-top));left:max(24px,env(safe-area-inset-left));font:600 1.05rem/1 var(--display);letter-spacing:.06em;font-variant-numeric:tabular-nums}
+.gross :focus-visible{outline-color:#fff}
 @media (max-width:560px){
-  .bild-nav{padding:14px 9px}
-  .bild-nav.zurueck{left:4px}
-  .bild-nav.weiter{right:4px}
-  .bild-nav svg{width:20px;height:20px}
-  .bild-gross{padding:max(56px,calc(env(safe-area-inset-top) + 48px)) 14px max(16px,env(safe-area-inset-bottom));gap:10px}
-  .bild-gross .bild-titel{font-size:1rem}
-  .bild-gross .bild-text{font-size:.85rem}
-  .bild-zaehler{top:16px;left:18px;font-size:.75rem}
-  .bild-zu{top:10px;right:12px;padding:8px}
-  .bild-zu svg{width:22px;height:22px}
+  .gross{padding:max(72px,calc(env(safe-area-inset-top) + 64px)) 12px max(80px,calc(env(safe-area-inset-bottom) + 76px))}
+  .gross-nav{top:auto;bottom:max(12px,env(safe-area-inset-bottom));transform:none}
+  .gross-zaehler{top:auto;left:50%;transform:translateX(-50%);bottom:max(28px,calc(env(safe-area-inset-bottom) + 16px))}
 }
-.bild-zu svg{width:26px;height:26px;stroke:currentColor;stroke-width:2}
-@media (prefers-reduced-motion:reduce){.bild-gross,.bild-gross img{transition:none}}
-.ref figcaption{padding:22px 22px 26px;flex:1}
-.ref-no{
-  font-family:var(--font-display);font-size:.85rem;font-weight:700;color:var(--railx-orange);
-  letter-spacing:.12em;display:block;margin-bottom:9px;
-}
-.ref h3{font-size:1.05rem;line-height:1.25;margin-bottom:9px}
-.ref figcaption p{font-size:.88rem;color:var(--railx-gray);line-height:1.55}
-.ref-works{border-left:3px solid var(--railx-orange);padding:4px 0 4px 28px}
-.ref-works h3{
-  font-family:var(--font-display);font-size:1.15rem;text-transform:uppercase;letter-spacing:.03em;
-  margin:0 0 16px;color:var(--railx-dark);line-height:inherit;
-}
-.ref-works ul{list-style:none;margin:0;padding:0;columns:2;column-gap:44px}
-.ref-works li{
-  position:relative;padding-left:20px;margin-bottom:11px;font-size:.94rem;color:var(--railx-gray);
-  break-inside:avoid;
-}
-.ref-works li::before{content:"";position:absolute;left:0;top:10px;width:8px;height:2px;background:var(--railx-orange)}
 
-/* ---------- Vorteile ---------- */
-/* Einleitung links, Teamfoto rechts. Drei Entscheidungen, damit das Bild nicht
-   danebengelegt wirkt:
-   1. Spalten 1.25/0.75 statt 1/1 — bei gleich breiten Spalten war das Bild 134 px hoeher
-      als der Text, jetzt nur noch 56 px. Der Text wird dabei nicht zu breit (685 px, die
-      globale Regel deckelt .section-head ohnehin bei 720 px).
-   2. Die Eyebrow steht als eigene Zeile ueber beiden Spalten (`grid-column:1/-1`), nicht
-      mehr in `.section-head`. Dadurch beginnt das Bild zwangslaeufig unterhalb von
-      „Warum RailX“ und auf derselben Linie wie die Ueberschrift — ohne festen Zahlenwert,
-      der beim naechsten Schriftwechsel falsch waere. `align-items:start` fuer die zweite Zeile.
-   3. Kanten wie am Nachweis-Block weiter unten, aber kraeftiger und ohne Passepartout:
-      Das Bild fuellt die Karte randlos aus. Weisse Linie 2 px in .25 — derselbe Wert wie die
-      Oberkanten der vier Werte darunter. Rote Kante links 6 px statt 4. Ohne die Linie
-      wuerden dunkle Bildpartien ins Nachtblau auslaufen. */
-.ueber-kopf{
-  display:grid;grid-template-columns:1.25fr .75fr;
-  column-gap:56px;row-gap:0;align-items:start;margin-bottom:58px;
-}
-.ueber-kopf>.eyebrow{grid-column:1/-1}
-.ueber-kopf .section-head{margin-bottom:0}
-.ueber-bild{
-  margin:0;
-  border:2px solid rgba(255,255,255,.25);border-left:6px solid var(--railx-orange);
-}
-.ueber-bild img{display:block;width:100%;height:auto}
-.benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
-
-/* ---------- Eignungsnachweis (Praequalifikation) ---------- */
-.nachweis{
-  margin-top:58px;padding:34px 38px;
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.16);border-left:4px solid var(--railx-orange);
-  display:grid;grid-template-columns:1.05fr 1fr;gap:28px 48px;align-items:start;
-}
-.nachweis-label{
-  display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--railx-orange);margin-bottom:14px;
-}
-.nachweis h3{font-size:1.4rem;line-height:1.2;margin-bottom:14px}
-.nachweis-kopf p{color:rgba(255,255,255,.76);font-size:.95rem;max-width:54ch}
-.nachweis-daten{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 28px;margin:0}
-.nachweis-daten dt{
-  font-size:.68rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
-  color:rgba(255,255,255,.5);
-}
-.nachweis-daten dd{margin:5px 0 0;font-size:.96rem;font-weight:600;color:#fff;line-height:1.35}
-.nachweis-link{align-self:start;justify-self:start}
-/* Fixierte Kopfzeile nicht ueber den Blockanfang laufen lassen */
-#nachweise{scroll-margin-top:132px}
-.nachweis-link svg{width:17px;height:17px;stroke:currentColor;stroke-width:2;fill:none;flex:none}
-.nachweis-fuss{grid-column:1/-1;margin:0;font-size:.78rem;color:rgba(255,255,255,.45)}
-.benefit{padding-top:26px;border-top:2px solid rgba(255,255,255,.25)}
-.benefit h3{font-size:1.1rem;margin-bottom:11px;color:#fff}
-.benefit p{color:rgba(255,255,255,.68);font-size:.92rem}
-.benefit-no{font-family:var(--font-display);font-size:.85rem;font-weight:700;color:var(--railx-orange-hell);letter-spacing:.12em;display:block;margin-bottom:12px}
-
-/* ---------- Ablauf ---------- */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
-.step{position:relative;padding:0 26px 0 0}
-.step-marker{display:flex;align-items:center;margin-bottom:22px}
-.step-dot{width:15px;height:15px;background:var(--railx-orange);flex:0 0 auto;border-radius:50%}
-.step-line{height:2px;background:var(--border);flex:1}
-.step:last-child .step-line{background:transparent}
-.step h3{font-size:1.08rem;margin-bottom:10px}
-.step p{color:var(--railx-gray);font-size:.9rem}
-.step-idx{font-family:var(--font-display);font-size:.8rem;letter-spacing:.14em;color:var(--railx-orange);font-weight:700;display:block;margin-bottom:8px}
-
-/* ---------- CTA-Band ---------- */
-.band{background:var(--railx-orange);padding:64px 0}
-.band-inner{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
-.band h2{color:#fff;max-width:640px}
-.band p{color:#fff;margin-top:14px;max-width:560px}
-.band .btn{background:#fff;color:var(--railx-orange);border-color:#fff}
-.band .btn:hover{background:var(--railx-dark);color:#fff;border-color:var(--railx-dark)}
-
-/* ---------- Kontakt ---------- */
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:stretch}
-.contact>*{background:#fff;border:1px solid var(--border);padding:42px;display:flex;flex-direction:column}
-.contact-info h2{margin-bottom:18px}
-.contact-info>p{color:var(--railx-gray);margin-bottom:30px}
-.contact-info .eyebrow{margin-bottom:14px}
-.info-item{display:flex;gap:18px;padding:22px 0;border-top:1px solid var(--border)}
-.info-item svg{width:21px;height:21px;stroke:var(--railx-orange);flex:0 0 auto;margin-top:3px}
-.info-item strong{display:block;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--railx-gray);font-weight:600;margin-bottom:5px}
-.info-item span{font-size:1rem;font-weight:500;color:var(--railx-dark)}
-form{margin:0}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.field{margin-bottom:20px}
-label{display:block;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--railx-dark);margin-bottom:8px}
-input,select,textarea{
-  width:100%;padding:14px 16px;border:1px solid var(--border);background:var(--railx-light);
-  font-family:var(--font-body);font-size:16px;color:var(--railx-dark);transition:border-color .18s ease,background .18s ease;
-}
-input:focus,select:focus,textarea:focus{outline:none;border-color:var(--railx-orange);background:#fff}
-textarea{resize:vertical;min-height:200px}
-.field-grow{flex:1;display:flex;flex-direction:column;min-height:200px}
-.field-grow textarea{flex:1;height:100%}
-.consent{display:flex;gap:12px;align-items:flex-start;margin:6px 0 26px}
-.consent input{width:18px;height:18px;flex:0 0 auto;margin-top:3px;accent-color:var(--railx-orange)}
-.consent label{text-transform:none;letter-spacing:0;font-size:.85rem;font-weight:400;color:var(--railx-gray);margin:0;line-height:1.5}
-.consent a{color:var(--railx-orange);text-decoration:underline}
-form .btn{width:100%}
-.map-wrap{margin-top:auto;flex:1;min-height:340px;background:var(--railx-light);border:1px solid var(--border);position:relative;overflow:hidden}
-.map-wrap iframe{width:100%;height:100%;border:0;display:block}
-.map-placeholder{
-  position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
-  text-align:center;padding:30px 26px;gap:10px;
-}
-.map-placeholder svg{width:38px;height:38px;stroke:var(--railx-orange);margin-bottom:4px}
-.map-placeholder strong{font-family:var(--font-display);font-size:1.15rem;text-transform:uppercase;letter-spacing:.02em;color:var(--railx-dark)}
-.map-placeholder p{font-size:.82rem;color:var(--railx-gray);max-width:400px;margin-bottom:8px}
-.map-placeholder p a{color:var(--railx-orange);text-decoration:underline}
-.map-placeholder .btn{width:auto}
-.form-note{font-size:.82rem;color:var(--railx-gray);margin-top:14px;text-align:center}
-
-.form-status{display:none;padding:14px 16px;margin-bottom:20px;font-size:.9rem;font-weight:500}
-.form-status.show{display:block}
-.form-status.ok{background:rgba(34,197,94,.1);color:#15803d;border-left:3px solid #22c55e}
-.form-status.err{background:rgba(225,6,19,.08);color:var(--railx-orange);border-left:3px solid var(--railx-orange)}
-
-/* ---------- Footer ---------- */
-.footer{background:var(--railx-dark);color:#fff;padding:76px 0 0}
-.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;padding-bottom:56px}
-.footer-brand p{color:rgba(255,255,255,.6);font-size:.92rem;margin-top:22px;max-width:330px}
-.footer h2{font-family:var(--font-display);font-size:1rem;text-transform:uppercase;letter-spacing:.06em;margin:0 0 20px;color:#fff;line-height:inherit}
-.footer ul{list-style:none;margin:0;padding:0}
-.footer li{margin-bottom:12px}
-.footer li a{display:inline-block;padding:3px 0}
-.footer li a{color:rgba(255,255,255,.62);font-size:.9rem;transition:color .18s ease}
-.footer li a:hover{color:var(--railx-orange)}
-.footer-bottom{
-  border-top:1px solid rgba(255,255,255,.1);padding:26px 0;display:flex;
-  justify-content:space-between;gap:20px;flex-wrap:wrap;
-}
-.footer-bottom p,.footer-bottom a{color:rgba(255,255,255,.5);font-size:.83rem}
-.footer-bottom a:hover{color:#fff}
-.footer-legal{display:flex;gap:26px}
-.footer-legal a{padding:6px 0}
-
-/* ---------- Reveal ---------- */
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
-.reveal.in{opacity:1;transform:none}
-
-/* ---------- Responsive ---------- */
-@media (max-width:1024px){
-  .services{grid-template-columns:repeat(2,1fr)}
-  .services>.card,
-  .services>.card:last-child{grid-column:auto}
-  .refs,
-  .refs.praxis{grid-template-columns:repeat(2,1fr)}
-  .nachweis{grid-template-columns:1fr;gap:26px;padding:30px 30px}
-  .benefits{grid-template-columns:repeat(2,1fr);gap:36px}
-  /* Einspaltig gestapelt. Ohne Deckel waere das Bild bei 1024px 961x722 gross und wuerde
-     den Abschnitt erschlagen — es steht linksbuendig unter dem Text wie die Ueberschrift. */
-  .ueber-kopf{grid-template-columns:1fr;column-gap:0}
-  /* Einspaltig gestapelt: Der Abstand kommt hier her, weil row-gap 0 bleiben muss
-     (sonst steht die Eyebrow doppelt weit ueber der Ueberschrift). */
-  .ueber-bild{max-width:560px;margin-top:34px}
-  .steps{grid-template-columns:repeat(2,1fr);row-gap:44px}
-  .contact{grid-template-columns:1fr;gap:26px}
-  .map-wrap{flex:none;aspect-ratio:4/3;min-height:0}
-  .field-grow{flex:none}
-  .field-grow textarea{height:auto}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
-}
-@media (max-width:820px){
-  .nav,.header-phone{display:none}
-  .burger{display:block}
-  .header-cta{gap:12px}
-  .header-inner{height:76px}
-  .logo-img{height:48px}
-  .footer .logo-img{height:60px}
-  /* volle Bildschirmhoehe: ohne die Kennzahlen passt der Hero aufs Display, und die
-     frei gewordene Flaeche zeigt das Foto statt nur kuerzer zu werden. svh, damit die
-     ein- und ausfahrende Browserleiste die Hoehe nicht springen laesst.
-     Der untere Abstand kommt aus den Hero-Regeln oben (52px bzw. 28px). */
-  .hero{min-height:100svh;padding-top:112px}
-  .stat{padding:20px 14px}
-  .stat-num{font-size:2rem}
-  .section{padding:74px 0}
-  .contact>*{padding:26px}
-}
-@media (max-width:560px){
-  /* Platz fuer das groessere Logo: CTA steckt im Klappmenue */
-  .header-cta .btn-primary{display:none}
-  .header-inner{height:68px}
-  .logo-img{height:44px}
-
-  /* Sehr schmale Displays: Logo und PQ-Kuerzel stossen sonst aneinander.
-     Muss nach der Zeile darueber stehen, sonst gewinnt die 44px. */
-  @media (max-width:360px){
-    .logo-img{height:39px}
-    .header-pq{padding:6px 7px;gap:4px;letter-spacing:.06em}
-    .header-cta{gap:9px}
-  }
-
-  .services{grid-template-columns:1fr}
-  .services>.card,
-  .services>.card:last-child{grid-column:auto}
-  .refs,
-  .refs.praxis{grid-template-columns:1fr;gap:18px}
-  .ref figcaption{padding:18px 18px 22px}
-  .ref-lupe,.ref-zahl{font-size:.62rem;padding:4px 7px}
-  .ref-works ul{columns:1}
-  .ref-works{padding-left:20px}
-  .benefits,.steps{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr}
-  .form-row{grid-template-columns:1fr;gap:0}
-  .hero-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
-  /* Hinweis darf in der schmalen Kachel umbrechen; Unterstreichung folgt dem Text */
-  .stat-mehr{
-    display:inline;white-space:normal;border-bottom:0;padding-bottom:0;line-height:1.7;
-    font-size:.64rem;letter-spacing:.03em;
-    text-decoration:underline;text-decoration-color:rgba(225,6,19,.5);text-underline-offset:4px;
-  }
-  .nachweis{padding:26px 22px}
-  .nachweis-daten{grid-template-columns:1fr;gap:16px}
-  .nachweis-link{width:100%;justify-content:space-between;padding-left:18px;padding-right:18px}
-  .nachweis h3{font-size:1.15rem}
-  .nachweis h3,.nachweis-daten dd{overflow-wrap:anywhere}
-  .dateigroesse{display:none}
-  .hero-actions .btn{width:100%}
-  .step{padding-right:0}
+@media (forced-colors:active){
+  .burger span{forced-color-adjust:none;background:CanvasText}
+  .stationen a[aria-current]::after,.streifen i.aktiv,.halt.erreicht{forced-color-adjust:none;background:Highlight;border-color:Highlight}
 }
 @media (prefers-reduced-motion:reduce){
-  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-  .reveal{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+@media print{
+  #fahrplan,.kopf,.menue,.leiste,.gross,.karte,.starter,.burger{display:none!important}
+  body{background:#fff;padding:0}
+  .sperrpause,.fuss,.nacht{background:#fff!important;color:#000!important}
+  .nacht h1,.nacht h1 span,.nacht h3,.nacht p,.nacht dt,.nacht dd,.nacht label,.fuss h2,.fuss li,.fuss li a,.fuss p{color:#000!important}
+  .galerie-etikett,.leiste,.starter-aktion{display:none!important}
+  .taste-rot{background:#fff!important;color:#000!important;border:1px solid #000!important;box-shadow:none!important}
+  .pq-zeile .trenner,.fuss-unten a,.fuss-unten p{color:#000!important}
+  .hero{padding-top:0}
+  .blatt,.referenz,.leistung{break-inside:avoid}
+  .pq-raster .taste::after{content:" — railx-gleisbau.de/dokumente/praequalifikation-railx-gmbh.pdf";text-transform:none}
 }
 </style>
 </head>
 <body>
-<a class="skip-link" href="#leistungen">Zum Inhalt springen</a>
+<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+<svg id="fahrplan" aria-hidden="true" focusable="false"></svg>
 
-<!-- ================= HEADER ================= -->
-<header class="header" id="header">
-  <div class="wrap header-inner">
-    <a href="#top" class="logo" aria-label="RailX — Gleisbau und Infrastruktur, zur Startseite">
-      <img class="logo-img" src="logo-railx-invers.png" alt="RailX — Gleisbau und Infrastruktur" width="1141" height="300" />
+<header class="kopf">
+  <div class="wrap kopf-innen">
+    <a class="logo" href="#top" aria-label="RailX GmbH, zur Startseite">
+      <img src="logo-railx.png" alt="RailX, Gleisbau und Infrastruktur" width="1141" height="300" />
     </a>
-
-    <nav class="nav" aria-label="Hauptnavigation">
-      <a href="#leistungen">Leistungen</a>
-      <a href="#referenzen">Referenzen</a>
-      <a href="#praxis">Praxis</a>
-      <a href="#ablauf">Ablauf</a>
-      <a href="#ueber-uns">Über uns</a>
-      <a href="#kontakt">Kontakt</a>
+    <nav class="stationen" aria-label="Hauptnavigation">
+      <ol>
+        <li><a href="#praequalifikation">Präqualifikation</a></li>
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#referenzen">Referenzen</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#ablauf">Ablauf</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ol>
     </nav>
-
-    <div class="header-cta">
-      <a href="tel:+4923255943000" class="header-phone">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        <span>02325 5943000</span>
+    <div class="kopf-aktion">
+      <a class="kopf-tel" href="tel:+4923255943000" aria-label="Anrufen: 02325 5943000, Büro Mo–Fr 10–18 Uhr"><b>02325 5943000</b><span>Büro <span class="nb">Mo–Fr 10–18 Uhr</span></span></a>
+      <a class="taste taste-rot" href="#anfrage">Projekt anfragen</a>
+      <a class="pq-pille" href="dokumente/praequalifikation-railx-gmbh.pdf" target="_blank" rel="noopener"
+         aria-label="PQ-Nachweis: Präqualifikation der Deutschen Bahn AG (PDF, 1,6 MB, öffnet in neuem Tab)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6v20h12V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg><span>PQ<span class="pq-lang">-Nachweis</span></span>
       </a>
-      <a href="#kontakt" class="btn btn-primary">Projekt anfragen</a>
-      <a class="header-pq" href="dokumente/praequalifikation-railx-gmbh.pdf" target="_blank" rel="noopener"
-         aria-label="Präqualifikationsnachweis der Deutschen Bahn AG ansehen (PDF, 1,6 MB, öffnet in neuem Tab)">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg>
-        <span>PQ</span>
-      </a>
-      <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menue" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
     </div>
   </div>
-
-  <div class="mobile-nav" id="mobileNav">
-    <a href="#leistungen">Leistungen</a>
-    <a href="#referenzen">Referenzen</a>
-    <a href="#praxis">Praxis</a>
-    <a href="#ablauf">Ablauf</a>
-    <a href="#ueber-uns">Über uns</a>
-    <a href="#kontakt">Kontakt</a>
-    <a class="mobile-nav-pq" href="dokumente/praequalifikation-railx-gmbh.pdf" target="_blank" rel="noopener"
-       aria-label="Präqualifikation Deutsche Bahn (PDF, 1,6 MB, öffnet in neuem Tab)">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg>
-      <span>Präqualifikation Deutsche Bahn<span class="mobile-nav-datei">PDF, 1,6 MB</span></span>
+  <div class="streifen" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <nav class="menue" id="menue" aria-label="Hauptnavigation">
+    <a class="menue-tel" href="tel:+4923255943000" aria-label="Anrufen: 02325 5943000, Büro Mo–Fr 10–18 Uhr">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      <span>Anrufen: 02325 5943000<small>Büro <span class="nb">Mo–Fr 10–18 Uhr</span></small></span>
     </a>
-    <a href="#kontakt" class="btn btn-primary">Projekt anfragen</a>
-  </div>
+    <ol>
+      <li><a href="#praequalifikation">Präqualifikation</a></li>
+      <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#referenzen">Referenzen</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#ablauf">Ablauf</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ol>
+    <a class="menue-pq" href="dokumente/praequalifikation-railx-gmbh.pdf" target="_blank" rel="noopener"
+       aria-label="Nachweis als PDF öffnen: Präqualifikation der Deutschen Bahn AG (1,6 MB, öffnet in neuem Tab)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6v20h12V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg>
+      <span>Nachweis als PDF öffnen<small>Präqualifikation Deutsche Bahn AG, 1,6 MB</small></span>
+    </a>
+    <a class="taste taste-rot" href="#anfrage">Projekt anfragen</a>
+  </nav>
 </header>
 
-<!-- ================= HERO ================= -->
-<section class="hero" id="top">
-  <div class="hero-bg">
-    <!-- Zwei Zuschnitte desselben Motivs. Quer 1672x941 ab 561px; hochkant 941x1672 bis 560px,
-         damit auf dem Handy das ganze Motiv zu sehen ist statt nur des mittleren Streifens.
-         Aendert sich eine der Dateien -> Kontraste ueber dem Foto neu messen (Pruefroutine 7). -->
-    <picture>
-      <source media="(max-width:560px)" srcset="hero-railx-mobile.jpg?v=1" width="941" height="1672" />
-      <img src="hero-railx.jpg?v=4"
-           alt="Neu eingebaute Weiche am Bahnhof Mönchengladbach bei Tagesanbruch nach der Nachtsperrpause" width="1672" height="941" fetchpriority="high" />
-    </picture>
-  </div>
+<main id="inhalt">
 
-  <div class="wrap hero-inner">
-    <div class="hero-content">
-      <div class="hero-titel">
-        <h1>Wir bringen <br class="br-handy" />Ihr Projekt<br /><em>aufs Gleis.</em></h1>
-      </div>
+<!-- ================= ERSTER BILDSCHIRM ================= -->
+<section class="hero" id="top" aria-labelledby="titel">
+  <div class="wrap hero-raster">
+    <ol class="zeitachse nr" aria-hidden="true">
+      <li>22</li><li>23</li><li>00</li><li>01</li><li>02</li><li>03</li><li>04</li><li>05</li><li>06</li>
+    </ol>
+    <div class="sperrpause nacht">
+      <svg class="trasse-start" id="trasse-start" aria-hidden="true" focusable="false"></svg>
+      <h1 id="titel">Weichen und Gleise. <span>Eingebaut in der Sperrpause.</span></h1>
       <div class="hero-text">
-        <p class="hero-lead">
-          <b><a class="lead-pq" href="dokumente/praequalifikation-railx-gmbh.pdf" target="_blank" rel="noopener"
-             aria-label="Präqualifikationsnachweis der Deutschen Bahn AG ansehen (PDF, 1,6 MB, öffnet in neuem Tab)">Präqualifiziertes<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7"/><path d="M10 14 21 3"/><path d="M21 14v7H3V3h7"/></svg></a> Fachunternehmen für Eisenbahninfrastruktur</b>
-          <span class="lead-leistungen">Weichenerneuerungen, Schienenarbeiten, Gleis- und Oberbauarbeiten sowie Instandhaltung</span>
-          <span class="lead-zusatz">bundesweit auch unter laufendem Betrieb</span>
-        </p>
-        <div class="hero-actions">
-          <a href="#kontakt" class="btn btn-primary">
-            Projekt anfragen
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a href="#leistungen" class="btn btn-ghost">Leistungen ansehen</a>
-        </div>
+        <p class="unterzeile">Oberbauarbeiten für Infrastrukturbetreiber, Generalunternehmer und Werksbahnen. Bundesweit, auch unter laufendem Betrieb.</p>
+        <p class="pq-zeile">Präqualifiziert bei der Deutschen Bahn AG <span class="trenner" aria-hidden="true">·</span> <span class="pq-lang">Oberbau Instandsetzung (IS) Gleise/Weichen <span class="trenner" aria-hidden="true">·</span> </span>gültig bis <span class="nr">22.09.2030</span> <span class="trenner" aria-hidden="true">·</span> <a class="verweis" href="dokumente/praequalifikation-railx-gmbh.pdf" target="_blank" rel="noopener" aria-label="Nachweis öffnen: Präqualifikation der Deutschen Bahn AG (PDF, 1,6 MB, öffnet in neuem Tab)">Nachweis <span class="pq-lang">öffnen </span>(PDF)</a></p>
+        <form class="starter" id="starter" action="#anfrage" method="get" aria-label="Projekt anfragen: erste Angaben">
+          <div>
+            <label for="s-leistung">Leistung</label>
+            <select id="s-leistung" name="leistung">
+              <option value="" selected>Bitte wählen</option>
+              <option>Weichenerneuerung und Weichenumbau</option>
+              <option>Gleis- und Oberbauarbeiten</option>
+              <option>Schienenwechsel und Schienenarbeiten</option>
+              <option>Instandhaltung</option>
+              <option>Bahninfrastruktur</option>
+              <option>Vegetationsarbeiten</option>
+              <option>Winterdienst</option>
+              <option>Mehrere Leistungen oder Sonstiges</option>
+            </select>
+          </div>
+          <div>
+            <label for="s-ort">Ort</label>
+            <input id="s-ort" name="ort" type="text" maxlength="120" placeholder="Bahnhof, Strecke" />
+          </div>
+          <div>
+            <label for="s-zeitraum">Zeitraum</label>
+            <input id="s-zeitraum" name="zeitraum" type="text" maxlength="120" placeholder="z. B. März" />
+          </div>
+          <div class="starter-aktion">
+            <button class="taste taste-rot" type="submit" id="starter-knopf">Weiter zur Anfrage
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <a class="verweis" href="#referenzen">Referenzen ansehen</a>
+          </div>
+        </form>
+        <a class="taste taste-rot ohne-js" href="#anfrage">Projekt anfragen</a>
+        <a class="hero-tel" href="tel:+4923255943000" aria-label="Anrufen: 02325 5943000, Büro Mo–Fr 10–18 Uhr"><b class="nr">02325 5943000</b><small>Büro <span class="nb">Mo–Fr 10–18 Uhr</span></small></a>
       </div>
+      <figure class="hero-bild">
+        <img src="hero-railx.jpg?v=4" alt="Neu eingebaute Weiche am Bahnhof Mönchengladbach bei Tagesanbruch nach der Nachtsperrpause" width="1672" height="941" />
+        <figcaption>Titelbild: neu eingebaute Weiche am Bahnhof Mönchengladbach nach der Nachtsperrpause · <a class="verweis" href="#referenz-moenchengladbach" aria-label="Zum Projekt: Bahnhof Mönchengladbach">Zum Projekt</a></figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<!-- Kennzahlen: eigenes Band direkt unter dem Hero, damit das Titelbild frei bleibt -->
-<section class="kennzahlen-band">
-  <!-- Nur auf dem Handy sichtbar: der Fliesstext aus dem Hero. Steht bewusst ausserhalb
-       von .wrap, weil er seinen eigenen Innenabstand mitbringt (sonst doppelt eingerueckt). -->
-  <p class="hero-lead-unten">
-    <b><a class="lead-pq" href="dokumente/praequalifikation-railx-gmbh.pdf" target="_blank" rel="noopener"
-       aria-label="Präqualifikationsnachweis der Deutschen Bahn AG ansehen (PDF, 1,6 MB, öffnet in neuem Tab)">Präqualifiziertes<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7"/><path d="M10 14 21 3"/><path d="M21 14v7H3V3h7"/></svg></a> Fachunternehmen für Eisenbahninfrastruktur</b>
-    <span class="lead-leistungen">Weichenerneuerungen, Schienenarbeiten, Gleis- und Oberbauarbeiten sowie Instandhaltung</span>
-    <span class="lead-zusatz">bundesweit auch unter laufendem Betrieb</span>
-  </p>
+<!-- ================= PRAEQUALIFIKATION ================= -->
+<section class="abschnitt" id="praequalifikation" aria-labelledby="pq-titel" data-halt="0">
+  <span id="nachweise" class="sr-only"></span>
   <div class="wrap">
-    <div class="hero-stats">
-      <div class="stat"><div class="stat-num">20<span>+</span></div><div class="stat-label">Jahre Branchen&shy;erfahrung</div></div>
-      <div class="stat"><div class="stat-num">10<span>+</span></div><div class="stat-label">Projekte realisiert</div></div>
-      <div class="stat"><div class="stat-num">24<span>/7</span></div><div class="stat-label">Bundesweit einsatz&shy;bereit</div></div>
-      <a class="stat stat-pq" href="#nachweise"><div class="stat-num">PQ</div><div class="stat-label">Präquali&shy;fiziert bis 2030</div><span class="stat-mehr">Nachweis <span class="nobr">ansehen<svg class="stat-pfeil" viewBox="0 0 24 24" stroke-linecap="square" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></a>
+    <div class="abschnitt-kopf">
+      <span class="halt" aria-hidden="true"></span>
+      <h2 id="pq-titel">Präqualifikations&shy;nachweis der Deutschen Bahn AG</h2>
+      <p>Unsere Eignung für die Instandsetzung des Oberbaus an Gleisen und Weichen ist im Präqualifikationssystem der Deutschen Bahn AG geprüft. Die Angaben aus dem Nachweis stehen hier als Text, damit Sie sie direkt abgleichen können.</p>
+    </div>
+    <div class="blatt pq-raster">
+      <div>
+        <dl class="kursbuch">
+          <div><dt>Warengruppe</dt><dd>Oberbau Instandsetzung (IS) Gleise/Weichen</dd></div>
+          <div><dt>Gültig bis</dt><dd>22.09.2030</dd></div>
+          <div><dt>Vorgangsnummer</dt><dd>137658</dd></div>
+          <div><dt>Aussteller</dt><dd>Deutsche Bahn AG, Beschaffung Infrastruktur</dd></div>
+          <div><dt>Ausgestellt am</dt><dd>22.09.2026</dd></div>
+          <div><dt>Status</dt><dd>Präqualifiziert</dd></div>
+        </dl>
+      </div>
+      <div>
+        <a class="taste taste-rot" href="dokumente/praequalifikation-railx-gmbh.pdf" target="_blank" rel="noopener"
+           aria-label="Nachweis öffnen: Präqualifikation der Deutschen Bahn AG (PDF, 1,6 MB, öffnet in neuem Tab)">Nachweis öffnen (PDF, 1,6 MB)
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7"/><path d="M10 14 21 3"/><path d="M21 14v7H3V3h7"/></svg></a>
+        <p class="pq-hinweis">Das PDF ist ein Scan des Originals ohne Textebene. Alle Angaben daraus stehen hier als Text.</p>
+      </div>
+      <div class="pq-firma">
+        <h3>Einsatz und Firmendaten</h3>
+        <dl class="kursbuch">
+          <div><dt>Einsätze 24/7</dt><dd>Wir arbeiten zu jeder Tageszeit, auch nachts in Sperrpausen. Das Büro erreichen Sie <span class="nb">Mo–Fr 10–18 Uhr</span>.</dd></div>
+          <div><dt>Einsatzgebiet</dt><dd>Bundesweit, Sitz in Herne (NRW)</dd></div>
+          <div><dt>Firmendaten</dt><dd>RailX GmbH · Flöz-Hugo-Siedlung 18, 44653 Herne · Amtsgericht Bochum, HRB 22969 · USt-IdNr. DE460319619</dd></div>
+        </dl>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ================= LEISTUNGEN ================= -->
-<section class="section section-light" id="leistungen">
+<section class="abschnitt" id="leistungen" aria-labelledby="leistungen-titel" data-halt="1">
+  <span id="praxis" class="sr-only"></span>
   <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Unsere Leistungen</span>
-      <h2>Alles rund ums Gleis</h2>
-      <p>Als Fachunternehmen im Bereich der Eisenbahninfrastruktur unterstützen wir unsere Auftraggeber bei Bau-, Instandhaltungs- und Erneuerungsmaßnahmen im Gleisbereich — auch unter den besonderen Bedingungen des laufenden Eisenbahnbetriebes.</p>
+    <div class="leistungen-kopf">
+      <div class="abschnitt-kopf">
+        <span class="halt" aria-hidden="true"></span>
+        <h2 id="leistungen-titel">Leistungen mit Schwerpunkt Weichen</h2>
+        <p>Dazu kommen Gleis- und Schienenarbeiten, die Instandhaltung und ergänzende Arbeiten an der Strecke.</p>
+      </div>
+      <div class="legende" role="group" aria-labelledby="legende-titel">
+        <p class="legende-titel" id="legende-titel">Zeichenerklärung</p>
+        <dl>
+          <div><dt><span class="linie linie-rot" aria-hidden="true"></span><span class="sr-only">Rote Linie</span></dt><dd>Der Weg Ihrer Anfrage</dd></div>
+          <div><dt><span class="linie linie-schraffur" aria-hidden="true"></span><span class="sr-only">Schraffur</span></dt><dd>Sperrpause</dd></div>
+          <div><dt><span class="linie linie-doppelt" aria-hidden="true"></span><span class="sr-only">Doppellinie</span></dt><dd>Kernleistung</dd></div>
+          <div><dt><span class="linie linie-voll" aria-hidden="true"></span><span class="sr-only">Volllinie</span></dt><dd>Oberbau</dd></div>
+          <div><dt><span class="linie linie-bedarf" aria-hidden="true"></span><span class="sr-only">Strichlinie</span></dt><dd>Ergänzende Arbeiten</dd></div>
+          <div><dt><span class="linie linie-zuege" aria-hidden="true"></span><span class="sr-only">Dünne graue und blaue Linien</span></dt><dd>Zugfahrten im Hintergrund</dd></div>
+        </dl>
+      </div>
     </div>
 
-    <div class="services">
-      <article class="card reveal">
-        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="square"><path d="M4 21V3M10 21V9M4 9h6M10 9l10-6M10 15l10 6"/></svg></span>
-        <h3>Weichenerneuerung &amp; -umbau</h3>
-        <p>Erneuerung und Umbau von Weichen — geplant, vorbereitet und ausgeführt im vereinbarten Zeitfenster.</p>
-        <ul><li>Weichenerneuerungen</li><li>Weichenumbauten</li><li>Vorbereitende Oberbauarbeiten</li></ul>
-      </article>
+    <article class="blatt kern" id="weichen" aria-labelledby="weichen-titel">
+      <button type="button" class="galerie" data-bilder='[{"src": "bilder/tat-weichen-1.jpg?v=6", "bu": "Zungenvorrichtung mit Stellstange und Weichenverschluss"}, {"src": "bilder/tat-weichen-2.jpg?v=6", "bu": "Neu hergestellte Gleisverbindung nach Abschluss der Oberbauarbeiten"}]' data-titel="Weichenerneuerung und Weichenumbau" aria-label="2 Aufnahmen ansehen: Weichenerneuerung und Weichenumbau">
+        <img src="bilder/tat-weichen-1.jpg?v=6" alt="Zungenvorrichtung mit Stellstange und Weichenverschluss" width="1200" height="1600" loading="lazy" />
+        <span class="galerie-etikett" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 9V3h6M21 9V3h-6M3 15v6h6M21 15v6h-6"/></svg>2 Aufnahmen ansehen</span>
+      </button>
+      <div class="kern-text">
+        <span class="linie linie-doppelt" aria-hidden="true"></span>
+        <h3 id="weichen-titel">Weichenerneuerung und Weichenumbau</h3>
+        <p>Wir erneuern Weichen und bauen sie um, vom vorbereiteten Weichenschwellenrost bis zur eingeschotterten Weiche. Die Arbeiten führen wir im vereinbarten Zeitfenster aus, auch in der Nachtsperrpause.</p>
+        <ul class="punkte-liste"><li>Weichenerneuerung</li><li>Weichenumbau</li><li>Vorbereitende Oberbauarbeiten</li></ul>
+        <p class="beleg">Weichenarbeiten in allen vier Referenzprojekten, darunter Schienentrennschnitte an einer doppelten Kreuzungsweiche (DKW) in Mönchengladbach. <a class="verweis" href="#referenzen">Referenzen ansehen</a></p>
+      </div>
+    </article>
 
-      <article class="card reveal">
-        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="square"><path d="M3 7h18M3 17h18M7 7v10M17 7v10"/></svg></span>
-        <h3>Schienenwechsel &amp; Schienenarbeiten</h3>
-        <p>Austausch und Bearbeitung von Schienen — fachgerecht ausgeführt und dokumentiert.</p>
-        <ul><li>Schienenwechsel</li><li>Schienenschweiß- und Schienentrennarbeiten</li><li>Schienenbearbeitung</li></ul>
+    <div class="blatt tafel">
+      <article class="tafel-zeile" id="gleisbau" aria-labelledby="gleisbau-titel">
+        <div><span class="linie linie-voll" aria-hidden="true"></span><h3 id="gleisbau-titel">Gleis- und Oberbauarbeiten</h3></div>
+        <div>
+          <p>Neubau, Umbau und Rückbau von Gleisanlagen, vom Planum über Schotterbettung und Gleisrost bis zur fertigen Gleislage.</p>
+          <ul class="punkte-liste"><li>Gleisbau und Gleiserneuerung</li><li>Schotterarbeiten und Stopfen</li><li>Schwellen- und Kleineisenwechsel</li></ul>
+        </div>
+        <button type="button" class="galerie" data-bilder='[{"src": "bilder/tat-gleisbau-1.jpg?v=6", "bu": "Gleisoberbauarbeiten — Einbau und Ausrichtung von Schienen auf Betonschwellen"}, {"src": "bilder/tat-gleisbau-2.jpg?v=6", "bu": "Schwellenverlegung im Streckengleis"}, {"src": "bilder/tat-stopfarbeiten-1.jpg?v=6", "bu": "Unterstopfen der Schwellen mit der Stopfhacke"}, {"src": "bilder/tat-weichen-3.jpg?v=6", "bu": "Neu verlegtes Streckengleis im Bogen"}, {"src": "bilder/tat-weichen-4.jpg?v=6", "bu": "Fertige Gleislage mit neuer Schotterbettung"}]' data-titel="Gleis- und Oberbauarbeiten" aria-label="5 Aufnahmen ansehen: Gleis- und Oberbauarbeiten">
+          <img src="bilder/tat-gleisbau-1.jpg?v=6" alt="Gleisoberbauarbeiten — Einbau und Ausrichtung von Schienen auf Betonschwellen" width="675" height="1200" loading="lazy" />
+          <span class="galerie-etikett" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 9V3h6M21 9V3h-6M3 15v6h6M21 15v6h-6"/></svg>5 Aufnahmen ansehen</span>
+        </button>
       </article>
-
-      <article class="card reveal">
-        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="square"><path d="M3 16h18M3 20h18M6 16V8M12 16V8M18 16V8M4 8h16"/></svg></span>
-        <h3>Gleis- &amp; Oberbauarbeiten</h3>
-        <p>Neubau, Umbau und Rückbau von Gleisanlagen samt aller Arbeiten am Oberbau.</p>
-        <ul><li>Gleisbau &amp; Gleiserneuerung</li><li>Schotterarbeiten &amp; Stopfen</li><li>Schwellen- und Kleineisenwechsel</li></ul>
+      <article class="tafel-zeile" id="schienen" aria-labelledby="schienen-titel">
+        <div><span class="linie linie-voll" aria-hidden="true"></span><h3 id="schienen-titel">Schienenwechsel und Schienenarbeiten</h3></div>
+        <div>
+          <p>Austausch von Schienen, Schienentrennschnitte und Arbeiten an der Schienenbefestigung, auch in der Nachtsperrpause.</p>
+          <ul class="punkte-liste"><li>Schienenwechsel</li><li>Schienentrennschnitte</li><li>Arbeiten an der Schienenbefestigung</li></ul>
+        </div>
+        <button type="button" class="galerie" data-bilder='[{"src": "bilder/tat-schienenarbeiten-1.jpg?v=6", "bu": "Schienentrennschnitt mit der Schienentrennschleifmaschine"}, {"src": "bilder/tat-schienenarbeiten-2.jpg?v=6", "bu": "Schienentrennschnitt in der Nachtsperrpause"}, {"src": "bilder/tat-schienenarbeiten-3.jpg?v=6", "bu": "Anziehen der Schienenbefestigung mit der Gleisschraubmaschine"}, {"src": "bilder/tat-schienenarbeiten-4.jpg?v=6", "bu": "Schienentrennschnitt am Tunnelportal"}]' data-titel="Schienenwechsel und Schienenarbeiten" aria-label="4 Aufnahmen ansehen: Schienenwechsel und Schienenarbeiten">
+          <img src="bilder/tat-schienenarbeiten-1.jpg?v=6" alt="Schienentrennschnitt mit der Schienentrennschleifmaschine" width="796" height="1064" loading="lazy" />
+          <span class="galerie-etikett" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 9V3h6M21 9V3h-6M3 15v6h6M21 15v6h-6"/></svg>4 Aufnahmen ansehen</span>
+        </button>
       </article>
-
-      <article class="card reveal">
-        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="square"><path d="M3 17l4-4 3 2 5-6 3 3"/><path d="M3 21h18M3 3v18"/></svg></span>
-        <h3>Instandhaltung</h3>
-        <p>Laufende Unterhaltung, die Verfügbarkeit sichert und teure Ausfälle verhindert.</p>
-        <ul><li>Inspektion &amp; Mängelbeseitigung</li><li>Wartung von Gleis- und Oberbauanlagen</li><li>Kurzfristige Störungsbeseitigung</li></ul>
+      <article class="tafel-zeile" id="instandhaltung" aria-labelledby="instandhaltung-titel">
+        <div><span class="linie linie-voll" aria-hidden="true"></span><h3 id="instandhaltung-titel">Instandhaltung</h3></div>
+        <div>
+          <p>Inspektion, Wartung und Mängelbeseitigung an Gleis- und Oberbauanlagen. Bei Störungen auch kurzfristig.</p>
+          <ul class="punkte-liste"><li>Inspektion und Mängelbeseitigung</li><li>Wartung von Gleis- und Oberbauanlagen</li><li>Kurzfristige Störungsbeseitigung</li></ul>
+        </div>
+        <a class="verweis" href="#kurzfristig">Störung? So erreichen Sie uns</a>
       </article>
-
-      <article class="card reveal">
-        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="square"><path d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-6h6v6"/></svg></span>
-        <h3>Bahninfrastruktur</h3>
-        <p>Anlagen und Leitungswege entlang der Strecke — fachgerecht ausgeführt und dokumentiert.</p>
-        <ul><li>Kabeltiefbau &amp; Leitungen</li><li>Entwässerung &amp; Böschungen</li><li>Bahnsteige &amp; Zuwegungen</li></ul>
-      </article>
-
-      <article class="card reveal">
-        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="square"><path d="M12 22V12"/><path d="M12 12c0-3 2-5 5-5 0 3-2 5-5 5z"/><path d="M12 14c0-3-2-5-5-5 0 3 2 5 5 5z"/><path d="M4 22h16"/></svg></span>
-        <h3>Vegetationsarbeiten</h3>
-        <p>Freier Lichtraum und sichere Sicht — im Gleisbereich und entlang der Strecke.</p>
-        <ul><li>Rückschnitt &amp; Freischnitt</li><li>Freihaltung des Lichtraumprofils</li><li>Aufwuchsbeseitigung im Gleisbereich</li></ul>
-      </article>
-
-      <article class="card reveal">
-        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="square"><path d="M12 2v20M4 7l16 10M20 7L4 17M12 6l-3-3M12 6l3-3M12 18l-3 3M12 18l3 3"/></svg></span>
-        <h3>Winterdienst</h3>
-        <p>Betriebsfähigkeit auch bei Schnee und Eis — an Gleisanlagen und Zuwegungen.</p>
-        <ul><li>Schnee- und Eisfreihaltung</li><li>Weichenbereiche freihalten</li><li>Bahnsteige &amp; Zuwegungen</li></ul>
-      </article>
-
     </div>
+
+    <section class="blatt ergaenzend" id="ergaenzend" aria-labelledby="ergaenzend-titel">
+      <span class="linie linie-bedarf" aria-hidden="true"></span>
+      <h3 id="ergaenzend-titel">Ergänzende Arbeiten an der Strecke</h3>
+      <dl class="ergaenzend-liste">
+        <div><dt>Bahninfrastruktur</dt><dd>Kabeltiefbau und Leitungen, Entwässerung und Böschungen, Bahnsteige und Zuwegungen.</dd></div>
+        <div><dt>Vegetationsarbeiten</dt><dd>Rückschnitt und Freischnitt, Freihalten des Lichtraumprofils, Beseitigen von Aufwuchs im Gleisbereich.</dd></div>
+        <div><dt>Winterdienst</dt><dd>Schnee- und Eisfreihaltung an Gleisanlagen, in Weichenbereichen, an Bahnsteigen und Zuwegungen.</dd></div>
+      </dl>
+    </section>
   </div>
 </section>
 
 <!-- ================= REFERENZEN ================= -->
-<section class="section" id="referenzen">
+<section class="abschnitt" id="referenzen" aria-labelledby="referenzen-titel" data-halt="2">
   <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Referenzen</span>
-      <h2>Ausgewählte Projekte</h2>
-      <p>Eine Auswahl der Maßnahmen, die wir ausgeführt oder begleitet haben. Unser Einsatzgebiet reicht über NRW hinaus — wir arbeiten bundesweit.</p>
+    <div class="abschnitt-kopf">
+      <span class="halt" aria-hidden="true"></span>
+      <h2 id="referenzen-titel">Referenzen: vier Projekte in 27 Aufnahmen</h2>
+      <p>Eine Auswahl der Maßnahmen, die wir selbst ausgeführt und begleitet haben, mit Aufnahmen von der Baustelle. Alle vier liegen in Nordrhein-Westfalen, unser Einsatzgebiet ist bundesweit.</p>
     </div>
-
-    <div class="refs">
-      <figure class="ref reveal">
-        <div class="ref-bild" data-bilder='[{"src": "bilder/ref-remscheid-1.jpg?v=6", "bu": "Herstellung und Verdichtung des Planums für den anschließenden Gleisoberbau"}, {"src": "bilder/ref-remscheid-2.jpg?v=6", "bu": "Vermessung der Gleislage am neu verlegten Gleisrost"}, {"src": "bilder/ref-remscheid-3.jpg?v=6", "bu": "Neu verlegter Gleisrost auf der vorbereiteten Schotterbettung"}, {"src": "bilder/ref-remscheid-4.jpg?v=6", "bu": "Verfüllen der Schwellenfächer mit Gleisschotter"}, {"src": "bilder/ref-remscheid-5.jpg?v=6", "bu": "Ausgelegte Betonschwellen mit vormontierter Schienenbefestigung vor dem Schieneneinbau"}, {"src": "bilder/ref-remscheid-6.jpg?v=6", "bu": "Absteckung und Schwellenverlegung neben dem Bestandsgleis"}, {"src": "bilder/ref-remscheid-7.jpg?v=6", "bu": "Kontrolle der Spurweite mit der Gleismesslehre"}, {"src": "bilder/ref-remscheid-8.jpg?v=6", "bu": "Schienentrennschnitt mit der Schienentrennschleifmaschine"}, {"src": "bilder/ref-remscheid-9.jpg?v=6", "bu": "Anziehen der Schienenbefestigung mit der Gleisschraubmaschine"}, {"src": "bilder/ref-remscheid-10.jpg?v=6", "bu": "Arbeiten an der Zungenvorrichtung im neu eingeschotterten Weichenbereich"}, {"src": "bilder/ref-remscheid-11.jpg?v=6", "bu": "Gleisstopfmaschine im Bauabschnitt"}]'>
-          <img src="bilder/ref-remscheid-1.jpg?v=6" alt="Herstellung und Verdichtung des Planums für den anschließenden Gleisoberbau" loading="lazy" />
-          <span class="ref-lupe">Vergrößern</span>
-          <span class="ref-zahl">1&thinsp;/&thinsp;11</span>
+    <div class="referenzen">
+      <article class="referenz sperrpause nacht" id="referenz-moenchengladbach" aria-labelledby="referenz-moenchengladbach-titel">
+        <button type="button" class="galerie" data-bilder='[{"src": "bilder/ref-moenchengladbach-1.jpg?v=6", "bu": "Schienentrennschnitte an einer doppelten Kreuzungsweiche (DKW) während der Sperrpause"}, {"src": "bilder/ref-moenchengladbach-2.jpg?v=6", "bu": "Verdichtung der Schotterbettung vor dem Weicheneinbau"}, {"src": "bilder/ref-moenchengladbach-3.jpg?v=6", "bu": "Weiche 33 nach dem Einbau"}, {"src": "bilder/ref-moenchengladbach-4.jpg?v=6", "bu": "Fertig eingebaute Weiche mit neuer Schotterbettung"}, {"src": "bilder/ref-moenchengladbach-5.jpg?v=6", "bu": "Neu eingebaute Weiche bei Tagesanbruch nach der Nachtsperrpause"}]' data-titel="Bahnhof Mönchengladbach" aria-label="5 Aufnahmen ansehen: Bahnhof Mönchengladbach">
+          <img src="bilder/ref-moenchengladbach-1.jpg?v=6" alt="Schienentrennschnitte an einer doppelten Kreuzungsweiche (DKW) während der Sperrpause" width="1200" height="675" loading="lazy" />
+          <span class="galerie-etikett" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 9V3h6M21 9V3h-6M3 15v6h6M21 15v6h-6"/></svg>5 Aufnahmen ansehen</span>
+        </button>
+        <div class="referenz-text">
+          <h3 id="referenz-moenchengladbach-titel">Bahnhof Mönchengladbach</h3>
+          <dl class="datenzeilen">
+            <div><dt>Ort</dt><dd>Mönchengladbach (NRW)</dd></div>
+            <div><dt>Leistung</dt><dd>Weicheneinbau in der Nachtsperrpause, mit Schienentrennschnitten an einer doppelten Kreuzungsweiche (DKW).</dd></div>
+            <div><dt>Rahmenbedingung</dt><dd>Nachtsperrpause</dd></div>
+            <div><dt>Aufnahmen</dt><dd class="nr">5</dd></div>
+          </dl>
         </div>
-        <figcaption>
-          <span class="ref-no">01</span>
-          <h3>Bahnhof Remscheid</h3>
-          <p>Oberbauarbeiten von der Planumsherstellung über die Gleisrostverlegung bis zur maschinellen Durcharbeitung.</p>
-        </figcaption>
-      </figure>
-
-      <figure class="ref reveal">
-        <div class="ref-bild" data-bilder='[{"src": "bilder/ref-paderborn-1.jpg?v=6", "bu": "Gleis- und Weichenarbeiten im Werksbereich"}, {"src": "bilder/ref-paderborn-2.jpg?v=6", "bu": "Herzstückbereich der neu eingebauten Weiche"}, {"src": "bilder/ref-paderborn-3.jpg?v=6", "bu": "Neu eingeschotterte Gleisanlage im Werksbereich"}, {"src": "bilder/ref-paderborn-4.jpg?v=6", "bu": "Unterstopfen der Schwellen mit Stopfhacken im Werksgleis"}, {"src": "bilder/ref-paderborn-5.jpg?v=6", "bu": "Verdichtung des Planums mit der Rüttelplatte"}, {"src": "bilder/ref-paderborn-6.jpg?v=6", "bu": "Kontrollmessung an der eingebauten Weiche"}]'>
-          <img src="bilder/ref-paderborn-1.jpg?v=6" alt="Gleis- und Weichenarbeiten im Werksbereich" loading="lazy" />
-          <span class="ref-lupe">Vergrößern</span>
-          <span class="ref-zahl">1&thinsp;/&thinsp;6</span>
+      </article>
+      <article class="referenz nacht" id="referenz-remscheid" aria-labelledby="referenz-remscheid-titel">
+        <button type="button" class="galerie" data-bilder='[{"src": "bilder/ref-remscheid-1.jpg?v=6", "bu": "Herstellung und Verdichtung des Planums für den anschließenden Gleisoberbau"}, {"src": "bilder/ref-remscheid-2.jpg?v=6", "bu": "Vermessung der Gleislage am neu verlegten Gleisrost"}, {"src": "bilder/ref-remscheid-3.jpg?v=6", "bu": "Neu verlegter Gleisrost auf der vorbereiteten Schotterbettung"}, {"src": "bilder/ref-remscheid-4.jpg?v=6", "bu": "Verfüllen der Schwellenfächer mit Gleisschotter"}, {"src": "bilder/ref-remscheid-5.jpg?v=6", "bu": "Ausgelegte Betonschwellen mit vormontierter Schienenbefestigung vor dem Schieneneinbau"}, {"src": "bilder/ref-remscheid-6.jpg?v=6", "bu": "Absteckung und Schwellenverlegung neben dem Bestandsgleis"}, {"src": "bilder/ref-remscheid-7.jpg?v=6", "bu": "Kontrolle der Spurweite mit der Gleismesslehre"}, {"src": "bilder/ref-remscheid-8.jpg?v=6", "bu": "Schienentrennschnitt mit der Schienentrennschleifmaschine"}, {"src": "bilder/ref-remscheid-9.jpg?v=6", "bu": "Anziehen der Schienenbefestigung mit der Gleisschraubmaschine"}, {"src": "bilder/ref-remscheid-10.jpg?v=6", "bu": "Arbeiten an der Zungenvorrichtung im neu eingeschotterten Weichenbereich"}, {"src": "bilder/ref-remscheid-11.jpg?v=6", "bu": "Gleisstopfmaschine im Bauabschnitt"}]' data-titel="Bahnhof Remscheid" aria-label="11 Aufnahmen ansehen: Bahnhof Remscheid">
+          <img src="bilder/ref-remscheid-1.jpg?v=6" alt="Herstellung und Verdichtung des Planums für den anschließenden Gleisoberbau" width="1200" height="675" loading="lazy" />
+          <span class="galerie-etikett" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 9V3h6M21 9V3h-6M3 15v6h6M21 15v6h-6"/></svg>11 Aufnahmen ansehen</span>
+        </button>
+        <div class="referenz-text">
+          <h3 id="referenz-remscheid-titel">Bahnhof Remscheid</h3>
+          <dl class="datenzeilen">
+            <div><dt>Ort</dt><dd>Remscheid (NRW)</dd></div>
+            <div><dt>Leistung</dt><dd>Oberbauarbeiten im Gleis- und Weichenbereich, vom Planum über die Schwellen- und Gleisrostverlegung bis zum Einschottern.</dd></div>
+            <div><dt>Rahmenbedingung</dt><dd>Arbeiten neben dem Bestandsgleis</dd></div>
+            <div><dt>Aufnahmen</dt><dd class="nr">11</dd></div>
+          </dl>
         </div>
-        <figcaption>
-          <span class="ref-no">02</span>
-          <h3>FZI Werk Paderborn</h3>
-          <p>Erneuerung von Gleisanlagen und Weichenverbindungen im Werksbereich.</p>
-        </figcaption>
-      </figure>
-
-      <figure class="ref reveal">
-        <div class="ref-bild" data-bilder='[{"src": "bilder/ref-gremberg-1.jpg?v=6", "bu": "Weichenumbau mit dem Zweiwegebagger"}, {"src": "bilder/ref-gremberg-2.jpg?v=6", "bu": "Neu eingebaute Weiche mit Zungenvorrichtung und Gleitstühlen"}, {"src": "bilder/ref-gremberg-3.jpg?v=6", "bu": "Montagearbeiten an der Zungenvorrichtung"}, {"src": "bilder/ref-gremberg-4.jpg?v=6", "bu": "Ausgelegte Weichenschwellen mit vormontierten Gleitstuhlplatten"}, {"src": "bilder/ref-gremberg-5.jpg?v=6", "bu": "Vorbereiteter Weichenschwellenrost vor dem Einlegen der Schienen"}]'>
-          <img src="bilder/ref-gremberg-1.jpg?v=6" alt="Weichenumbau mit dem Zweiwegebagger" loading="lazy" />
-          <span class="ref-lupe">Vergrößern</span>
-          <span class="ref-zahl">1&thinsp;/&thinsp;5</span>
+      </article>
+      <article class="referenz nacht" id="referenz-gremberg" aria-labelledby="referenz-gremberg-titel">
+        <button type="button" class="galerie" data-bilder='[{"src": "bilder/ref-gremberg-1.jpg?v=6", "bu": "Weichenumbau mit dem Zweiwegebagger"}, {"src": "bilder/ref-gremberg-2.jpg?v=6", "bu": "Neu eingebaute Weiche mit Zungenvorrichtung und Gleitstühlen"}, {"src": "bilder/ref-gremberg-3.jpg?v=6", "bu": "Montagearbeiten an der Zungenvorrichtung"}, {"src": "bilder/ref-gremberg-4.jpg?v=6", "bu": "Ausgelegte Weichenschwellen mit vormontierten Gleitstuhlplatten"}, {"src": "bilder/ref-gremberg-5.jpg?v=6", "bu": "Vorbereiteter Weichenschwellenrost vor dem Einlegen der Schienen"}]' data-titel="Bahnhof Gremberg" aria-label="5 Aufnahmen ansehen: Bahnhof Gremberg">
+          <img src="bilder/ref-gremberg-1.jpg?v=6" alt="Weichenumbau mit dem Zweiwegebagger" width="675" height="1200" loading="lazy" />
+          <span class="galerie-etikett" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 9V3h6M21 9V3h-6M3 15v6h6M21 15v6h-6"/></svg>5 Aufnahmen ansehen</span>
+        </button>
+        <div class="referenz-text">
+          <h3 id="referenz-gremberg-titel">Bahnhof Gremberg</h3>
+          <dl class="datenzeilen">
+            <div><dt>Leistung</dt><dd>Weichenumbau mit dem Zweiwegebagger, vom vorbereiteten Weichenschwellenrost bis zur eingebauten Weiche mit Zungenvorrichtung und Gleitstühlen.</dd></div>
+            <div><dt>Aufnahmen</dt><dd class="nr">5</dd></div>
+          </dl>
         </div>
-        <figcaption>
-          <span class="ref-no">03</span>
-          <h3>Bahnhof Gremberg</h3>
-          <p>Maschinengestützter Weichenumbau mit anschließenden Schotterarbeiten.</p>
-        </figcaption>
-      </figure>
-
-      <figure class="ref reveal">
-        <div class="ref-bild" data-bilder='[{"src": "bilder/ref-moenchengladbach-1.jpg?v=6", "bu": "Schienentrennschnitte an einer doppelten Kreuzungsweiche (DKW) während der Sperrpause"}, {"src": "bilder/ref-moenchengladbach-2.jpg?v=6", "bu": "Verdichtung der Schotterbettung vor dem Weicheneinbau"}, {"src": "bilder/ref-moenchengladbach-3.jpg?v=6", "bu": "Weiche 33 nach dem Einbau"}, {"src": "bilder/ref-moenchengladbach-4.jpg?v=6", "bu": "Fertig eingebaute Weiche mit neuer Schotterbettung"}, {"src": "bilder/ref-moenchengladbach-5.jpg?v=6", "bu": "Neu eingebaute Weiche bei Tagesanbruch nach der Nachtsperrpause"}]'>
-          <img src="bilder/ref-moenchengladbach-1.jpg?v=6" alt="Schienentrennschnitte an einer doppelten Kreuzungsweiche (DKW) während der Sperrpause" loading="lazy" />
-          <span class="ref-lupe">Vergrößern</span>
-          <span class="ref-zahl">1&thinsp;/&thinsp;5</span>
+      </article>
+      <article class="referenz nacht" id="referenz-paderborn" aria-labelledby="referenz-paderborn-titel">
+        <button type="button" class="galerie" data-bilder='[{"src": "bilder/ref-paderborn-1.jpg?v=6", "bu": "Gleis- und Weichenarbeiten im Werksbereich"}, {"src": "bilder/ref-paderborn-2.jpg?v=6", "bu": "Herzstückbereich der neu eingebauten Weiche"}, {"src": "bilder/ref-paderborn-3.jpg?v=6", "bu": "Neu eingeschotterte Gleisanlage im Werksbereich"}, {"src": "bilder/ref-paderborn-4.jpg?v=6", "bu": "Unterstopfen der Schwellen mit Stopfhacken im Werksgleis"}, {"src": "bilder/ref-paderborn-5.jpg?v=6", "bu": "Verdichtung des Planums mit der Rüttelplatte"}, {"src": "bilder/ref-paderborn-6.jpg?v=6", "bu": "Kontrollmessung an der eingebauten Weiche"}]' data-titel="FZI Werk Paderborn" aria-label="6 Aufnahmen ansehen: FZI Werk Paderborn">
+          <img src="bilder/ref-paderborn-1.jpg?v=6" alt="Gleis- und Weichenarbeiten im Werksbereich" width="675" height="1200" loading="lazy" />
+          <span class="galerie-etikett" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 9V3h6M21 9V3h-6M3 15v6h6M21 15v6h-6"/></svg>6 Aufnahmen ansehen</span>
+        </button>
+        <div class="referenz-text">
+          <h3 id="referenz-paderborn-titel">FZI Werk Paderborn</h3>
+          <dl class="datenzeilen">
+            <div><dt>Ort</dt><dd>Paderborn (NRW)</dd></div>
+            <div><dt>Leistung</dt><dd>Gleis- und Weichenarbeiten im Werksbereich, vom verdichteten Planum bis zur Kontrollmessung an der eingebauten Weiche.</dd></div>
+            <div><dt>Rahmenbedingung</dt><dd>Gleisanlage im Werksbereich</dd></div>
+            <div><dt>Aufnahmen</dt><dd class="nr">6</dd></div>
+          </dl>
         </div>
-        <figcaption>
-          <span class="ref-no">04</span>
-          <h3>Bahnhof Mönchengladbach</h3>
-          <p>Weichenarbeiten in der Nachtsperrpause, einschließlich Schienentrennschnitten an einer doppelten Kreuzungsweiche (DKW).</p>
-        </figcaption>
-      </figure>
-    </div>
-
-    <div class="ref-works reveal">
-      <h3>Ausgeführte Arbeiten</h3>
-      <ul>
-        <li>Weichenerneuerungen und Weichenumbauten im Bereich der Eisenbahninfrastruktur</li>
-        <li>Vorbereitende Oberbauarbeiten im Rahmen von Gleis- und Weichenerneuerungen</li>
-        <li>Vermessungs- und Begehungsarbeiten zur Vorbereitung und Durchführung von Baumaßnahmen</li>
-        <li>Schienenwechsel sowie Instandhaltungsarbeiten an Gleis- und Oberbauanlagen</li>
-        <li>Durchführung von Bauleistungen unter den Bedingungen des laufenden Eisenbahnbetriebes</li>
-      </ul>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ================= AUS DER PRAXIS ================= -->
-<section class="section section-light" id="praxis">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Aus der Praxis</span>
-      <h2>Einblicke in unsere Arbeit</h2>
-      <p>Aufnahmen von unseren Baustellen — bei Tag, in der Nachtsperrpause und unter laufendem Betrieb.</p>
+<!-- ================= TEAM ================= -->
+<section class="abschnitt" id="team" aria-labelledby="team-titel" data-halt="3">
+  <span id="ueber-uns" class="sr-only"></span>
+  <div class="wrap team">
+    <div class="abschnitt-kopf team-text">
+      <span class="halt" aria-hidden="true"></span>
+      <h2 id="team-titel">Ein Team mit Erfahrung im Bahnbau</h2>
+      <p>Hinter RailX stehen Fachkräfte, Poliere und Bauverantwortliche aus dem Bahnbau. Zusammen bringt das Team mehr als 20 Jahre Bahnbau-Erfahrung mit, auch aus Arbeiten unter laufendem Eisenbahnbetrieb.</p>
     </div>
-
-    <div class="refs praxis">
-      <figure class="ref reveal">
-        <div class="ref-bild" data-bilder='[{"src": "bilder/tat-schienenarbeiten-1.jpg?v=6", "bu": "Schienentrennschnitt mit der Schienentrennschleifmaschine"}, {"src": "bilder/tat-schienenarbeiten-2.jpg?v=6", "bu": "Schienentrennschnitt in der Nachtsperrpause"}, {"src": "bilder/tat-schienenarbeiten-3.jpg?v=6", "bu": "Anziehen der Schienenbefestigung mit der Gleisschraubmaschine"}, {"src": "bilder/tat-schienenarbeiten-4.jpg?v=6", "bu": "Schienentrennschnitt am Tunnelportal"}]'>
-          <img src="bilder/tat-schienenarbeiten-1.jpg?v=6" alt="Schienentrennschnitt mit der Schienentrennschleifmaschine" loading="lazy" />
-          <span class="ref-lupe">Vergrößern</span>
-          <span class="ref-zahl">1&thinsp;/&thinsp;4</span>
-        </div>
-        <figcaption>
-          <h3>Schienenarbeiten</h3>
-          <p>Schienentrennschnitte und Arbeiten an Schienen und Schienenbefestigung — auch während der Nachtsperrpause.</p>
-        </figcaption>
-      </figure>
-
-      <figure class="ref reveal">
-        <div class="ref-bild" data-bilder='[{"src": "bilder/tat-gleisbau-1.jpg?v=6", "bu": "Gleisoberbauarbeiten — Einbau und Ausrichtung von Schienen auf Betonschwellen"}, {"src": "bilder/tat-gleisbau-2.jpg?v=6", "bu": "Schwellenverlegung im Streckengleis"}]'>
-          <img src="bilder/tat-gleisbau-1.jpg?v=6" alt="Gleisoberbauarbeiten — Einbau und Ausrichtung von Schienen auf Betonschwellen" loading="lazy" />
-          <span class="ref-lupe">Vergrößern</span>
-          <span class="ref-zahl">1&thinsp;/&thinsp;2</span>
-        </div>
-        <figcaption>
-          <h3>Gleisoberbau</h3>
-          <p>Maschinengestützter Einbau von Schwellen und Schienen im Streckengleis.</p>
-        </figcaption>
-      </figure>
-
-      <figure class="ref reveal">
-        <div class="ref-bild" data-bilder='[{"src": "bilder/tat-stopfarbeiten-1.jpg?v=6", "bu": "Unterstopfen der Schwellen mit der Stopfhacke"}]'>
-          <img src="bilder/tat-stopfarbeiten-1.jpg?v=6" alt="Unterstopfen der Schwellen mit der Stopfhacke" loading="lazy" />
-          <span class="ref-lupe">Vergrößern</span>
-        </div>
-        <figcaption>
-          <h3>Stopf- und Schotterarbeiten</h3>
-          <p>Unterstopfen und Verdichten des Gleisschotters zur Herstellung und Stabilisierung der Gleislage.</p>
-        </figcaption>
-      </figure>
-
-      <figure class="ref reveal">
-        <div class="ref-bild" data-bilder='[{"src": "bilder/tat-weichen-1.jpg?v=6", "bu": "Zungenvorrichtung mit Stellstange und Weichenverschluss"}, {"src": "bilder/tat-weichen-2.jpg?v=6", "bu": "Neu hergestellte Gleisverbindung nach Abschluss der Oberbauarbeiten"}, {"src": "bilder/tat-weichen-3.jpg?v=6", "bu": "Neu verlegtes Streckengleis im Bogen"}, {"src": "bilder/tat-weichen-4.jpg?v=6", "bu": "Fertige Gleislage mit neuer Schotterbettung"}]'>
-          <img src="bilder/tat-weichen-1.jpg?v=6" alt="Zungenvorrichtung mit Stellstange und Weichenverschluss" loading="lazy" />
-          <span class="ref-lupe">Vergrößern</span>
-          <span class="ref-zahl">1&thinsp;/&thinsp;4</span>
-        </div>
-        <figcaption>
-          <h3>Weichen und Gleisverbindungen</h3>
-          <p>Einbau von Weichen und Gleisverbindungen — von der Zungenvorrichtung bis zur fertigen Gleislage.</p>
-        </figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- ================= ÜBER UNS ================= -->
-<section class="section section-dark" id="ueber-uns">
-  <div class="wrap">
-    <!-- Einleitung und Teamfoto nebeneinander. Das Bild steht bewusst hier und nicht in den
-         Referenzen (dort zaehlen Projektergebnisse) oder in der Praxis (dort zaehlen
-         Taetigkeiten) — es zeigt die Leute, nicht ein Ergebnis. Ohne Bildunterschrift. -->
-    <div class="ueber-kopf">
-      <span class="eyebrow on-dark reveal">Warum RailX</span>
-      <div class="section-head reveal">
-        <h2>Erfahrung, auf die Sie bauen können</h2>
-        <p>Unser Team besteht aus erfahrenen Fachkräften, Polieren und Bauverantwortlichen mit umfangreicher praktischer Erfahrung im Bahnbau — auch unter den besonderen Bedingungen des laufenden Eisenbahnbetriebes, wo jede Bewegung im Gleisbereich abgestimmt und gesichert sein muss.</p>
-      </div>
-      <figure class="ueber-bild reveal">
-        <img src="bilder/team-1.jpg?v=1" alt="Mitarbeiter mit Helm und Warnkleidung im Gleisbereich; dahinter drei Kollegen in Warnkleidung, ein Kran mit Hebegeschirr und neu verlegte Schwellen" width="1447" height="1087" loading="lazy" />
-      </figure>
-    </div>
-    <div class="benefits">
-      <div class="benefit reveal">
-        <span class="benefit-no">01</span>
-        <h3>Arbeitssicherheit</h3>
-        <p>Arbeiten im Gleisbereich verzeihen keine Nachlässigkeit. Sicherheit hat bei jedem Einsatz Vorrang.</p>
-      </div>
-      <div class="benefit reveal">
-        <span class="benefit-no">02</span>
-        <h3>Qualität</h3>
-        <p>Fachgerechte Ausführung nach Regelwerk — nachvollziehbar dokumentiert bis zur Abnahme.</p>
-      </div>
-      <div class="benefit reveal">
-        <span class="benefit-no">03</span>
-        <h3>Termintreue</h3>
-        <p>Sperrpausen verzeihen keine Verzögerung. Unsere Planung ist genau darauf ausgelegt.</p>
-      </div>
-      <div class="benefit reveal">
-        <span class="benefit-no">04</span>
-        <h3>Abstimmung</h3>
-        <p>Zuverlässige Kommunikation mit allen Projektbeteiligten — vom Auftraggeber bis zur Betriebsleitung.</p>
-      </div>
-    </div>
-
-    <div class="nachweis reveal" id="nachweise">
-      <div class="nachweis-kopf">
-        <span class="nachweis-label">Eignungsnachweis</span>
-        <h3>Präqualifikationsnachweis der Deutschen Bahn AG</h3>
-        <p>
-          Unsere fachliche Eignung für Instandsetzungsarbeiten am Oberbau ist im Präqualifikationssystem
-          der Deutschen Bahn AG, Beschaffung Infrastruktur, geprüft und bestätigt. Auftraggeber können den
-          Nachweis jederzeit einsehen.
-        </p>
-      </div>
-      <dl class="nachweis-daten">
-        <div><dt>Warengruppe</dt><dd>Oberbau Instandsetzung (IS) Gleise/Weichen</dd></div>
-        <div><dt>Status</dt><dd>Präqualifiziert</dd></div>
-        <div><dt>Vorgangsnummer</dt><dd>137658</dd></div>
-        <div><dt>Gültig bis</dt><dd>22.09.2030</dd></div>
-      </dl>
-      <a class="btn btn-ghost nachweis-link"
-         href="dokumente/praequalifikation-railx-gmbh.pdf" target="_blank" rel="noopener"
-         aria-label="Präqualifikationsnachweis der Deutschen Bahn AG ansehen (PDF, 1,6 MB, öffnet in neuem Tab)">
-        <span>Nachweis ansehen (PDF<span class="dateigroesse">, 1,6 MB</span>)</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="square" aria-hidden="true"><path d="M14 3h7v7"/><path d="M10 14 21 3"/><path d="M21 14v7H3V3h7"/></svg>
-      </a>
-      <p class="nachweis-fuss">Ausgestellt am 22.09.2026 durch die Deutsche Bahn AG, Beschaffung Infrastruktur.</p>
-    </div>
+    <figure class="team-bild">
+      <img src="bilder/team-1.jpg?v=1" alt="Mitarbeiter mit Helm und Warnkleidung im Gleisbereich; dahinter drei Kollegen in Warnkleidung, ein Kran mit Hebegeschirr und neu verlegte Schwellen" width="1447" height="1087" loading="lazy" />
+    </figure>
   </div>
 </section>
 
 <!-- ================= ABLAUF ================= -->
-<section class="section section-light" id="ablauf">
+<section class="abschnitt" id="ablauf" aria-labelledby="ablauf-titel" data-halt="4">
   <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">So arbeiten wir</span>
-      <h2>Von der Anfrage zur Abnahme</h2>
-      <p>Vier Schritte, klar getaktet — damit Sie zu jedem Zeitpunkt wissen, woran Sie sind.</p>
+    <div class="abschnitt-kopf">
+      <span class="halt" aria-hidden="true"></span>
+      <h2 id="ablauf-titel">Ablauf von der Anfrage bis zur Abnahme</h2>
+      <p>So läuft ein Auftrag mit uns ab, in vier Schritten.</p>
     </div>
-    <div class="steps">
-      <div class="step reveal">
-        <div class="step-marker"><span class="step-dot"></span><span class="step-line"></span></div>
-        <span class="step-idx">Schritt 01</span>
-        <h3>Anfrage</h3>
-        <p>Sie schildern Ihr Vorhaben. Wir melden uns innerhalb von 24 Stunden zurück.</p>
-      </div>
-      <div class="step reveal">
-        <div class="step-marker"><span class="step-dot"></span><span class="step-line"></span></div>
-        <span class="step-idx">Schritt 02</span>
-        <h3>Ortstermin</h3>
-        <p>Gemeinsame Begehung, Aufnahme der Randbedingungen und Sperrpausen.</p>
-      </div>
-      <div class="step reveal">
-        <div class="step-marker"><span class="step-dot"></span><span class="step-line"></span></div>
-        <span class="step-idx">Schritt 03</span>
-        <h3>Angebot</h3>
-        <p>Transparente Kalkulation mit klar definierten Leistungspositionen — ohne versteckte Posten.</p>
-      </div>
-      <div class="step reveal">
-        <div class="step-marker"><span class="step-dot"></span><span class="step-line"></span></div>
-        <span class="step-idx">Schritt 04</span>
-        <h3>Ausführung</h3>
-        <p>Umsetzung im vereinbarten Zeitfenster, einschließlich Dokumentation und Abnahmebegleitung.</p>
-      </div>
+    <div class="halte-rahmen" id="halte-rahmen">
+    <svg aria-hidden="true" focusable="false"></svg>
+    <ol class="halte" id="halte">
+      <li><h3>Anfrage</h3><p>Sie schicken uns Ort, Zeitraum und gewünschte Leistung, per Formular, E-Mail oder Telefon. Wir antworten innerhalb von 24 Stunden.</p></li>
+      <li><h3>Ortstermin</h3><p>Wir begehen die Baustelle gemeinsam mit Ihnen und nehmen Randbedingungen und Sperrpausen auf.</p></li>
+      <li><h3>Angebot</h3><p>Sie erhalten ein Angebot mit klar definierten Leistungspositionen.</p></li>
+      <li><h3>Ausführung</h3><p>Wir arbeiten im vereinbarten Zeitfenster nach Regelwerk, abgestimmt mit der Betriebsleitung, und dokumentieren bis zur Abnahme.</p></li>
+    </ol>
     </div>
-  </div>
-</section>
-
-<!-- ================= CTA-BAND ================= -->
-<section class="band">
-  <div class="wrap band-inner">
-    <div>
-      <h2>Kurzfristig Kapazität nötig?</h2>
-      <p>Rufen Sie an oder schicken Sie uns die Eckdaten. Wir sagen Ihnen ehrlich, was wann machbar ist.</p>
-    </div>
-    <a href="#kontakt" class="btn">Jetzt anfragen</a>
+    <p class="ablauf-hinweis">Bei Ausschreibungen richtet sich der Ablauf nach dem Vergabeverfahren des Auftraggebers.</p>
   </div>
 </section>
 
 <!-- ================= KONTAKT ================= -->
-<section class="section section-light" id="kontakt">
+<section class="abschnitt" id="kontakt" aria-labelledby="kontakt-titel" data-halt="5">
   <div class="wrap">
-    <div class="contact">
-      <div class="contact-info reveal">
-        <span class="eyebrow">Kontakt</span>
-        <h2>Sprechen wir<br />über Ihr Projekt</h2>
-        <p>Beschreiben Sie kurz Ihr Vorhaben — Ort, Zeitraum und benötigte Leistung genügen für eine erste Einschätzung.</p>
-
-        <div class="info-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-          <div><strong>Telefon</strong><span>02325 5943000</span></div>
+    <div class="abschnitt-kopf">
+      <span class="halt" aria-hidden="true"></span>
+      <h2 id="kontakt-titel">Sprechen Sie mit uns über Ihr Projekt</h2>
+      <p>Ort, Zeitraum und gewünschte Leistung genügen für eine erste Einschätzung.</p>
+    </div>
+    <div class="kontakt">
+        <section class="nacht kurzfristig" id="kurzfristig" aria-labelledby="kurzfristig-titel">
+          <h3 id="kurzfristig-titel">Kurzfristiger Einsatz</h3>
+          <p>Rufen Sie uns an: <span class="nr">02325 5943000</span>, Büro <span class="nb">Mo–Fr 10–18 Uhr</span>. Außerhalb der Bürozeiten schicken Sie uns die Eckdaten über das Formular oder an <a href="mailto:info@railx-gleisbau.de">info@railx-gleisbau.de</a>. Wir antworten innerhalb von 24 Stunden.</p>
+          <a class="taste taste-rot" href="tel:+4923255943000" aria-label="Anrufen: 02325 5943000, Büro Mo–Fr 10–18 Uhr">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            Anrufen: 02325 5943000</a>
+          <br /><a class="verweis" href="#anfrage">Zum Formular</a>
+        </section>
+      <form class="blatt formular" id="anfrage" action="https://api.web3forms.com/submit" method="POST" aria-labelledby="formular-titel" aria-describedby="pflicht-hinweis">
+        <input type="hidden" name="access_key" value="748bead0-063b-47de-9376-c887ae33e4c0" />
+        <input type="hidden" name="subject" value="Anfrage über railx-gleisbau.de" />
+        <input type="hidden" name="from_name" value="RailX Website" />
+        <div style="position:absolute;left:-9999px" aria-hidden="true"><label for="botcheck">Website</label><input id="botcheck" name="botcheck" type="checkbox" tabindex="-1" autocomplete="off" /></div>
+        <h3 id="formular-titel">Projekt anfragen</h3>
+        <p class="pflicht-hinweis" id="pflicht-hinweis">Pflichtfelder sind mit * markiert.</p>
+        <p class="uebernommen" id="uebernommen" role="status" hidden></p>
+        <div class="feld-reihe">
+          <div class="feld"><label for="name">Name <span aria-hidden="true">*</span></label><input id="name" name="name" type="text" required maxlength="120" autocomplete="name" aria-describedby="name-fehler" /><p class="fehler" id="name-fehler" hidden></p></div>
+          <div class="feld"><label for="firma">Firma</label><input id="firma" name="firma" type="text" maxlength="120" autocomplete="organization" /></div>
         </div>
-        <div class="info-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="square"><path d="M2 5h20v14H2z"/><path d="m2 6 10 7 10-7"/></svg>
-          <div><strong>E-Mail</strong><span>info@railx-gleisbau.de</span></div>
+        <div class="feld-reihe">
+          <div class="feld"><label for="email">E-Mail <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" required maxlength="160" autocomplete="email" aria-describedby="email-fehler" /><p class="fehler" id="email-fehler" hidden></p></div>
+          <div class="feld"><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" maxlength="40" autocomplete="tel" aria-describedby="telefon-hilfe" /><p class="hilfe" id="telefon-hilfe">Für schnelle Rückfragen</p></div>
         </div>
-        <div class="info-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="square"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <div><strong>Standort</strong><span>Flöz-Hugo-Siedlung 18, 44653 Herne</span></div>
-        </div>
-        <div class="info-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="square"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg>
-          <div><strong>Einsatzgebiet</strong><span>Bundesweit — Sitz in Herne, NRW</span></div>
-        </div>
-        <div class="info-item" style="border-bottom:1px solid var(--border)">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="square"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          <div><strong>Erreichbarkeit</strong><span>Mo–Fr 10:00–18:00 · Einsätze 24/7</span></div>
-        </div>
-
-        <div class="map-wrap" id="mapWrap">
-          <div class="map-placeholder" id="mapPlaceholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <strong>Flöz-Hugo-Siedlung 18, 44653 Herne</strong>
-            <p>Beim Laden der Karte werden Daten an Google übertragen. Näheres in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
-            <button type="button" class="btn btn-outline" id="mapLoad">Karte laden</button>
-          </div>
-        </div>
-      </div>
-
-      <form id="anfrage" novalidate>
-        <div style="position:absolute;left:-9999px;top:-9999px" aria-hidden="true">
-          <label for="botcheck">Website</label>
-          <input id="botcheck" name="botcheck" type="checkbox" tabindex="-1" autocomplete="off" />
-        </div>
-        <div class="form-row">
-          <div class="field"><label for="name">Name *</label><input id="name" name="name" type="text" required autocomplete="name" /></div>
-          <div class="field"><label for="firma">Firma</label><input id="firma" name="firma" type="text" autocomplete="organization" /></div>
-        </div>
-        <div class="form-row">
-          <div class="field"><label for="email">E-Mail *</label><input id="email" name="email" type="email" required autocomplete="email" /></div>
-          <div class="field"><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" autocomplete="tel" /></div>
-        </div>
-        <div class="field">
+        <div class="feld">
           <label for="leistung">Gewünschte Leistung</label>
           <select id="leistung" name="leistung">
-            <option>Weichenerneuerung / Weichenumbau</option>
-            <option>Schienenwechsel / Schienenarbeiten</option>
-            <option>Gleis- &amp; Oberbauarbeiten</option>
-            <option>Instandhaltung</option>
-            <option>Bahninfrastruktur</option>
-            <option>Vegetationsarbeiten</option>
-            <option>Winterdienst</option>
-            <option>Sonstiges</option>
+            <option value="" selected>Bitte wählen</option>
+              <option>Weichenerneuerung und Weichenumbau</option>
+              <option>Gleis- und Oberbauarbeiten</option>
+              <option>Schienenwechsel und Schienenarbeiten</option>
+              <option>Instandhaltung</option>
+              <option>Bahninfrastruktur</option>
+              <option>Vegetationsarbeiten</option>
+              <option>Winterdienst</option>
+              <option>Mehrere Leistungen oder Sonstiges</option>
           </select>
         </div>
-        <div class="field field-grow">
-          <label for="nachricht">Ihr Projekt *</label>
-          <textarea id="nachricht" name="nachricht" required placeholder="Ort, Zeitraum, Umfang …"></textarea>
+        <div class="feld-reihe">
+          <div class="feld"><label for="ort">Ort der Arbeiten</label><input id="ort" name="ort" type="text" maxlength="120" aria-describedby="ort-hilfe" /><p class="hilfe" id="ort-hilfe">Ort, Bahnhof oder Strecke, falls bekannt mit Streckenkilometer</p></div>
+          <div class="feld"><label for="zeitraum">Zeitraum</label><input id="zeitraum" name="zeitraum" type="text" maxlength="120" aria-describedby="zeitraum-hilfe" /><p class="hilfe" id="zeitraum-hilfe">Geplanter Zeitraum oder Sperrpause, falls schon bekannt</p></div>
         </div>
-        <div class="consent">
-          <input id="dsgvo" name="dsgvo" type="checkbox" required />
-          <label for="dsgvo">Ich stimme zu, dass meine Angaben zur Bearbeitung der Anfrage gespeichert werden. Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.</label>
+        <div class="feld">
+          <label for="nachricht">Ihr Projekt <span aria-hidden="true">*</span></label>
+          <p class="hilfe hilfe-vorab" id="nachricht-hilfe">Art und Umfang der Arbeiten, zum Beispiel Anzahl der Weichen oder Gleislänge. Pläne oder Leistungsverzeichnisse schicken Sie bitte an <a href="mailto:info@railx-gleisbau.de">info@railx-gleisbau.de</a>.</p>
+          <textarea id="nachricht" name="nachricht" required rows="6" aria-describedby="nachricht-fehler nachricht-hilfe"></textarea>
+          <p class="fehler" id="nachricht-fehler" hidden></p>
         </div>
-        <div class="form-tail">
-          <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
-          <button type="submit" class="btn btn-primary">Anfrage senden</button>
-          <p class="form-note">Antwort in der Regel innerhalb von 24 Stunden.</p>
+        <div class="einwilligung">
+          <input id="dsgvo" name="dsgvo" type="checkbox" required aria-describedby="dsgvo-fehler" />
+          <label for="dsgvo">Ich stimme zu, dass meine Angaben zur Bearbeitung der Anfrage gespeichert werden. Details in der <a class="verweis" href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung<span class="sr-only"> (öffnet in neuem Tab)</span></a>. <span aria-hidden="true">*</span></label>
         </div>
+        <p class="fehler einwilligung-fehler" id="dsgvo-fehler" hidden></p>
+        <p class="sammel" id="sammel" role="alert" hidden></p>
+        <button type="submit" class="taste taste-rot">Anfrage senden</button>
+        <p class="unter-knopf">Wir antworten innerhalb von 24 Stunden. Eilt es, erreichen Sie das Büro <span class="nb">Mo–Fr 10–18 Uhr</span> unter <a class="verweis nr" href="tel:+4923255943000">02325 5943000</a>.</p>
+        <div class="status" id="status" role="status" aria-live="polite" tabindex="-1"></div>
       </form>
+        <div class="blatt kontaktdaten">
+          <dl class="kursbuch">
+            <div><dt>Telefon</dt><dd><a href="tel:+4923255943000" class="nr">02325 5943000</a><small>Büro <span class="nb">Mo–Fr 10–18 Uhr</span></small></dd></div>
+            <div><dt>E-Mail</dt><dd><a href="mailto:info@railx-gleisbau.de">info@railx-gleisbau.de</a><small>Auch für Pläne und Leistungsverzeichnisse</small></dd></div>
+            <div><dt>Anschrift</dt><dd>RailX GmbH, Flöz-Hugo-Siedlung 18, 44653 Herne</dd></div>
+            <div><dt>Einsatzgebiet</dt><dd>Bundesweit, Sitz in Herne (NRW)</dd></div>
+            <div><dt>Einsatzzeiten</dt><dd>24/7, auch nachts in Sperrpausen</dd></div>
+          </dl>
+        </div>
+        <div class="blatt karte" id="karte">
+          <div class="karte-platz" id="karte-platz">
+            <strong>RailX GmbH, Flöz-Hugo-Siedlung 18, 44653 Herne</strong>
+            <p>Die Karte wird von Google Maps geladen. Dabei werden Daten an Google übertragen. Mehr dazu in unserer <a class="verweis" href="datenschutz.html">Datenschutzerklärung</a>.</p>
+            <button type="button" class="taste taste-linie" id="karte-laden">Karte laden</button>
+          </div>
+        </div>
+
     </div>
   </div>
 </section>
+</main>
 
-<div class="bild-gross" id="bildGross" aria-hidden="true">
-  <button type="button" class="bild-zu" id="bildZu" aria-label="Ansicht schließen">
-    <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
-  </button>
-  <span class="bild-zaehler" id="bildZaehler"></span>
-  <button type="button" class="bild-nav zurueck" id="bildZurueck" aria-label="Vorheriges Bild">
-    <svg viewBox="0 0 24 24" stroke-linecap="square"><path d="M15 5l-7 7 7 7"/></svg>
-  </button>
-  <button type="button" class="bild-nav weiter" id="bildWeiter" aria-label="Nächstes Bild">
-    <svg viewBox="0 0 24 24" stroke-linecap="square"><path d="M9 5l7 7-7 7"/></svg>
-  </button>
-  <img src="" alt="" />
-  <figcaption><strong class="bild-titel"></strong><span class="bild-text"></span></figcaption>
+<div class="gross" id="gross" role="dialog" aria-modal="true" aria-labelledby="gross-titel" aria-describedby="gross-text" aria-hidden="true">
+  <button type="button" class="gross-zu" id="gross-zu" aria-label="Ansicht schließen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <span class="gross-zaehler" id="gross-zaehler"></span>
+  <button type="button" class="gross-nav zurueck" id="gross-zurueck" aria-label="Vorherige Aufnahme"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button type="button" class="gross-nav weiter" id="gross-weiter" aria-label="Nächste Aufnahme"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+  <div class="gross-unterschrift" id="gross-unterschrift" aria-live="polite"><strong class="gross-titel" id="gross-titel"></strong><span class="gross-text" id="gross-text"></span><span class="sr-only" id="gross-ansage"></span><button type="button" class="gross-erneut" id="gross-erneut" hidden>Erneut laden</button></div>
 </div>
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="logo">
-          <img class="logo-img" src="logo-railx-invers.png" alt="RailX — Gleisbau und Infrastruktur" width="1141" height="300" />
-        </div>
-        <p>Fachunternehmen für Eisenbahninfrastruktur: Weichenerneuerungen, Schienenarbeiten, Gleis- und Oberbauarbeiten sowie Instandhaltung im Gleisbereich. Sitz in Herne im Ruhrgebiet — bundesweit im Einsatz.</p>
-      </div>
+<nav class="leiste" id="leiste" aria-label="Schnellkontakt">
+  <a class="taste taste-linie" href="tel:+4923255943000" aria-label="Anrufen: 02325 5943000, Büro Mo–Fr 10–18 Uhr">Anrufen<small><span class="nb">Mo–Fr 10–18 Uhr</span></small></a>
+  <a class="taste taste-rot" href="#anfrage">Projekt anfragen</a>
+</nav>
 
+<footer class="fuss nacht">
+  <div class="wrap">
+    <div class="fuss-raster">
+      <div>
+        <a class="logo" href="#top" aria-label="RailX GmbH, zur Startseite"><img src="logo-railx-invers.png" alt="RailX, Gleisbau und Infrastruktur" width="1141" height="300" loading="lazy" /></a>
+        <p>Oberbauarbeiten mit Schwerpunkt Weichen. Sitz in Herne, bundesweit im Einsatz.</p>
+      </div>
       <div>
         <h2>Leistungen</h2>
         <ul>
-          <li><a href="#leistungen">Weichenerneuerung</a></li>
-          <li><a href="#leistungen">Schienenarbeiten</a></li>
-          <li><a href="#leistungen">Gleis- &amp; Oberbau</a></li>
-          <li><a href="#leistungen">Instandhaltung</a></li>
-          <li><a href="#leistungen">Vegetationsarbeiten</a></li>
-          <li><a href="#leistungen">Winterdienst</a></li>
+          <li><a href="#weichen">Weichenerneuerung und -umbau</a></li>
+          <li><a href="#gleisbau">Gleis- und Oberbauarbeiten</a></li>
+          <li><a href="#schienen">Schienenarbeiten</a></li>
+          <li><a href="#instandhaltung">Instandhaltung</a></li>
+          <li><a href="#ergaenzend">Bahninfrastruktur</a></li>
+          <li><a href="#ergaenzend">Vegetationsarbeiten</a></li>
+          <li><a href="#ergaenzend">Winterdienst</a></li>
         </ul>
       </div>
-
       <div>
-        <h2>Unternehmen</h2>
+        <h2>Übersicht</h2>
         <ul>
-          <li><a href="#ueber-uns">Über uns</a></li>
+          <li><a href="#praequalifikation">Präqualifikation</a></li>
           <li><a href="#referenzen">Referenzen</a></li>
-          <li><a href="#praxis">Aus der Praxis</a></li>
+          <li><a href="#team">Team</a></li>
           <li><a href="#ablauf">Ablauf</a></li>
-          <li><a href="#nachweise">Präqualifikation</a></li>
-          <li><a href="impressum.html">Impressum</a></li>
-          <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </div>
-
       <div>
         <h2>Kontakt</h2>
         <ul>
-          <li><a href="tel:+4923255943000">02325 5943000</a></li>
+          <li><a href="tel:+4923255943000" class="nr">02325 5943000</a></li>
+          <li>Büro <span class="nb">Mo–Fr 10–18 Uhr</span></li>
           <li><a href="mailto:info@railx-gleisbau.de">info@railx-gleisbau.de</a></li>
-          <li><a href="#kontakt">Flöz-Hugo-Siedlung 18<br />44653 Herne</a></li>
+          <li>Flöz-Hugo-Siedlung 18, 44653 Herne</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Nachweis und Firmendaten</h2>
+        <ul>
+          <li>Präqualifikation Deutsche Bahn AG, Nr. <span class="nr">137658</span>, gültig bis <span class="nr">22.09.2030</span></li>
+          <li><a href="dokumente/praequalifikation-railx-gmbh.pdf" target="_blank" rel="noopener" aria-label="Nachweis öffnen: Präqualifikation der Deutschen Bahn AG (PDF, 1,6 MB, öffnet in neuem Tab)">Nachweis öffnen (PDF, 1,6 MB)</a></li>
+          <li>Amtsgericht Bochum, HRB 22969</li>
+          <li>USt-IdNr. DE460319619</li>
         </ul>
       </div>
     </div>
-
-    <div class="footer-bottom">
-      <p>© <span id="jahr">2026</span> RailX GmbH. Alle Rechte vorbehalten.</p>
-      <div class="footer-legal">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
-      </div>
+    <div class="fuss-unten">
+      <p>© <span id="jahr">2026</span> RailX GmbH</p>
+      <nav aria-label="Rechtliches"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></nav>
     </div>
   </div>
 </footer>
 
 <script>
-// Jahr im Footer
 document.getElementById('jahr').textContent = new Date().getFullYear();
+const ruhig = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const kopf = document.querySelector('.kopf');
+const leeren = n => { while (n.firstChild) n.removeChild(n.firstChild); };
 
-// Header-Zustand beim Scrollen
-const header = document.getElementById('header');
-addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 40), {passive:true});
+/* ---------- Sprunglink: der Hauptbereich ist nur fuer diesen Sprung fokussierbar ---------- */
+const inhalt = document.getElementById('inhalt');
+document.querySelector('.skip-link').addEventListener('click', e => {
+  e.preventDefault();
+  inhalt.tabIndex = -1; inhalt.focus();
+  inhalt.addEventListener('blur', () => inhalt.removeAttribute('tabindex'), { once: true });
+});
 
-// Mobiles Menü
+/* ---------- Menue ---------- */
 const burger = document.getElementById('burger');
-const mobileNav = document.getElementById('mobileNav');
-burger.addEventListener('click', () => {
-  const open = mobileNav.classList.toggle('open');
-  burger.classList.toggle('open', open);
-  burger.setAttribute('aria-expanded', String(open));
-  burger.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
-});
-mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  mobileNav.classList.remove('open');
-  burger.classList.remove('open');
-  burger.setAttribute('aria-expanded','false');
-}));
-
-// Scroll-Reveal (respektiert prefers-reduced-motion)
-if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, {threshold:.12, rootMargin:'0px 0px -60px 0px'});
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-} else {
-  document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+const menue = document.getElementById('menue');
+function menueSetzen(offen) {
+  menue.classList.toggle('offen', offen);
+  burger.setAttribute('aria-expanded', String(offen));
+  burger.setAttribute('aria-label', offen ? 'Menü schließen' : 'Menü öffnen');
 }
+burger.addEventListener('click', () => menueSetzen(!menue.classList.contains('offen')));
+menue.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menueSetzen(false)));
+addEventListener('keydown', e => { if (e.key === 'Escape' && menue.classList.contains('offen')) { menueSetzen(false); burger.focus(); } });
+document.addEventListener('click', e => { if (menue.classList.contains('offen') && !kopf.contains(e.target)) menueSetzen(false); });
+kopf.addEventListener('focusout', e => { if (menue.classList.contains('offen') && e.relatedTarget && !kopf.contains(e.relatedTarget)) menueSetzen(false); });
+matchMedia('(min-width:1101px)').addEventListener('change', e => { if (e.matches) menueSetzen(false); });
 
-// Referenzbilder: Klick öffnet die bildschirmfüllende Ansicht mit Blätterfunktion
-const bildGross    = document.getElementById('bildGross');
-const grossImg     = bildGross.querySelector('img');
-const grossText    = bildGross.querySelector('figcaption');
-const grossTitel   = grossText.querySelector('.bild-titel');
-const grossBu      = grossText.querySelector('.bild-text');
-const grossZaehler = document.getElementById('bildZaehler');
+/* ---------- Erste Angaben aus dem ersten Bildschirm ins Formular ---------- */
+const starter = document.getElementById('starter');
+const formular = document.getElementById('anfrage');
+const uebernommen = document.getElementById('uebernommen');
+starter.addEventListener('submit', e => {
+  e.preventDefault();
+  const w = { leistung: starter.leistung.value, ort: starter.ort.value.trim(), zeitraum: starter.zeitraum.value.trim() };
+  if (w.leistung) document.getElementById('leistung').value = w.leistung;
+  if (w.ort) document.getElementById('ort').value = w.ort;
+  if (w.zeitraum) document.getElementById('zeitraum').value = w.zeitraum;
+  const genannt = [w.leistung && 'Leistung', w.ort && 'Ort', w.zeitraum && 'Zeitraum'].filter(Boolean);
+  uebernommen.textContent = genannt.length
+    ? genannt.join(', ').replace(/, ([^,]*)$/, ' und $1') + ' aus dem ersten Schritt sind übernommen. Ergänzen Sie bitte Name, E-Mail und Ihr Projekt.'
+    : 'Ergänzen Sie bitte Name, E-Mail und Ihr Projekt.';
+  uebernommen.hidden = false;
+  document.getElementById('name').setAttribute('aria-describedby', 'uebernommen name-fehler');
+  formular.scrollIntoView({ behavior: ruhig ? 'auto' : 'smooth', block: 'start' });
+  setTimeout(() => document.getElementById('name').focus({ preventScroll: true }), ruhig ? 0 : 600);
+});
 
-// Bild so groß wie möglich in die Fläche einpassen und die Unterschrift
-// auf dieselbe Breite bringen — so ragt sie bei Hochformat nicht seitlich heraus
-function grossLayout() {
+/* ---------- Aktionsleiste: weg, solange das Formular im Bild ist oder getippt wird; Hoehe gemessen ---------- */
+const leiste = document.getElementById('leiste');
+let formularSichtbar = false;
+function leisteSetzen() {
+  const tippt = document.activeElement && /INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName);
+  leiste.classList.toggle('weg', formularSichtbar || tippt);
+}
+function leisteMessen() {
+  const h = getComputedStyle(leiste).display === 'none' ? 0 : leiste.offsetHeight;
+  document.documentElement.style.setProperty('--leiste', h + 'px');
+}
+if ('IntersectionObserver' in window) new IntersectionObserver(es => { formularSichtbar = es[0].isIntersecting; leisteSetzen(); }, { threshold: .05 }).observe(formular);
+document.addEventListener('focusin', leisteSetzen);
+document.addEventListener('focusout', () => setTimeout(leisteSetzen, 50));
+if ('ResizeObserver' in window) new ResizeObserver(leisteMessen).observe(leiste);
+addEventListener('resize', leisteMessen);
+leisteMessen();
+
+/* ---------- Grossansicht ---------- */
+const gross = document.getElementById('gross');
+const grossImg = document.createElement('img'); grossImg.alt = '';
+const grossUnter = document.getElementById('gross-unterschrift');
+gross.insertBefore(grossImg, grossUnter);
+const grossTitel = document.getElementById('gross-titel'), grossText = document.getElementById('gross-text'), grossAnsage = document.getElementById('gross-ansage');
+const grossZaehler = document.getElementById('gross-zaehler'), grossZu = document.getElementById('gross-zu'), grossErneut = document.getElementById('gross-erneut');
+const seitenTeile = [...document.body.children].filter(n => n !== gross && n.tagName !== 'SCRIPT');
+let galerie = [], pos = 0, titel = '', ausloeser = null, ladeTimer = 0;
+
+function layout() {
   if (!grossImg.naturalWidth) return;
-  const cs      = getComputedStyle(bildGross);
-  const innenB  = bildGross.clientWidth  - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
-  const innenH  = bildGross.clientHeight - parseFloat(cs.paddingTop)  - parseFloat(cs.paddingBottom);
-  const abstand = parseFloat(cs.rowGap) || 0;
-  const nb = grossImg.naturalWidth, nh = grossImg.naturalHeight;
-  let bildB = innenB, bildH = innenH;
-  // Textbreite und Bildgröße hängen voneinander ab (Zeilenumbruch) — kurz iterieren
+  const cs = getComputedStyle(gross);
+  const iw = gross.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+  const ih = gross.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+  const gap = parseFloat(cs.rowGap) || 0, nw = grossImg.naturalWidth, nh = grossImg.naturalHeight;
+  let b = iw, h = ih;
   for (let i = 0; i < 3; i++) {
-    grossText.style.width = Math.min(innenB, Math.max(bildB, 320)) + 'px';
-    const textH = grossText.offsetHeight + abstand;
-    const f = Math.min(innenB / nb, (innenH - textH) / nh);
-    bildB = Math.round(nb * f); bildH = Math.round(nh * f);
+    grossUnter.style.width = Math.min(iw, Math.max(b, 320)) + 'px';
+    const f = Math.min(iw / nw, (ih - grossUnter.offsetHeight - gap) / nh);
+    b = Math.round(nw * f); h = Math.round(nh * f);
   }
-  // Unterschrift exakt auf die endgueltige Bildbreite bringen — aber nur,
-  // wenn sie dadurch nicht hoeher wird und unter das Bild rutschen wuerde
-  const alteBreite = grossText.style.width;
-  const alteHoehe  = grossText.offsetHeight;
-  grossText.style.width = Math.min(innenB, Math.max(bildB, 320)) + 'px';
-  if (grossText.offsetHeight > alteHoehe) grossText.style.width = alteBreite;
-
-  grossImg.style.width  = bildB + 'px';
-  grossImg.style.height = bildH + 'px';
+  grossUnter.style.width = Math.min(iw, Math.max(b, 320)) + 'px';
+  grossImg.style.width = b + 'px'; grossImg.style.height = h + 'px';
 }
-grossImg.addEventListener('load', grossLayout);
-window.addEventListener('resize', () => { if (bildGross.classList.contains('sichtbar')) grossLayout(); });
+grossImg.addEventListener('load', () => { clearTimeout(ladeTimer); gross.classList.remove('laedt'); grossImg.classList.remove('wechsel'); grossErneut.hidden = true; layout(); });
+grossImg.addEventListener('error', () => {
+  if (!grossImg.getAttribute('src')) return;
+  clearTimeout(ladeTimer); gross.classList.remove('laedt'); grossImg.classList.remove('wechsel');
+  grossText.textContent = 'Die Aufnahme konnte nicht geladen werden. Bitte prüfen Sie Ihre Verbindung.'; grossErneut.hidden = false;
+});
+grossErneut.addEventListener('click', e => { e.stopPropagation(); const b = galerie[pos]; grossText.textContent = b.bu; grossErneut.hidden = true; grossImg.src = b.src + (b.src.includes('?') ? '&' : '?') + 'neu=' + Date.now(); });
+addEventListener('resize', () => { if (gross.classList.contains('offen')) layout(); });
 
-let galerie = [];      // Bilder des aktuell geöffneten Projekts
-let position = 0;      // Index des angezeigten Bildes
-let projektTitel = '';
-
-function bildSetzen(i, weich) {
-  position = (i + galerie.length) % galerie.length;   // umlaufend blättern
-  const b = galerie[position];
-  if (weich) {
-    grossImg.classList.add('wechsel');
-    grossImg.addEventListener('load', () => grossImg.classList.remove('wechsel'), { once: true });
-  }
-  grossImg.src = b.src;
-  grossImg.alt = b.bu;
-  grossTitel.textContent = projektTitel;
-  grossBu.textContent = b.bu;
-  if (grossImg.complete) grossLayout();
-  grossZaehler.textContent = galerie.length > 1
-    ? (position + 1) + ' / ' + galerie.length : '';
+function setzen(i, weich) {
+  pos = (i + galerie.length) % galerie.length;
+  const b = galerie[pos];
+  clearTimeout(ladeTimer); grossErneut.hidden = true;
+  if (weich) grossImg.classList.add('wechsel');
+  grossImg.src = b.src;                       // alt bleibt leer: die Unterschrift steht sichtbar darunter
+  grossTitel.textContent = titel; grossText.textContent = b.bu;
+  grossZaehler.textContent = galerie.length > 1 ? (pos + 1) + ' / ' + galerie.length : '';
+  grossAnsage.textContent = galerie.length > 1 ? ' Aufnahme ' + (pos + 1) + ' von ' + galerie.length : '';
+  if (grossImg.complete && grossImg.naturalWidth) { grossImg.classList.remove('wechsel'); layout(); }
+  else ladeTimer = setTimeout(() => gross.classList.add('laedt'), 300);
 }
-
-function grossZeigen(box) {
-  galerie = JSON.parse(box.dataset.bilder);
-  projektTitel = box.closest('.ref').querySelector('h3').textContent;
-  bildGross.classList.toggle('einzeln', galerie.length < 2);
-  bildSetzen(0);
-  bildGross.classList.add('sichtbar');
-  bildGross.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';   // Seite dahinter nicht mitscrollen
+function oeffnen(knopf) {
+  ausloeser = knopf; galerie = JSON.parse(knopf.dataset.bilder); titel = knopf.dataset.titel;
+  gross.classList.toggle('einzeln', galerie.length < 2);
+  setzen(0, true);
+  gross.classList.add('offen'); gross.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  seitenTeile.forEach(n => n.inert = true);
+  grossZu.focus();
+  history.pushState({ gross: true }, '');
 }
-
-function grossSchliessen() {
-  bildGross.classList.remove('sichtbar');
-  bildGross.setAttribute('aria-hidden', 'true');
+function schliessen(ausVerlauf) {
+  if (!gross.classList.contains('offen')) return;
+  gross.classList.remove('offen', 'laedt');
   document.body.style.overflow = '';
+  seitenTeile.forEach(n => n.inert = false);
+  clearTimeout(ladeTimer);
+  if (ausloeser) ausloeser.focus();
+  gross.setAttribute('aria-hidden', 'true');
+  if (!ausVerlauf && history.state && history.state.gross) history.back();
 }
-
-document.querySelectorAll('.ref-bild').forEach(box => {
-  box.addEventListener('click', () => grossZeigen(box));
-});
-
-// Schließen: Klick auf den Hintergrund, Schaltfläche oder Escape
-// Wischen auf Touchgeräten: seitlich blättern
-let tippX = 0, tippY = 0, gewischt = false;
-
-bildGross.addEventListener('touchstart', e => {
-  if (e.touches.length !== 1) return;
-  tippX = e.touches[0].clientX;
-  tippY = e.touches[0].clientY;
-  gewischt = false;
+addEventListener('popstate', () => schliessen(true));
+document.querySelectorAll('.galerie').forEach(k => k.addEventListener('click', () => oeffnen(k)));
+grossZu.addEventListener('click', e => { e.stopPropagation(); schliessen(); });
+document.getElementById('gross-zurueck').addEventListener('click', e => { e.stopPropagation(); setzen(pos - 1, true); });
+document.getElementById('gross-weiter').addEventListener('click', e => { e.stopPropagation(); setzen(pos + 1, true); });
+// Wischen blaettert; nach einem Zwei-Finger-Zoom zaehlt das Loslassen nicht als Wisch
+let tx = 0, ty = 0, gewischt = false, mehrfinger = false;
+gross.addEventListener('touchstart', e => {
+  if (e.touches.length > 1) { mehrfinger = true; return; }
+  tx = e.touches[0].clientX; ty = e.touches[0].clientY; gewischt = false;
 }, { passive: true });
-
-bildGross.addEventListener('touchend', e => {
+gross.addEventListener('touchend', e => {
+  if (mehrfinger) { if (e.touches.length === 0) mehrfinger = false; return; }
   if (galerie.length < 2) return;
-  const t = e.changedTouches[0];
-  const dx = t.clientX - tippX;
-  const dy = t.clientY - tippY;
-  // Nur waagerechte Bewegungen auswerten, damit vertikales Wischen frei bleibt
-  if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) * 1.5) {
-    bildSetzen(position + (dx < 0 ? 1 : -1), true);
-    gewischt = true;
-  }
+  const t = e.changedTouches[0], dx = t.clientX - tx, dy = t.clientY - ty;
+  if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) * 1.5) { setzen(pos + (dx < 0 ? 1 : -1), true); gewischt = true; }
 }, { passive: true });
-
-// Schließen: Klick auf den Hintergrund — aber nicht nach einem Wisch
-bildGross.addEventListener('click', () => {
+gross.addEventListener('click', e => {
   if (gewischt) { gewischt = false; return; }
-  grossSchliessen();
+  if (e.target === grossImg || grossUnter.contains(e.target)) return;
+  schliessen();
 });
-document.getElementById('bildZu').addEventListener('click', e => {
-  e.stopPropagation(); grossSchliessen();
-});
-
-// Blättern — stopPropagation, damit der Klick die Ansicht nicht schließt
-document.getElementById('bildZurueck').addEventListener('click', e => {
-  e.stopPropagation(); bildSetzen(position - 1, true);
-});
-document.getElementById('bildWeiter').addEventListener('click', e => {
-  e.stopPropagation(); bildSetzen(position + 1, true);
-});
-// Klick auf das Bild schließt die Ansicht ebenfalls —
-// der Wisch-Schutz oben verhindert, dass ein Wischen als Klick zählt.
-
 addEventListener('keydown', e => {
-  if (!bildGross.classList.contains('sichtbar')) return;
-  if (e.key === 'Escape')     grossSchliessen();
-  if (e.key === 'ArrowLeft')  bildSetzen(position - 1, true);
-  if (e.key === 'ArrowRight') bildSetzen(position + 1, true);
+  if (!gross.classList.contains('offen')) return;
+  if (e.key === 'Escape') { schliessen(); return; }
+  if (galerie.length > 1 && e.key === 'ArrowLeft') setzen(pos - 1, true);
+  if (galerie.length > 1 && e.key === 'ArrowRight') setzen(pos + 1, true);
+  if (e.key === 'Tab') {
+    const z = [...gross.querySelectorAll('button')].filter(b => !b.hidden && b.offsetParent !== null);
+    if (!gross.contains(document.activeElement)) { e.preventDefault(); z[0].focus(); }
+    else if (e.shiftKey && document.activeElement === z[0]) { e.preventDefault(); z[z.length - 1].focus(); }
+    else if (!e.shiftKey && document.activeElement === z[z.length - 1]) { e.preventDefault(); z[0].focus(); }
+  }
 });
 
-// Karte — Zwei-Klick-Lösung: Google wird erst nach aktivem Klick kontaktiert
-const mapLoad = document.getElementById('mapLoad');
-if (mapLoad) {
-  mapLoad.addEventListener('click', () => {
-    const adresse = 'Flöz-Hugo-Siedlung 18, 44653 Herne';
-    const iframe = document.createElement('iframe');
-    iframe.src = 'https://maps.google.com/maps?q=' + encodeURIComponent(adresse) + '&output=embed';
-    iframe.title = 'Standort RailX auf Google Maps';
-    iframe.loading = 'lazy';
-    iframe.referrerPolicy = 'no-referrer-when-downgrade';
-    iframe.allowFullscreen = true;
+/* ---------- Karte: Google erst nach Klick ---------- */
+document.getElementById('karte-laden').addEventListener('click', () => {
+  const f = document.createElement('iframe');
+  f.src = 'https://maps.google.com/maps?q=' + encodeURIComponent('Flöz-Hugo-Siedlung 18, 44653 Herne') + '&output=embed';
+  f.title = 'Standort der RailX GmbH auf Google Maps'; f.loading = 'lazy';
+  const k = document.getElementById('karte'); leeren(k); k.appendChild(f); f.focus();
+});
 
-    const wrap = document.getElementById('mapWrap');
-    wrap.innerHTML = '';
-    wrap.appendChild(iframe);
-  });
-}
-
-// Formular — sendet an Web3Forms und zeigt Status inline an
-// WICHTIG: Access Key unten eintragen. Kostenlos anfordern auf https://web3forms.com
+/* ---------- Formular ---------- */
 const WEB3FORMS_KEY = '748bead0-063b-47de-9376-c887ae33e4c0';
-const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
-
-const anfrageForm = document.getElementById('anfrage');
-const formStatus = document.getElementById('formStatus');
-
-function zeigeStatus(art, text) {
-  formStatus.textContent = text;
-  formStatus.className = 'form-status show ' + art;
+formular.noValidate = true;
+const status = document.getElementById('status'), sammel = document.getElementById('sammel');
+const TEL = '<a href="tel:+4923255943000">02325 5943000</a> (Büro <span class="nb">Mo–Fr 10–18 Uhr</span>)';
+const MAIL = '<a href="mailto:info@railx-gleisbau.de">info@railx-gleisbau.de</a>';
+const pruefen = {
+  name: f => f.value.trim() ? '' : 'Bitte geben Sie Ihren Namen an.',
+  email: f => !f.value.trim() ? 'Bitte geben Sie Ihre E-Mail-Adresse an. Dorthin schicken wir unsere Antwort.'
+    : /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(f.value.trim()) ? '' : 'Bitte prüfen Sie die E-Mail-Adresse. Sie sollte so aufgebaut sein: name@firma.de',
+  nachricht: f => !f.value.trim() ? 'Bitte beschreiben Sie Ihr Projekt in ein paar Worten, zum Beispiel Ort, Zeitraum und Umfang.'
+    : f.value.length > 4000 ? 'Der Text ist länger als 4.000 Zeichen. Bitte kürzen Sie ihn oder schicken Sie ausführliche Unterlagen an info@railx-gleisbau.de.' : '',
+  dsgvo: f => f.checked ? '' : 'Bitte stimmen Sie der Speicherung Ihrer Angaben zu. Ohne Zustimmung kann das Formular nicht gesendet werden. Sie können uns auch direkt schreiben: info@railx-gleisbau.de',
+};
+function feld(f) {
+  const t = pruefen[f.id](f), p = document.getElementById(f.id + '-fehler');
+  f.setAttribute('aria-invalid', t ? 'true' : 'false'); p.textContent = t; p.hidden = !t; return !t;
+}
+Object.keys(pruefen).forEach(id => {
+  const f = document.getElementById(id);
+  const nach = () => { if (f.getAttribute('aria-invalid') === 'true') feld(f); };
+  f.addEventListener('input', nach); f.addEventListener('change', nach);
+  f.addEventListener('blur', () => { if (f.type !== 'checkbox' && f.value.trim()) feld(f); });
+});
+// Ausweg, wenn der Versanddienst nicht erreichbar ist: dieselbe Anfrage als E-Mail
+function mailLink(d) {
+  const zeilen = ['Name: ' + d.name];
+  if (d.firma) zeilen.push('Firma: ' + d.firma);
+  zeilen.push('E-Mail: ' + d.email);
+  if (d.telefon) zeilen.push('Telefon: ' + d.telefon);
+  zeilen.push('Leistung: ' + d.leistung);
+  if (d.ort) zeilen.push('Ort: ' + d.ort);
+  if (d.zeitraum) zeilen.push('Zeitraum: ' + d.zeitraum);
+  zeilen.push('', d.nachricht);
+  const text = zeilen.join(String.fromCharCode(10));
+  const gekuerzt = text.length > 1800;
+  const kurz = gekuerzt ? text.slice(0, 1800) + String.fromCharCode(10, 10) + '[Gekürzt. Bitte fügen Sie den vollständigen Text aus dem Formular ein.]' : text;
+  const a = document.createElement('a');
+  a.className = 'taste taste-linie';
+  a.href = 'mailto:info@railx-gleisbau.de?subject=' + encodeURIComponent('Anfrage über railx-gleisbau.de') + '&body=' + encodeURIComponent(kurz);
+  a.textContent = 'Per E-Mail senden';
+  // Volltext zusaetzlich in die Zwischenablage, falls die Mail-App kuerzt oder sich nicht oeffnet
+  a.addEventListener('click', () => {
+    if (!navigator.clipboard) return;
+    navigator.clipboard.writeText(text).then(() => {
+      let h = status.querySelector('.ablage');
+      if (!h) { h = document.createElement('p'); h.className = 'ablage'; status.appendChild(h); }
+      h.textContent = gekuerzt
+        ? 'Ihr vollständiger Text liegt in der Zwischenablage. Die E-Mail enthält eine gekürzte Fassung; bitte fügen Sie den Text dort ein.'
+        : 'Ihr Text liegt zusätzlich in der Zwischenablage, falls sich das E-Mail-Programm nicht öffnet.';
+    }, () => {});
+  });
+  return a;
+}
+function zeigeStatus(art, html, d) {
+  status.innerHTML = html; status.className = 'status zeigen ' + art;
+  if (d) { status.appendChild(document.createElement('br')); status.appendChild(mailLink(d)); }
+  if (art === 'err') status.focus();
 }
 
-anfrageForm.addEventListener('submit', async (e) => {
+formular.addEventListener('submit', async e => {
   e.preventDefault();
   const f = e.target;
-  if (!f.checkValidity()) { f.reportValidity(); return; }
-
-  const btn = f.querySelector('button[type=submit]');
-  const btnTextOriginal = btn.textContent;
-  btn.disabled = true;
-  btn.textContent = 'Wird gesendet …';
-  formStatus.className = 'form-status';
-
-  const daten = Object.fromEntries(new FormData(f).entries());
-  daten.access_key = WEB3FORMS_KEY;
-  daten.subject = 'Neue Anfrage über railx-gleisbau.de — ' + (daten.name || '');
-  daten.from_name = 'RailX Website';
-  daten.dsgvo = daten.dsgvo ? 'Ja, zugestimmt' : 'Nein';
-  // botcheck bleibt als Spam-Falle im Payload: Web3Forms verwirft
-  // die Einsendung automatisch, wenn ein Bot das Feld angehakt hat.
-
-  // Abbruch, falls Web3Forms nicht innerhalb von 15 Sekunden antwortet
-  const abbruch = new AbortController();
-  const timeout = setTimeout(() => abbruch.abort(), 15000);
-
+  ['name', 'firma', 'email', 'telefon', 'ort', 'zeitraum', 'nachricht'].forEach(id => { f[id].value = f[id].value.trim(); });
+  const falsch = Object.keys(pruefen).map(id => document.getElementById(id)).filter(x => !feld(x));
+  if (falsch.length) {
+    sammel.textContent = falsch.length === 1 ? 'Bitte prüfen Sie die markierte Angabe.' : 'Bitte prüfen Sie die ' + falsch.length + ' markierten Angaben.';
+    sammel.hidden = false; falsch[0].focus(); return;
+  }
+  sammel.hidden = true;
+  const knopf = f.querySelector('button[type=submit]'), text = knopf.textContent;
+  knopf.disabled = true; knopf.textContent = 'Wird gesendet …'; status.className = 'status';
+  const d = Object.fromEntries(new FormData(f).entries());
+  d.access_key = WEB3FORMS_KEY;
+  d.leistung = d.leistung || 'Keine Angabe';
+  d.subject = 'Anfrage über railx-gleisbau.de: ' + d.leistung + ', ' + d.name;
+  d.from_name = 'RailX Website';
+  d.dsgvo = d.dsgvo ? 'Ja, zugestimmt' : 'Nein';
+  const abbruch = new AbortController(), timer = setTimeout(() => abbruch.abort(), 15000);
   try {
-    const res = await fetch(WEB3FORMS_ENDPOINT, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(daten),
-      signal: abbruch.signal,
-    });
-
-    let antwort = null;
-    try { antwort = await res.json(); } catch (_) { /* keine JSON-Antwort */ }
-
-    // Zur Fehlersuche in der Browser-Konsole (F12) sichtbar:
-    console.log('Web3Forms-Antwort:', res.status, antwort);
-
-    const erfolgreich = res.ok && antwort && antwort.success === true;
-
-    if (erfolgreich) {
-      zeigeStatus('ok', 'Danke! Ihre Anfrage wurde versendet — wir melden uns in der Regel innerhalb von 24 Stunden.');
-      f.reset();
-      btn.textContent = 'Anfrage gesendet';
-      setTimeout(() => { btn.disabled = false; btn.textContent = btnTextOriginal; }, 4000);
+    if (!navigator.onLine) throw new Error('offline');
+    const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(d), signal: abbruch.signal });
+    let a = null; try { a = await res.json(); } catch (_) {}
+    if (res.ok && a && a.success === true) {
+      status.textContent = 'Vielen Dank. Ihre Anfrage ist bei uns eingegangen. Wir antworten innerhalb von 24 Stunden an ' + f.email.value + '.';
+      status.className = 'status zeigen ok';
+      f.reset(); uebernommen.hidden = true;
+      f.name.setAttribute('aria-describedby', 'name-fehler');
+      Object.keys(pruefen).forEach(id => document.getElementById(id).removeAttribute('aria-invalid'));
+      status.focus();
+      knopf.textContent = 'Anfrage gesendet';
+      setTimeout(() => { knopf.disabled = false; knopf.textContent = text; }, 4000);
     } else {
-      const detail = antwort && antwort.message ? ' (' + antwort.message + ')' : '';
-      zeigeStatus('err', 'Die Nachricht konnte nicht gesendet werden' + detail + '. Bitte rufen Sie uns an oder schreiben Sie direkt an info@railx-gleisbau.de.');
-      btn.disabled = false;
-      btn.textContent = btnTextOriginal;
+      zeigeStatus('err', 'Ihre Anfrage konnte nicht gesendet werden. Ihre Eingaben sind noch da. Bitte versuchen Sie es erneut oder schreiben Sie an ' + MAIL + '. Telefon: ' + TEL + '.', d);
+      knopf.disabled = false; knopf.textContent = text;
     }
   } catch (err) {
-    const text = err.name === 'AbortError'
-      ? 'Zeitüberschreitung beim Senden. Bitte versuchen Sie es erneut oder rufen Sie uns an.'
-      : 'Verbindung fehlgeschlagen. Bitte prüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.';
-    zeigeStatus('err', text);
-    btn.disabled = false;
-    btn.textContent = btnTextOriginal;
-  } finally {
-    clearTimeout(timeout);
-  }
+    let t;
+    if (err.message === 'offline') t = 'Keine Internetverbindung. Ihre Eingaben sind noch da. Senden Sie die Anfrage erneut, sobald Sie wieder online sind, oder schreiben Sie an ' + MAIL + '. Telefon: ' + TEL + '.';
+    else if (err.name === 'AbortError') t = 'Der Versand hat zu lange gedauert und wurde abgebrochen. Ihre Eingaben sind noch da. Bitte senden Sie die Anfrage in einem Moment erneut oder schreiben Sie an ' + MAIL + '. Telefon: ' + TEL + '.';
+    else t = 'Der Versanddienst ist nicht erreichbar, möglicherweise blockiert Ihr Netzwerk ihn. Ihre Eingaben sind noch da. Senden Sie die Anfrage per E-Mail oder schreiben Sie an ' + MAIL + '. Telefon: ' + TEL + '.';
+    zeigeStatus('err', t, d);
+    knopf.disabled = false; knopf.textContent = text;
+  } finally { clearTimeout(timer); }
 });
+
+/* ---------- Bildfahrplan (reine Zeichnung, darf die Bedienung nie stoeren) ---------- */
+const svg = document.getElementById('fahrplan');
+const startSvg = document.getElementById('trasse-start');
+const NS = 'http://www.w3.org/2000/svg';
+const navLinks = [...document.querySelectorAll('.stationen a')];
+const streifen = [...document.querySelectorAll('.streifen i')];
+const abschnitte = [...document.querySelectorAll('[data-halt]')];
+const heroFenster = document.querySelector('.hero .sperrpause');
+let trasse = null, punkte = [], laengen = [], gesamt = 0, ersteZeichnung = true, vorlauf = 1;
+
+function el(name, attrs) { const n = document.createElementNS(NS, name); for (const k in attrs) n.setAttribute(k, attrs[k]); return n; }
+function seiteY(n) { return n.getBoundingClientRect().top + scrollY; }
+function stationenX() {
+  if (navLinks.length && navLinks[0].offsetParent) return navLinks.map(a => { const r = a.getBoundingClientRect(); return r.left + r.width / 2; });
+  const w = document.querySelector('.abschnitt .wrap'), r = w.getBoundingClientRect(), cs = getComputedStyle(w);
+  const l = r.left + parseFloat(cs.paddingLeft), b = r.width - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+  return abschnitte.map((_, i) => l + b * (i + .5) / abschnitte.length);
+}
+function rechteck(n) { const r = n.getBoundingClientRect(); return { l: r.left - 8, r: r.right + 8, t: r.top + scrollY - 8, b: r.bottom + scrollY + 8 }; }
+function innen(p, rs) { return rs.some(q => p[0] > q.l && p[0] < q.r && p[1] > q.t && p[1] < q.b); }
+// Eine Zugtrasse; vor einer Sperrpause endet sie mit einem Endstrich
+function zug(pts, rs, klasse) {
+  if (innen(pts[0], rs)) return;
+  const aus = [pts[0]]; let stopp = null;
+  for (let i = 1; i < pts.length && !stopp; i++) {
+    const [x0, y0] = pts[i - 1], [x1, y1] = pts[i], len = Math.hypot(x1 - x0, y1 - y0), n = Math.max(1, Math.ceil(len / 4));
+    let letzter = [x0, y0];
+    for (let k = 1; k <= n; k++) {
+      const p = [x0 + (x1 - x0) * k / n, y0 + (y1 - y0) * k / n];
+      if (innen(p, rs)) { stopp = { p: letzter, dx: (x1 - x0) / len, dy: (y1 - y0) / len }; break; }
+      letzter = p;
+    }
+    aus.push(stopp ? stopp.p : pts[i]);
+  }
+  if (aus.length < 2) return;
+  // Nur sichtbare Stuecke zeichnen: Was zwischen deckenden Flaechen kuerzer als 64 px auftaucht, wirkt wie ein Kratzer
+  const proben = [aus[0]];
+  for (let i = 1; i < aus.length; i++) {
+    const [x0, y0] = aus[i - 1], [x1, y1] = aus[i], n = Math.max(1, Math.ceil(Math.hypot(x1 - x0, y1 - y0) / 3));
+    for (let k = 1; k <= n; k++) proben.push([x0 + (x1 - x0) * k / n, y0 + (y1 - y0) * k / n]);
+  }
+  const sichtbar = proben.map(p => !innen(p, masken));
+  const strecken = []; let s = -1;
+  sichtbar.forEach((v, i) => { if (v && s < 0) s = i; if ((!v || i === sichtbar.length - 1) && s >= 0) { strecken.push([s, v ? i : i - 1]); s = -1; } });
+  const lang = ([a, b]) => { let l = 0; for (let i = a + 1; i <= b; i++) l += Math.hypot(proben[i][0] - proben[i - 1][0], proben[i][1] - proben[i - 1][1]); return l; };
+  const bleiben = strecken.filter(st => lang(st) >= 64);
+  bleiben.forEach(([a, b]) => {
+    // je eine Probe unter die Flaeche hinein, damit keine Luecke an der Kante bleibt
+    const teil = proben.slice(Math.max(0, a - 1), Math.min(proben.length, b + 2));
+    svg.append(el('polyline', { points: teil.map(p => p.map(v => Math.round(v * 10) / 10).join(',')).join(' '), class: 'zug ' + klasse }));
+  });
+  const letzte = bleiben[bleiben.length - 1];
+  if (stopp && letzte && letzte[1] === proben.length - 1) { const [x, y] = stopp.p, nx = -stopp.dy * 6, ny = stopp.dx * 6; svg.append(el('line', { x1: x + nx, y1: y + ny, x2: x - nx, y2: y - ny, class: 'zug zug-ende ' + klasse.replace(' bedarf', '') })); }
+}
+// Deckende Flaechen im Inhalt (Hintergrund oder Bild): dahinter ist ein Zug ohnehin unsichtbar
+let masken = [];
+function maskenSammeln() {
+  const raus = [];
+  for (const e of document.querySelectorAll('main *')) {
+    if (e.closest('svg') || raus.some(o => o.el.contains(e))) continue;
+    const r = e.getBoundingClientRect();
+    if (r.width * r.height < 1500) continue;
+    const bg = getComputedStyle(e).backgroundColor, a = bg.startsWith('rgba') ? parseFloat(bg.split(',')[3]) : (bg === 'transparent' ? 0 : 1);
+    if (e.tagName === 'IMG' || a > .9) raus.push({ el: e, l: r.left, r: r.right, t: r.top + scrollY, b: r.bottom + scrollY });
+  }
+  return raus;
+}
+
+function zeichnen() {
+  const B = document.documentElement.clientWidth;
+  const H = seiteY(document.querySelector('.fuss'));
+  svg.setAttribute('height', H); svg.setAttribute('viewBox', '0 0 ' + B + ' ' + H); svg.style.height = H + 'px';
+  leeren(svg);
+  const xs = stationenX(), oben = kopf.offsetHeight;
+  xs.forEach(x => svg.append(el('line', { x1: x, y1: oben, x2: x, y2: H, class: 'stationslinie' })));
+  // Sperrpausen und die Halte-Treppe im Ablauf: dort enden Zuege mit Endstrich
+  const fenster = [...document.querySelectorAll('.sperrpause, #halte-rahmen')].map(rechteck);
+  masken = maskenSammeln();
+  // Zugtrassen im Takt: gleiche Neigung, Halt an jeder Betriebsstelle
+  const abstand = xs.length > 1 ? Math.abs(xs[1] - xs[0]) : 120;
+  const takt = Math.max(110, Math.min(170, abstand * 1.1));
+  const baender = [document.querySelector('.hero'), ...abschnitte];
+  baender.forEach((band, bi) => {
+    const top = seiteY(band), unten = top + band.offsetHeight;
+    const anzahl = bi === 0 ? 4 : 3 + (bi % 2);
+    for (let k = 0; k < anzahl; k++) {
+      const rechts = (bi + k) % 2 === 0, y = top + 70 + k * 84;
+      if (y > unten - takt) break;
+      let pts;
+      if (bi === 0) pts = rechts ? [[B + 20, y], [xs[xs.length - 1], y + takt * 2]] : [[-20, y], [xs[0], y + takt * 2]];
+      else {
+        const d = rechts ? 1 : -1; let i = rechts ? k % 2 : xs.length - 1 - (k % 2), yy = y; pts = [[xs[i], yy]];
+        for (let m = 0; m < 4; m++) { const j = i + d; if (j < 0 || j >= xs.length) break; yy += takt; pts.push([xs[j], yy]); yy += 16; pts.push([xs[j], yy]); i = j; }
+      }
+      const art = ['zug-grau', 'zug-blau bedarf', 'zug-grau'][k % 3];
+      zug(pts, fenster, art);
+      if (k % 3 === 2) zug(pts.map(p => [p[0], p[1] + 5]), fenster, art);
+    }
+  });
+  // Durchgehende Zeitachse: nach der Nachtsperrpause der Tag von 6 bis 22 Uhr
+  const wl = document.querySelector('.hero .wrap').getBoundingClientRect().left;
+  const nachtEnde = seiteY(heroFenster) + heroFenster.offsetHeight;
+  if (wl >= 64) {
+    const stunde = (H - nachtEnde) / 16;
+    for (let h = 7; h <= 22; h++) {
+      const y = nachtEnde + (h - 6) * stunde;
+      svg.append(el('line', { x1: wl - 10, y1: y, x2: wl - 2, y2: y, class: 'stundenstrich' }));
+      const t = el('text', { x: wl - 16, y: y + 5, 'text-anchor': 'end', class: 'stunde' }); t.textContent = String(h).padStart(2, '0'); svg.append(t);
+    }
+  }
+  // Anfrage-Trasse: im Nachtfenster vom Knopf bis zur Unterkante, dann von Halt zu Halt bis zum Absendeknopf
+  const knopf = document.getElementById('starter-knopf'), fr = heroFenster.getBoundingClientRect(), kn = knopf.getBoundingClientRect();
+  const textR = document.querySelector('.hero-text').getBoundingClientRect(), bild = document.querySelector('.hero-bild').getBoundingClientRect();
+  // Gestapelt (Tablet, Handy): Foto unter dem Text. Dann laeuft die Trasse im rechten Innenabstand, nie durch Text oder Foto
+  const gestapelt = bild.top >= textR.bottom - 1;
+  let ausX = Math.min(Math.max(xs[0], fr.left + 24), fr.right - 24), weg = [];
+  if (kn.width) {
+    if (gestapelt) {
+      ausX = (Math.max(textR.right, bild.right) + fr.right) / 2;
+      const mitte = kn.top + kn.height / 2;
+      const rechtsFrei = ![...knopf.parentElement.children].some(c => c !== knopf && c.offsetParent && (r => r.left >= kn.right - 1 && r.top < kn.bottom && r.bottom > kn.top)(c.getBoundingClientRect()));
+      if (rechtsFrei) weg = [[kn.right, mitte], [ausX, mitte]];
+      else {
+        // Rechts neben dem Knopf steht ein Verweis: unten aus dem Knopf, durch die Fuge zur naechsten Zeile
+        const naechste = [...document.querySelectorAll('.hero-text > *')].map(c => c.getBoundingClientRect()).filter(r => r.height && r.top >= kn.bottom - 1).map(r => r.top);
+        const fuge = kn.bottom + Math.min(12, ((naechste.length ? Math.min(...naechste) : kn.bottom + 24) - kn.bottom) / 2);
+        weg = [[kn.right - 18, kn.bottom], [kn.right - 18, fuge], [ausX, fuge]];
+      }
+    } else weg = [[kn.right, kn.top + kn.height / 2]];
+    weg.push([ausX, fr.bottom]);
+  }
+  leeren(startSvg);
+  startSvg.setAttribute('viewBox', '0 0 ' + fr.width + ' ' + fr.height);
+  if (weg.length) {
+    const lokal = weg.map(p => [p[0] - fr.left, p[1] - fr.top]);
+    const anfang = el('polyline', { points: lokal.map(p => p.join(',')).join(' ') });
+    startSvg.append(anfang);
+    if (ersteZeichnung && !ruhig) {
+      let l = 0; for (let i = 1; i < lokal.length; i++) l += Math.hypot(lokal[i][0] - lokal[i - 1][0], lokal[i][1] - lokal[i - 1][1]);
+      anfang.style.strokeDasharray = l; anfang.style.strokeDashoffset = l;
+      requestAnimationFrame(() => { anfang.style.transition = 'stroke-dashoffset .9s cubic-bezier(.16,1,.3,1)'; anfang.style.strokeDashoffset = 0; });
+    }
+  }
+  punkte = [[ausX, fr.bottom + scrollY]];
+  // Ragt das Foto unter dem Fenster heraus, laeuft die Trasse erst an ihm vorbei
+  if (gestapelt && bild.bottom > fr.bottom && ausX > bild.right) punkte.push([ausX, bild.bottom + 24 + scrollY]);
+  vorlauf = punkte.length;
+  abschnitte.forEach((s, i) => {
+    const halt = s.querySelector('.halt'), k = halt.parentElement.getBoundingClientRect();
+    halt.style.setProperty('--halt-x', (xs[i] - k.left) + 'px');
+    const r = halt.getBoundingClientRect();
+    punkte.push([xs[i], r.top + r.height / 2 + scrollY]);
+  });
+  const ziel = formular.querySelector('button[type=submit]').getBoundingClientRect();
+  punkte.push([ziel.left + ziel.width / 2, ziel.top + scrollY]);
+  laengen = [0]; gesamt = 0;
+  for (let i = 1; i < punkte.length; i++) { gesamt += Math.hypot(punkte[i][0] - punkte[i - 1][0], punkte[i][1] - punkte[i - 1][1]); laengen.push(gesamt); }
+  trasse = el('polyline', { points: punkte.map(p => p.join(',')).join(' '), class: 'anfrage' });
+  trasse.style.strokeDasharray = gesamt;
+  svg.append(trasse);
+  ersteZeichnung = false;
+  fortschritt();
+}
+
+// Gezeichnet wird mindestens bis zum ersten Halt; markiert wird nur, was die Lesehoehe erreicht hat
+function fortschritt() {
+  if (!trasse) return;
+  const lese = scrollY + innerHeight * .55;
+  const y = Math.max(lese, punkte.length > vorlauf ? punkte[vorlauf][1] : 0);
+  let l = gesamt;
+  if (!ruhig) {
+    l = 0;
+    for (let i = 1; i < punkte.length; i++) {
+      const [, y0] = punkte[i - 1], [, y1] = punkte[i];
+      if (y >= y1) { l = laengen[i]; continue; }
+      if (y > y0) l = laengen[i - 1] + (laengen[i] - laengen[i - 1]) * (y - y0) / (y1 - y0);
+      break;
+    }
+  }
+  trasse.style.strokeDashoffset = gesamt - l;
+  let aktiv = -1;
+  abschnitte.forEach((s, i) => { const erreicht = punkte[i + vorlauf][1] <= lese; s.querySelector('.halt').classList.toggle('erreicht', erreicht); if (erreicht) aktiv = i; });
+  if (innerHeight + scrollY >= document.documentElement.scrollHeight - 4) aktiv = abschnitte.length - 1;
+  navLinks.forEach((a, i) => i === aktiv ? a.setAttribute('aria-current', 'location') : a.removeAttribute('aria-current'));
+  streifen.forEach((n, i) => n.classList.toggle('aktiv', i === aktiv));
+}
+
+// Ablauf: Verbinder von Halt zu Halt, dazu das einzige belegte Intervall
+function ablaufZeichnen() {
+  const rahmen = document.getElementById('halte-rahmen'), s = rahmen.querySelector('svg');
+  leeren(s);
+  if (getComputedStyle(s).display === 'none') return;
+  const box = rahmen.getBoundingClientRect();
+  const hs = [...rahmen.querySelectorAll('h3')].map(h => h.getBoundingClientRect());
+  for (let i = 1; i < hs.length; i++) {
+    const a = hs[i - 1], b = hs[i];
+    s.append(el('line', { x1: a.right - box.left, y1: a.top + a.height / 2 - box.top, x2: b.left - box.left, y2: b.top + b.height / 2 - box.top }));
+  }
+  if (hs.length > 1) {
+    const a = hs[0], b = hs[1];
+    const t = el('text', { x: (a.right + b.left) / 2 - box.left + 6, y: (a.top + b.top) / 2 + a.height / 2 - box.top - 10, class: 'intervall' });
+    t.textContent = 'Antwort in 24 h'; s.append(t);
+  }
+}
+
+function sicher(f) { try { f(); } catch (e) { /* Zeichnung ist Beiwerk */ } }
+let geplant = false;
+addEventListener('scroll', () => { if (!geplant) { geplant = true; requestAnimationFrame(() => { geplant = false; sicher(fortschritt); }); } }, { passive: true });
+let zeichenTimer = 0;
+const neuZeichnen = () => { clearTimeout(zeichenTimer); zeichenTimer = setTimeout(() => { sicher(zeichnen); sicher(ablaufZeichnen); }, 120); };
+addEventListener('resize', neuZeichnen);
+addEventListener('load', neuZeichnen);
+if (document.fonts) document.fonts.ready.then(neuZeichnen);
+if ('ResizeObserver' in window) new ResizeObserver(neuZeichnen).observe(document.querySelector('main'));
+sicher(zeichnen); sicher(ablaufZeichnen);
 </script>
 </body>
 </html>
